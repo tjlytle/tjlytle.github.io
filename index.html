@@ -1,6 +1,423 @@
-<html>
-<head><title>timlytle</title></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tim Lytle — Engineering Leader &amp; Platform Architect</title>
+    <meta name="description" content="Engineering leader and backend architect with 20+ years building scalable, API-first systems. Available for consulting and longer-term opportunities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-bg: #f8f6f1;
+            --color-surface: #f0ece4;
+            --color-text: #2a2520;
+            --color-text-secondary: #5c554c;
+            --color-accent: #8b4513;
+            --color-accent-hover: #a0522d;
+            --color-rule: #d4cfc6;
+            --color-available: #2d5016;
+            --color-available-bg: #e8f0e0;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background: var(--color-bg);
+            line-height: 1.7;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ─── HEADER / HERO ─── */
+
+        header {
+            padding: 5rem 0 3rem;
+            animation: fadeUp 0.8s ease-out;
+        }
+
+        .name {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.1;
+            color: var(--color-text);
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--color-text-secondary);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .availability-badge {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--color-available);
+            background: var(--color-available-bg);
+            padding: 0.4em 1em;
+            border-radius: 2px;
+            letter-spacing: 0.03em;
+            border-left: 3px solid var(--color-available);
+        }
+
+        /* ─── SECTIONS ─── */
+
+        section {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .section-label {
+            font-family: var(--font-body);
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ─── ABOUT ─── */
+
+        .about-text {
+            font-size: 1.05rem;
+        }
+
+        .about-text p:first-child {
+            font-family: var(--font-display);
+            font-size: 1.45rem;
+            line-height: 1.55;
+            font-weight: 400;
+            color: var(--color-text);
+        }
+
+        /* ─── EXPERTISE GRID ─── */
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem 2.5rem;
+        }
+
+        .expertise-item h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .expertise-item p {
+            font-size: 0.88rem;
+            color: var(--color-text-secondary);
+            line-height: 1.55;
+        }
+
+        /* ─── SPEAKING & WRITING ─── */
+
+        .credential {
+            margin-bottom: 1.2rem;
+        }
+
+        .credential:last-child {
+            margin-bottom: 0;
+        }
+
+        .credential-title {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .credential-detail {
+            font-size: 0.88rem;
+            color: var(--color-text-secondary);
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        a:hover {
+            border-bottom-color: var(--color-accent);
+        }
+
+        /* ─── CTA / CONTACT ─── */
+
+        .contact-section {
+            background: var(--color-surface);
+            margin: 0 -2rem;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .contact-section .container {
+            padding: 0;
+        }
+
+        .contact-intro {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            line-height: 1.4;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-body {
+            margin-bottom: 2rem;
+            color: var(--color-text-secondary);
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            font-family: var(--font-body);
+            font-size: 0.88rem;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 0.75em 1.5em;
+            border: none;
+            border-bottom: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border-bottom: none;
+        }
+
+        .btn-primary {
+            background: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-accent-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text);
+            border: 1.5px solid var(--color-text);
+            padding: calc(0.75em - 1.5px) calc(1.5em - 1.5px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-text);
+            color: var(--color-bg);
+        }
+
+        /* ─── FOOTER ─── */
+
+        footer {
+            padding: 2.5rem 0;
+            border-top: 1px solid var(--color-rule);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        .footer-links a {
+            color: var(--color-text-secondary);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* ─── ANIMATION ─── */
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            opacity: 0;
+            transform: translateY(12px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+
+        @media (max-width: 600px) {
+            html { font-size: 16px; }
+
+            header { padding: 3rem 0 2rem; }
+
+            .name { font-size: 2.4rem; }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
 <body>
-Hello.
+
+    <div class="container">
+
+        <header>
+            <h1 class="name">Tim Lytle</h1>
+            <p class="tagline">Engineering Leader · Platform Architect · Technical Advisor</p>
+            <span class="availability-badge">Available for new engagements</span>
+        </header>
+
+        <section class="animate-in">
+            <p class="section-label">About</p>
+            <div class="about-text">
+                <p>I'm an engineering leader and backend architect with over twenty years building scalable, API-first systems. I lead engineering organizations and contribute directly to critical systems — I don't believe you have to choose between the two.</p>
+                <p>I shape product strategy alongside business stakeholders while staying hands-on with architecture and implementation. I'm known for preventing unnecessary complexity, deferring irreversible decisions, and designing systems that remain adaptable as understanding evolves.</p>
+                <p>I'm also a recognized speaker and published technical author. I've given keynotes at developer conferences and a TEDx talk on creativity and where humans fit in an ever-changing world. I care about making complex ideas accessible — whether that's in a code review, on stage, or at a whiteboard.</p>
+            </div>
+        </section>
+
+        <section class="animate-in">
+            <p class="section-label">Expertise</p>
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h3>Engineering Leadership</h3>
+                    <p>Hiring, performance management, mentorship, and building teams that work well together.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Systems Architecture</h3>
+                    <p>API-first design, event-driven systems, and scalable backend platforms.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Platform Strategy</h3>
+                    <p>API design, authentication architecture, and developer experience.</p>
+                </div>
+                <div class="expertise-item">
+                    <h3>Technical Communication</h3>
+                    <p>Conference keynotes, technical writing, and translating complex concepts for any audience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="animate-in">
+            <p class="section-label">Speaking &amp; Writing</p>
+            <div class="credential">
+                <p class="credential-title">Conference Speaker</p>
+                <p class="credential-detail">Dozens of talks and keynotes at developer conferences on API design, software architecture, and stewardship. <a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">Browse talks →</a></p>
+            </div>
+            <div class="credential">
+                <p class="credential-title">TEDx Speaker</p>
+                <p class="credential-detail">A talk on creativity, what it means to be human, and how that shapes our understanding of an ever-changing world.</p>
+            </div>
+            <div class="credential">
+                <p class="credential-title">Published Author</p>
+                <p class="credential-detail">Multiple articles in <em>php[architect]</em> on API design, HTTP libraries, and software craftsmanship.</p>
+            </div>
+            <div class="credential">
+                <p class="credential-title">Community Builder</p>
+                <p class="credential-detail">Founded and led Lehigh Valley Tech — organizing meetups, hackathons, and startup weekends for the local technology community.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <section class="contact-section animate-in">
+        <div class="container">
+            <p class="section-label">Let's talk</p>
+            <p class="contact-intro">I'm currently available for consulting, advisory work, and exploring the right longer-term role.</p>
+            <p class="contact-body">Whether you have a thorny API integration, a team that could use some direction, or a system architecture that needs a fresh perspective — I'd enjoy the conversation.</p>
+            <div class="contact-links">
+                <a href="https://calendar.app.google/FmfBr6pNfw5oTJ739" class="btn btn-primary" target="_blank" rel="noopener">Book a conversation</a>
+                <a href="mailto:tim@timlytle.net" class="btn btn-secondary">tim@timlytle.net</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <footer>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">Talks</a>
+                <a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Simple scroll-triggered fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+    </script>
+
 </body>
 </html>
