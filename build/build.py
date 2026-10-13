@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render index.html and talks.html from build/talks.json and build/templates/.
+"""Render index.html, talks.html and talks/<slug>.html from build/talks.json and build/templates/.
 
 Usage: python3 build/build.py
 Refresh the data first with: python3 build/fetch_joindin.py  (merges new joind.in entries into talks.json)
@@ -21,14 +21,22 @@ def esc(s):
     return html.escape(s or "", quote=True)
 
 
+def talk_url(talk):
+    return f'/talks/{talk["slug"]}.html'
+
+
 def short_event(name):
-    """php[tek] 2023 -> php[tek] 2023; 'Longhorn PHP Conference 2023' -> 'Longhorn PHP 2023'."""
+    """'Longhorn PHP Conference 2023' -> 'Longhorn PHP 2023', and a few one-offs."""
     name = re.sub(r"\s+Conference\b", "", name)
     name = re.sub(r"\s+-\s+Online Edition", " (online)", name)
     name = re.sub(r"\s+\(Online\)", " (online)", name)
     name = name.replace("Nomad PHP US - June 2015", "Nomad PHP 2015").replace("Nomad PHP December 2016 US", "Nomad PHP 2016")
     name = name.replace("LVPHP - February 2013", "LVPHP 2013").replace("php|tek 2012 UnCons", "php[tek] 2012 uncon")
     return name
+
+
+def pretty_date(iso):
+    return date.fromisoformat(iso).strftime("%B %-d, %Y")
 
 
 def highly_rated(talk):
@@ -40,26 +48,21 @@ def highly_rated(talk):
     return sum(i["rating"] * i["comments"] for i in rated) / total >= 4.5
 
 
-def rating_line(talk):
-    return '<span class="talk__rating">highly rated</span>' if highly_rated(talk) else ""
+def rating_tag(cls):
+    return f'<span class="{cls}">highly rated</span>'
+
+
+def newest_first(talk):
+    return sorted(talk["instances"], key=lambda i: i["date"], reverse=True)
+
+
+def slides_link(talk):
+    return next((i["slides"] for i in newest_first(talk) if i.get("slides")), None)
 
 
 def instances_line(talk):
-    parts = []
-    for inst in sorted(talk["instances"], key=lambda i: i["date"], reverse=True):
-        label = esc(short_event(inst["event"]))
-        parts.append(f'<a href="{esc(inst["joindin"])}" rel="noopener">{label}</a>')
+    parts = [f'<a href="{esc(i["joindin"])}" rel="noopener">{esc(short_event(i["event"]))}</a>' for i in newest_first(talk)]
     return " &middot; ".join(parts)
-
-
-def links_line(talk):
-    links = []
-    slides = next((i["slides"] for i in sorted(talk["instances"], key=lambda i: i["date"], reverse=True) if i.get("slides")), None)
-    if slides:
-        links.append(f'<a href="{esc(slides)}" rel="noopener">Slides</a>')
-    if talk.get("video"):
-        links.append(f'<a href="{esc(talk["video"])}" rel="noopener">Video</a>')
-    return "".join(links)
 
 
 def paragraphs(text):
@@ -67,26 +70,22 @@ def paragraphs(text):
     return "".join(f"<p>{esc(c)}</p>" for c in chunks)
 
 
+def media(talk, cls="talk__thumb"):
+    if talk.get("thumb"):
+        return f'<img class="{cls}" src="/assets/img/decks/{esc(talk["thumb"])}" alt="" loading="lazy" width="800" height="450">'
+    return f'<div class="{cls}--placeholder" aria-hidden="true">{esc(talk["title"])}</div>'
+
+
 def card(talk, idx):
     color = STICKY_CYCLE[idx % len(STICKY_CYCLE)]
-    if talk.get("thumb"):
-        media = f'<img class="talk__thumb" src="assets/img/decks/{esc(talk["thumb"])}" alt="" loading="lazy" width="800" height="450">'
-    else:
-        media = f'<div class="talk__thumb--placeholder" aria-hidden="true">{esc(talk["title"])}</div>'
-    newest = max(talk["instances"], key=lambda i: i["date"])
-    foot = ""
-    if links_line(talk) or rating_line(talk):
-        foot = f'<div class="talk__foot"><div class="talk__links">{links_line(talk)}</div>{rating_line(talk)}</div>'
-    more = ""
-    if talk.get("description") and len(talk["description"]) > len(talk["blurb"]) + 40:
-        more = f'<details class="talk__more"><summary>Full abstract</summary>{paragraphs(talk["description"])}</details>'
+    url = talk_url(talk)
+    foot = f'<div class="talk__foot"><a class="talk__more-link" href="{url}">About this talk &rarr;</a>{rating_tag("talk__rating") if highly_rated(talk) else ""}</div>'
     return f'''
       <article class="talk sticky sticky--tape {color}" id="{esc(talk["slug"])}">
-        {media}
-        <h3 class="talk__title"><a href="{esc(newest["joindin"])}" rel="noopener">{esc(talk["title"])}</a></h3>
+        <a class="talk__media" href="{url}" tabindex="-1" aria-hidden="true">{media(talk)}</a>
+        <h3 class="talk__title"><a href="{url}">{esc(talk["title"])}</a></h3>
         <p class="talk__blurb">{esc(talk["blurb"])}</p>
         <p class="talk__meta mono">{instances_line(talk)}</p>
-        {more}
         {foot}
       </article>'''
 
@@ -99,18 +98,15 @@ def list_rows(talks):
         label = f'<span class="row__year mono">{year}</span>' if year != last_year else '<span class="row__year mono" aria-hidden="true"></span>'
         last_year = year
         side = ""
-        slides = next((i["slides"] for i in sorted(talk["instances"], key=lambda i: i["date"], reverse=True) if i.get("slides")), None)
-        if slides:
-            side += f'<a class="row__link" href="{esc(slides)}" rel="noopener">Slides</a>'
+        if slides_link(talk):
+            side += f'<a class="row__link" href="{esc(slides_link(talk))}" rel="noopener">Slides</a>'
         if highly_rated(talk):
-            side += '<span class="row__rated">highly rated</span>'
-        anchor = f'#{esc(talk["slug"])}' if talk["slug"] in FEATURED_SLUGS else None
-        title = f'<a href="{anchor}">{esc(talk["title"])}</a>' if anchor else esc(talk["title"])
+            side += rating_tag("row__rated")
         rows.append(f'''
         <li class="row">
           {label}
           <div class="row__main">
-            <h3 class="row__title">{title}</h3>
+            <h3 class="row__title"><a href="{talk_url(talk)}">{esc(talk["title"])}</a></h3>
             <p class="row__events mono">{instances_line(talk)}</p>
             <p class="row__blurb">{esc(talk["blurb"])}</p>
           </div>
@@ -119,16 +115,32 @@ def list_rows(talks):
     return "".join(rows)
 
 
-def upcoming_block():
+def given_at(talk):
+    items = []
+    for i in newest_first(talk):
+        where = f' &middot; {esc(i["location"])}' if i.get("location") and i["location"].lower() != "online" else ""
+        items.append(f'''
+          <li class="given__item">
+            <span class="given__event">{esc(i["event"])}</span>
+            <span class="given__meta mono">{esc(pretty_date(i["date"]))}{where} &middot; <a href="{esc(i["joindin"])}" rel="noopener">joind.in</a></span>
+          </li>''')
+    return "".join(items)
+
+
+def upcoming_for(slug=None):
     today = date.today().isoformat()
-    items = [u for u in DATA.get("upcoming", []) if u["date"] >= today]
-    if not items:
+    items = [u for u in DATA.get("upcoming", []) if u["date"] >= today and (slug is None or u.get("slug") == slug)]
+    return items[0] if items else None
+
+
+def upcoming_block():
+    u = upcoming_for()
+    if not u:
         return ""
-    u = items[0]
     when = date.fromisoformat(u["date"]).strftime("%b %-d, %Y")
-    anchor = f'#{esc(u["slug"])}' if u.get("slug") else ""
+    href = talk_url({"slug": u["slug"]}) if u.get("slug") else "#"
     return f'''
-      <a class="upcoming sticky sticky--tape sticky--yellow" href="{anchor}">
+      <a class="upcoming sticky sticky--tape sticky--yellow" href="{href}">
         <span class="hand hand--orange">Next up</span>
         <span class="upcoming__title">{esc(u["title"])}</span>
         <span class="upcoming__meta mono">{esc(u["event"])} &middot; {esc(when)}</span>
@@ -136,16 +148,12 @@ def upcoming_block():
 
 
 def hero_note():
-    today = date.today().isoformat()
-    items = [u for u in DATA.get("upcoming", []) if u["date"] >= today]
-    if not items:
+    u = upcoming_for()
+    if not u:
         return ""
-    u = items[0]
     when = date.fromisoformat(u["date"]).strftime("%b %-d")
-    title = re.split(r"[:?]", u["title"])[0].strip()
-    if "?" in u["title"]:
-        title += "?"
-    href = f'talks.html#{esc(u["slug"])}' if u.get("slug") else "talks.html"
+    title = re.split(r"[:?]", u["title"])[0].strip() + ("?" if "?" in u["title"] else "")
+    href = talk_url({"slug": u["slug"]}) if u.get("slug") else "/talks.html"
     return f'''
         <a class="hero__note sticky sticky--tape" href="{href}">
           <span class="hand hand--orange">Next up</span>
@@ -154,38 +162,61 @@ def hero_note():
         </a>'''
 
 
-def render(template_name, out_name, **slots):
+def talk_kicker(talk):
+    u = upcoming_for(talk["slug"])
+    if u:
+        return f'next at {esc(u["event"])}, {date.fromisoformat(u["date"]).strftime("%b %-d")}'
+    n = len(talk["instances"])
+    first, last = talk["first"][:4], talk["last"][:4]
+    if n == 1:
+        return f"given once, in {last}"
+    span = last if first == last else f"{first} to {last}"
+    return f"given {n} times, {span}"
+
+
+def render(template_name, out_path, **slots):
     tpl = (BUILD / "templates" / template_name).read_text(encoding="utf-8")
     for key, val in slots.items():
         tpl = tpl.replace("{{" + key + "}}", val)
     leftover = re.findall(r"{{\w+}}", tpl)
     if leftover:
         raise SystemExit(f"unfilled slots in {template_name}: {leftover}")
-    (ROOT / out_name).write_text(tpl, encoding="utf-8")
-    print(f"wrote {out_name}")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text(tpl, encoding="utf-8")
 
 
 talks = sorted(DATA["talks"], key=lambda t: t["last"], reverse=True)
 by_slug = {t["slug"]: t for t in talks}
-FEATURED_SLUGS = DATA.get("featured", [])
-featured = [by_slug[s] for s in FEATURED_SLUGS] or talks[:3]
+featured = [by_slug[s] for s in DATA.get("featured", [])] or talks[:3]
 deliveries = sum(len(t["instances"]) for t in talks)
 first_year = min(i["date"] for t in talks for i in t["instances"])[:4]
 
 render(
-    "talks.html",
-    "talks.html",
+    "talks.html", ROOT / "talks.html",
     FEATURED_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
     TALK_LIST=list_rows(talks),
     UPCOMING=upcoming_block(),
-    TALK_COUNT=str(len(talks)),
-    DELIVERY_COUNT=str(deliveries),
-    FIRST_YEAR=first_year,
+    TALK_COUNT=str(len(talks)), DELIVERY_COUNT=str(deliveries), FIRST_YEAR=first_year,
 )
 render(
-    "index.html",
-    "index.html",
+    "index.html", ROOT / "index.html",
     RECENT_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
     HERO_NOTE=hero_note(),
     TALK_COUNT=str(len(talks)),
 )
+for talk in talks:
+    slides = slides_link(talk)
+    render(
+        "talk.html", ROOT / "talks" / f'{talk["slug"]}.html',
+        TITLE=esc(talk["title"]),
+        BLURB=esc(talk["blurb"]),
+        KICKER=talk_kicker(talk),
+        MEDIA=media(talk, "detail__thumb"),
+        DESCRIPTION=paragraphs(talk["description"]) or f'<p>{esc(talk["blurb"])}</p>',
+        GIVEN_AT=given_at(talk),
+        SLIDES=f'<a class="btn-sticky btn-sticky--quiet" href="{esc(slides)}" rel="noopener">Open the slides</a>' if slides else "",
+        RATED=rating_tag("detail__rated") if highly_rated(talk) else "",
+        OG_IMAGE=f'/assets/img/decks/{talk["thumb"]}' if talk.get("thumb") else "/assets/img/og-talks.jpg",
+        SLUG=talk["slug"],
+    )
+print(f"wrote index.html, talks.html and {len(talks)} talk pages")
