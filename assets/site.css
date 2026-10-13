@@ -132,13 +132,13 @@ a { color: inherit; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 
 /* ─── Hero ─── */
-.hero { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 40px; align-items: start; padding: 64px 0 0; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) 560px; gap: 40px; align-items: start; padding: 64px 0 0; }
 .hero__copy { display: flex; flex-direction: column; gap: 28px; padding-top: 24px; }
 .hero__title { font-size: clamp(3rem, 7.2vw, 5.75rem); }
 .hero__actions { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; padding-top: 6px; }
 .hero__figure { position: relative; height: 560px; }
-.hero__avatar { position: absolute; right: 0; bottom: 0; width: 520px; max-width: none; height: auto; }
-.hero__note { position: absolute; left: -150px; top: 48px; width: 230px; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 6px; --tilt: -6deg; text-decoration: none; }
+.hero__avatar { position: absolute; right: 0; bottom: 0; width: 250px; max-width: none; height: auto; }
+.hero__note { position: absolute; left: 0; top: 80px; width: 230px; padding: 22px 20px 20px; display: flex; flex-direction: column; gap: 6px; --tilt: -6deg; text-decoration: none; }
 .hero__note:hover { --tilt: -4deg; }
 .hero__note .hand { font-size: 1.3rem; }
 .hero__note .title { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.1; }
@@ -248,10 +248,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 
 /* ─── Responsive ─── */
 @media (max-width: 1100px) {
-  .hero { grid-template-columns: minmax(0, 1fr) 360px; }
+  .hero { grid-template-columns: minmax(0, 1fr) 440px; }
   .hero__figure { height: 460px; }
-  .hero__avatar { width: 420px; }
-  .hero__note { left: -110px; top: 20px; }
+  .hero__avatar { width: 200px; }
+  .hero__note { left: -30px; top: 40px; }
 }
 @media (max-width: 860px) {
   :root { --gutter: 20px; }
@@ -259,7 +259,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 40px; }
   .hero__copy { padding-top: 0; }
   .hero__figure { height: auto; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
-  .hero__avatar { position: static; width: 260px; align-self: flex-end; }
+  .hero__avatar { position: static; width: 150px; align-self: flex-end; }
   .hero__note { position: static; width: min(100%, 320px); --tilt: -1.5deg; order: -1; }
   .about { grid-template-columns: 1fr; gap: 40px; }
   .talks__cta { align-items: flex-start; transform: rotate(-2deg); }
