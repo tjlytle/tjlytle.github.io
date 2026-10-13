@@ -262,11 +262,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   :root { --gutter: 20px; }
   body { font-size: 17px; }
   /* Phone: headline and a small avatar share the first row, everything else stacks under them. */
-  .hero { grid-template-columns: minmax(0, 1fr) 104px; grid-template-areas: "title avatar" "lede lede" "actions actions" "note note"; gap: 24px 16px; padding-top: 36px; align-items: end; }
+  .hero { grid-template-columns: minmax(0, 1fr) 120px; grid-template-areas: "title avatar" "lede avatar" "actions actions" "note note"; gap: 20px 16px; padding-top: 36px; align-items: start; }
   .hero__copy, .hero__figure { display: contents; }
-  .hero__title { grid-area: title; font-size: 2.4rem; align-self: end; }
-  .hero__avatar { grid-area: avatar; position: static; width: 104px; height: auto; align-self: end; justify-self: end; }
-  .hero .lede { grid-area: lede; }
+  .hero__title { grid-area: title; font-size: 2.2rem; align-self: end; }
+  .hero__avatar { grid-area: avatar; position: static; width: 120px; height: auto; align-self: center; justify-self: end; }
+  .hero .lede { grid-area: lede; font-size: 1.05rem; line-height: 1.5; }
   .hero__actions { grid-area: actions; }
   .hero__note { grid-area: note; position: static; width: min(100%, 320px); --tilt: -1.5deg; justify-self: start; }
   .about { grid-template-columns: 1fr; gap: 40px; }
