@@ -162,7 +162,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .talk:nth-child(3n+2) { --tilt: 0.8deg; --tape-tilt: 2deg; }
 .talk:nth-child(3n+3) { --tilt: -0.6deg; --tape-tilt: -3deg; }
 .talk__thumb { aspect-ratio: 16 / 9; object-fit: cover; width: 100%; background: var(--teal-deep); }
-.talk__thumb--placeholder { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; background: var(--teal); color: var(--white); font-family: var(--font-hand); font-weight: 700; font-size: 1.5rem; text-align: center; padding: 20px; background-image: url(/assets/img/wash.jpg); background-size: cover; background-position: center; }
 .talk__title { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.08; color: var(--ink); text-wrap: balance; }
 .talk__title a { text-decoration: none; }
 .talk__blurb { font-size: 1rem; line-height: 1.5; color: #2a2520; text-wrap: pretty; }
@@ -200,6 +199,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .row__link { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; color: var(--teal-deep); text-decoration: none; border-bottom: 2px solid var(--teal-deep); }
 .row__link:hover { border-bottom-color: var(--green); }
 .row__rated { font-family: var(--font-hand); font-weight: 700; font-size: 1.1rem; color: var(--orange); white-space: nowrap; transform: rotate(-3deg); }
+
+/* ─── Title-slide stand-in for talks with no deck render ─── */
+.slide.slide { container-type: inline-size; position: relative; display: flex; height: auto; flex-direction: column; justify-content: center; gap: 4cqw; aspect-ratio: 16 / 9; padding: 7cqw 8cqw; color: var(--white); background-size: cover; background-position: center; overflow: hidden; }
+.slide::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1.4px); background-size: 7px 7px; opacity: 0.35; }
+.slide__title { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 300; font-size: 9.5cqw; line-height: 0.98; letter-spacing: -0.015em; text-wrap: balance; max-width: 92%; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18); }
+.slide__title b { font-weight: 700; }
+.slide__sig { position: relative; z-index: 1; font-size: 4cqw; color: var(--yellow); transform: rotate(-2deg); transform-origin: left center; }
+.slide--wash-1 { background-image: url(/assets/img/wash/wash-1.jpg); }
+.slide--wash-4 { background-image: url(/assets/img/wash/wash-4.jpg); }
+.slide--wash-5 { background-image: url(/assets/img/wash/wash-5.jpg); }
+.slide--wash-6 { background-image: url(/assets/img/wash/wash-6.jpg); }
+.slide--wash-8 { background-image: url(/assets/img/wash/wash-8.jpg); }
+.slide--wash-9 { background-image: url(/assets/img/wash/wash-9.jpg); }
+.slide--wash-10 { background-image: url(/assets/img/wash/wash-10.jpg); }
 
 /* ─── Upcoming callout ─── */
 .upcoming { display: flex; align-items: center; gap: 10px 24px; flex-wrap: wrap; padding: 22px 26px; --tilt: -0.8deg; margin-bottom: 56px; text-decoration: none; color: var(--ink); }
@@ -293,7 +306,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .detail__side { display: flex; flex-direction: column; gap: 44px; position: sticky; top: 32px; }
 .detail__deck { padding: 18px; --tilt: -1deg; --tape-tilt: -2deg; }
 .detail__thumb { width: 100%; height: auto; display: block; }
-.detail__thumb--placeholder { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; color: var(--white); font-family: var(--font-hand); font-weight: 700; font-size: 2rem; text-align: center; padding: 24px; background: var(--teal) url(/assets/img/wash.jpg) center / cover; }
 .detail__abstract { --tilt: 0.4deg; padding: 32px 40px 40px; }
 .detail__h2 { font-family: var(--font-display); font-weight: 700; font-size: 1.4rem; line-height: 1.1; color: var(--ink); margin-bottom: 16px; }
 .prose { color: #2a2520; font-size: 1.05rem; line-height: 1.6; max-width: 62ch; text-wrap: pretty; }

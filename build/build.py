@@ -70,10 +70,24 @@ def paragraphs(text):
     return "".join(f"<p>{esc(c)}</p>" for c in chunks)
 
 
+WASHES = [1, 6, 9, 4, 10, 5, 8]  # red, blue, pink, orange, green, purple, indigo
+
+
+def slide_title(title):
+    """Bold the last word the way the decks do: 'Let Go of <b>Ownership</b>'."""
+    words = title.split()
+    if len(words) < 2:
+        return f"<b>{esc(title)}</b>"
+    return esc(" ".join(words[:-1])) + f" <b>{esc(words[-1])}</b>"
+
+
 def media(talk, cls="talk__thumb"):
     if talk.get("thumb"):
         return f'<img class="{cls}" src="/assets/img/decks/{esc(talk["thumb"])}" alt="" loading="lazy" width="800" height="450">'
-    return f'<div class="{cls}--placeholder" aria-hidden="true">{esc(talk["title"])}</div>'
+    wash = WASHES[talk.get("_order", 0) % len(WASHES)]
+    return (f'<div class="{cls} slide slide--wash-{wash}" aria-hidden="true">'
+            f'<span class="slide__title">{slide_title(talk["title"])}</span>'
+            f'<span class="slide__sig hand">Tim Lytle &middot; @tjlytle</span></div>')
 
 
 def card(talk, idx):
@@ -186,6 +200,8 @@ def render(template_name, out_path, **slots):
 
 
 talks = sorted(DATA["talks"], key=lambda t: t["last"], reverse=True)
+for n, t in enumerate(t for t in talks if not t.get("thumb")):
+    t["_order"] = n
 by_slug = {t["slug"]: t for t in talks}
 featured = [by_slug[s] for s in DATA.get("featured", [])] or talks[:3]
 deliveries = sum(len(t["instances"]) for t in talks)
