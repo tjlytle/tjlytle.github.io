@@ -203,9 +203,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 /* ─── Title-slide stand-in for talks with no deck render ─── */
 .slide.slide { container-type: inline-size; position: relative; display: flex; height: auto; flex-direction: column; justify-content: center; gap: 4cqw; aspect-ratio: 16 / 9; padding: 7cqw 8cqw; color: var(--white); background-size: cover; background-position: center; overflow: hidden; }
 .slide::after { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1.4px); background-size: 7px 7px; opacity: 0.35; }
-.slide__title { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 300; font-size: 9.5cqw; line-height: 0.98; letter-spacing: -0.015em; text-wrap: balance; max-width: 92%; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18); }
+.slide__title { position: relative; z-index: 1; font-family: var(--font-display); font-weight: 300; font-size: 13cqw; line-height: 0.95; letter-spacing: -0.02em; text-wrap: balance; max-width: 96%; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18); }
 .slide__title b { font-weight: 700; }
-.slide__sig { position: relative; z-index: 1; font-size: 4cqw; color: var(--yellow); transform: rotate(-2deg); transform-origin: left center; }
+.slide__sig { position: relative; z-index: 1; font-size: 4.2cqw; color: var(--yellow); transform: rotate(-2deg); transform-origin: left center; }
 .slide--wash-1 { background-image: url(/assets/img/wash/wash-1.jpg); }
 .slide--wash-4 { background-image: url(/assets/img/wash/wash-4.jpg); }
 .slide--wash-5 { background-image: url(/assets/img/wash/wash-5.jpg); }
