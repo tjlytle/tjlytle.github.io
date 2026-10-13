@@ -70,7 +70,7 @@ def paragraphs(text):
     return "".join(f"<p>{esc(c)}</p>" for c in chunks)
 
 
-WASHES = [1, 6, 9, 4, 10, 5, 8]  # red, blue, pink, orange, green, purple, indigo
+WASHES = [1, 9, 4, 10, 5]  # red, pink, orange, green, purple: nothing blue, so the cards stand off the teal site
 
 
 def slide_title(title):
@@ -85,7 +85,9 @@ def media(talk, cls="talk__thumb"):
     if talk.get("thumb"):
         return f'<img class="{cls}" src="/assets/img/decks/{esc(talk["thumb"])}" alt="" loading="lazy" width="800" height="450">'
     wash = WASHES[talk.get("_order", 0) % len(WASHES)]
-    return (f'<div class="{cls} slide slide--wash-{wash}" aria-hidden="true">'
+    n = len(talk["title"])
+    size = "slide--xl" if n <= 16 else "slide--lg" if n <= 30 else ""
+    return (f'<div class="{cls} slide slide--wash-{wash} {size}" aria-hidden="true">'
             f'<span class="slide__title">{slide_title(talk["title"])}</span>'
             f'<span class="slide__sig hand">Tim Lytle &middot; @tjlytle</span></div>')
 
