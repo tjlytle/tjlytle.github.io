@@ -41,9 +41,14 @@ body {
 body::before {
   content: '';
   position: fixed;
-  inset: 0;
+  left: 0;
+  right: 0;
+  top: -20vh;
+  height: 140vh;
   z-index: -2;
-  background: var(--teal) url(/assets/img/wash.jpg) center / cover no-repeat;
+  background: var(--teal) url(/assets/img/wash-portrait.jpg) center / cover no-repeat;
+  transform: translate3d(0, var(--wash-shift, 20vh), 0);
+  will-change: transform;
 }
 /* A faint halftone, like the decks. */
 body::after {

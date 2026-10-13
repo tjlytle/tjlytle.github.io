@@ -114,5 +114,21 @@
     </div>
   </footer>
 
+  <script>
+    // Parallax: the wash layer is 140vh tall and slides at 12% of scroll speed, clamped to its overhang.
+    (function () {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var root = document.documentElement, queued = false;
+      function update() {
+        var vh = innerHeight, max = vh * 0.2;
+        var shift = Math.max(-max, Math.min(max, max - scrollY * 0.12));
+        root.style.setProperty('--wash-shift', shift + 'px');
+        queued = false;
+      }
+      addEventListener('scroll', function () { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+      addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </body>
 </html>
