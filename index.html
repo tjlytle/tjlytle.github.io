@@ -1,423 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tim Lytle — Engineering Leader &amp; Platform Architect</title>
-    <meta name="description" content="Engineering leader and backend architect with 20+ years building scalable, API-first systems. Available for consulting and longer-term opportunities.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --color-bg: #f8f6f1;
-            --color-surface: #f0ece4;
-            --color-text: #2a2520;
-            --color-text-secondary: #5c554c;
-            --color-accent: #8b4513;
-            --color-accent-hover: #a0522d;
-            --color-rule: #d4cfc6;
-            --color-available: #2d5016;
-            --color-available-bg: #e8f0e0;
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Source Sans 3', 'Source Sans Pro', system-ui, sans-serif;
-        }
-
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            font-size: 18px;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: var(--font-body);
-            color: var(--color-text);
-            background: var(--color-bg);
-            line-height: 1.7;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* ─── HEADER / HERO ─── */
-
-        header {
-            padding: 5rem 0 3rem;
-            animation: fadeUp 0.8s ease-out;
-        }
-
-        .name {
-            font-family: var(--font-display);
-            font-size: 3.2rem;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            line-height: 1.1;
-            color: var(--color-text);
-            margin-bottom: 0.5rem;
-        }
-
-        .tagline {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            font-weight: 400;
-            color: var(--color-text-secondary);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-        }
-
-        .availability-badge {
-            display: inline-block;
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--color-available);
-            background: var(--color-available-bg);
-            padding: 0.4em 1em;
-            border-radius: 2px;
-            letter-spacing: 0.03em;
-            border-left: 3px solid var(--color-available);
-        }
-
-        /* ─── SECTIONS ─── */
-
-        section {
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--color-rule);
-        }
-
-        .section-label {
-            font-family: var(--font-body);
-            font-size: 0.72rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--color-text-secondary);
-            margin-bottom: 1.2rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* ─── ABOUT ─── */
-
-        .about-text {
-            font-size: 1.05rem;
-        }
-
-        .about-text p:first-child {
-            font-family: var(--font-display);
-            font-size: 1.45rem;
-            line-height: 1.55;
-            font-weight: 400;
-            color: var(--color-text);
-        }
-
-        /* ─── EXPERTISE GRID ─── */
-
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem 2.5rem;
-        }
-
-        .expertise-item h3 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-        }
-
-        .expertise-item p {
-            font-size: 0.88rem;
-            color: var(--color-text-secondary);
-            line-height: 1.55;
-        }
-
-        /* ─── SPEAKING & WRITING ─── */
-
-        .credential {
-            margin-bottom: 1.2rem;
-        }
-
-        .credential:last-child {
-            margin-bottom: 0;
-        }
-
-        .credential-title {
-            font-family: var(--font-display);
-            font-size: 1.15rem;
-            font-weight: 600;
-        }
-
-        .credential-detail {
-            font-size: 0.88rem;
-            color: var(--color-text-secondary);
-        }
-
-        a {
-            color: var(--color-accent);
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.2s ease;
-        }
-
-        a:hover {
-            border-bottom-color: var(--color-accent);
-        }
-
-        /* ─── CTA / CONTACT ─── */
-
-        .contact-section {
-            background: var(--color-surface);
-            margin: 0 -2rem;
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--color-rule);
-        }
-
-        .contact-section .container {
-            padding: 0;
-        }
-
-        .contact-intro {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            line-height: 1.4;
-            font-weight: 500;
-            margin-bottom: 1.2rem;
-        }
-
-        .contact-body {
-            margin-bottom: 2rem;
-            color: var(--color-text-secondary);
-        }
-
-        .contact-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .btn {
-            display: inline-block;
-            font-family: var(--font-body);
-            font-size: 0.88rem;
-            font-weight: 600;
-            text-decoration: none;
-            padding: 0.75em 1.5em;
-            border: none;
-            border-bottom: none;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            border-bottom: none;
-        }
-
-        .btn-primary {
-            background: var(--color-text);
-            color: var(--color-bg);
-        }
-
-        .btn-primary:hover {
-            background: var(--color-accent-hover);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--color-text);
-            border: 1.5px solid var(--color-text);
-            padding: calc(0.75em - 1.5px) calc(1.5em - 1.5px);
-        }
-
-        .btn-secondary:hover {
-            background: var(--color-text);
-            color: var(--color-bg);
-        }
-
-        /* ─── FOOTER ─── */
-
-        footer {
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--color-rule);
-        }
-
-        .footer-links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            font-size: 0.85rem;
-        }
-
-        .footer-links a {
-            color: var(--color-text-secondary);
-        }
-
-        .footer-links a:hover {
-            color: var(--color-accent);
-        }
-
-        /* ─── ANIMATION ─── */
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(16px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-in {
-            opacity: 0;
-            transform: translateY(12px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .animate-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* ─── RESPONSIVE ─── */
-
-        @media (max-width: 600px) {
-            html { font-size: 16px; }
-
-            header { padding: 3rem 0 2rem; }
-
-            .name { font-size: 2.4rem; }
-
-            .expertise-grid {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
-
-            .contact-links {
-                flex-direction: column;
-            }
-
-            .btn {
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Lytle — Engineering Leader, Platform Architect, Conference Speaker</title>
+  <meta name="description" content="Engineering leader and backend architect with 20+ years building API-first systems. Conference speaker. Available for consulting and longer-term opportunities.">
+  <meta property="og:title" content="Tim Lytle">
+  <meta property="og:description" content="I build APIs, lead teams, and give talks.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://timlytle.net/">
+  <meta property="og:image" content="https://timlytle.net/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tjlytle">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Roboto+Condensed:wght@300;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
-    <div class="container">
+  <header class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="/" aria-label="Tim Lytle, home">
+        <span class="nav__name">Tim Lytle</span>
+        <span class="nav__handle">@tjlytle</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="talks.html">Talks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <header>
-            <h1 class="name">Tim Lytle</h1>
-            <p class="tagline">Engineering Leader · Platform Architect · Technical Advisor</p>
-            <span class="availability-badge">Available for new engagements</span>
-        </header>
+  <main class="container">
 
-        <section class="animate-in">
-            <p class="section-label">About</p>
-            <div class="about-text">
-                <p>I'm an engineering leader and backend architect with over twenty years building scalable, API-first systems. I lead engineering organizations and contribute directly to critical systems — I don't believe you have to choose between the two.</p>
-                <p>I shape product strategy alongside business stakeholders while staying hands-on with architecture and implementation. I'm known for preventing unnecessary complexity, deferring irreversible decisions, and designing systems that remain adaptable as understanding evolves.</p>
-                <p>I'm also a recognized speaker and published technical author. I've given keynotes at developer conferences and a TEDx talk on creativity and where humans fit in an ever-changing world. I care about making complex ideas accessible — whether that's in a code review, on stage, or at a whiteboard.</p>
-            </div>
-        </section>
-
-        <section class="animate-in">
-            <p class="section-label">Expertise</p>
-            <div class="expertise-grid">
-                <div class="expertise-item">
-                    <h3>Engineering Leadership</h3>
-                    <p>Hiring, performance management, mentorship, and building teams that work well together.</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Systems Architecture</h3>
-                    <p>API-first design, event-driven systems, and scalable backend platforms.</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Platform Strategy</h3>
-                    <p>API design, authentication architecture, and developer experience.</p>
-                </div>
-                <div class="expertise-item">
-                    <h3>Technical Communication</h3>
-                    <p>Conference keynotes, technical writing, and translating complex concepts for any audience.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="animate-in">
-            <p class="section-label">Speaking &amp; Writing</p>
-            <div class="credential">
-                <p class="credential-title">Conference Speaker</p>
-                <p class="credential-detail">Dozens of talks and keynotes at developer conferences on API design, software architecture, and stewardship. <a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">Browse talks →</a></p>
-            </div>
-            <div class="credential">
-                <p class="credential-title">TEDx Speaker</p>
-                <p class="credential-detail">A talk on creativity, what it means to be human, and how that shapes our understanding of an ever-changing world.</p>
-            </div>
-            <div class="credential">
-                <p class="credential-title">Published Author</p>
-                <p class="credential-detail">Multiple articles in <em>php[architect]</em> on API design, HTTP libraries, and software craftsmanship.</p>
-            </div>
-            <div class="credential">
-                <p class="credential-title">Community Builder</p>
-                <p class="credential-detail">Founded and led Lehigh Valley Tech — organizing meetups, hackathons, and startup weekends for the local technology community.</p>
-            </div>
-        </section>
-
-    </div>
-
-    <section class="contact-section animate-in">
-        <div class="container">
-            <p class="section-label">Let's talk</p>
-            <p class="contact-intro">I'm currently available for consulting, advisory work, and exploring the right longer-term role.</p>
-            <p class="contact-body">Whether you have a thorny API integration, a team that could use some direction, or a system architecture that needs a fresh perspective — I'd enjoy the conversation.</p>
-            <div class="contact-links">
-                <a href="https://calendar.app.google/FmfBr6pNfw5oTJ739" class="btn btn-primary" target="_blank" rel="noopener">Book a conversation</a>
-                <a href="mailto:tim@timlytle.net" class="btn btn-secondary">tim@timlytle.net</a>
-            </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 class="display hero__title" id="hero-title">I build <b>APIs</b>,<br>lead <b>teams</b>,<br>and give <b>talks</b>.</h1>
+        <p class="lede">Engineering leader and backend architect, twenty-plus years into building API-first systems. I run engineering orgs and still ship code, and I don't think you have to pick one.</p>
+        <div class="hero__actions">
+          <a class="btn-sticky" href="https://calendar.app.google/FmfBr6pNfw5oTJ739" target="_blank" rel="noopener">Book a conversation</a>
+          <a class="hand-link" href="talks.html"><span>or see what I talk about</span><svg width="54" height="26" viewBox="0 0 54 26" fill="none" aria-hidden="true"><path d="M2 14 C 14 6, 30 6, 48 12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M40 4 L 50 12 L 38 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
+      </div>
+      <div class="hero__figure">
+        <img class="hero__avatar" src="assets/img/tim.png" alt="A cartoon of Tim: glasses, big beard, grey hoodie." width="800" height="800" fetchpriority="high">
+        
+        <a class="hero__note sticky sticky--tape" href="talks.html#is-this-test-worth-it-evaluating-real-value-testing">
+          <span class="hand hand--orange">Next up</span>
+          <span class="title">Is This Test Worth It?</span>
+          <span class="mono">CodeBash 2026 &middot; Oct 14</span>
+        </a>
+        <span class="hero__caption hand hand--yellow" aria-hidden="true">representational me<svg width="70" height="40" viewBox="0 0 70 40" fill="none"><path d="M4 30 C 20 36, 44 30, 60 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M48 8 L 62 8 L 60 22" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
     </section>
 
-    <div class="container">
-        <footer>
-            <div class="footer-links">
-                <a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">Talks</a>
-                <a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a>
-            </div>
-        </footer>
+    <section class="section" aria-labelledby="lately-title">
+      <div class="section__head">
+        <div>
+          <p class="hand hand--green section__kicker">lately I've been talking about</p>
+          <h2 class="display section__title" id="lately-title">Tests, ownership, <b>and yaks</b>.</h2>
+        </div>
+        <a class="text-link" href="talks.html">All 26 talks</a>
+      </div>
+      <div class="talk-grid">
+      <article class="talk sticky sticky--tape " id="is-this-test-worth-it-evaluating-real-value-testing">
+        <img class="talk__thumb" src="assets/img/decks/valuable-tests.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/9f3d1" rel="noopener">Is This Test Worth It? Evaluating the Real Value of Testing</a></h3>
+        <p class="talk__blurb">Unit, integration, contract, or end-to-end: the question that matters is what a test actually buys you.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/9f3d1" rel="noopener">PHP TEK 2025</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>The differences between unit tests, integration tests, contract tests, end-to-end tests, and behavior tests-and which type is best to use-are often debated. Principles like &quot;don&#x27;t mock what you don&#x27;t own&quot; or &quot;test behavior, not implementation&quot; are often cited in those conversations. But there&#x27;s one key question we should always ask when writing tests: is this a valuable test?</p><p>So let&#x27;s put those other concepts aside and ask a simple question as we look at some real-world examples: &quot;What is the value of this test?&quot; Answering that can lead to more nuanced questions. Does this test continue to deliver value over time? How much value comes from the act of writing this test? Are there ways to increase the immediate value as well as the long term value?</p><p>Join me as we rethink testing-not in terms of types and categories, but in terms of the practical, meaningful value that testing brings to our codebases and our teams.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/9f3d1" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 9 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--yellow" id="let-go-ownership">
+        <img class="talk__thumb" src="assets/img/decks/ownership.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/19596" rel="noopener">Let Go of Ownership</a></h3>
+        <p class="talk__blurb">A keynote on swapping the ownership model for stewardship: in code, career, and community.</p>
+        <p class="talk__meta mono">3&times; &middot; <a href="https://joind.in/talk/19596" rel="noopener">PHP TEK 2025</a> &middot; <a href="https://joind.in/talk/d73e7" rel="noopener">Longhorn PHP 2023</a> &middot; <a href="https://joind.in/talk/0f1ed" rel="noopener">php[tek] 2023</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>We may adopt a perspective of ownership around the code we write and maintain, the career path we find ourselves on, and our position in the community around us.</p><p>Intentionally shifting that perspective away from the ownership model to an alternative model can lead to finding opportunity where before there was frustration and finality.</p><p>And it can impact more that just our code. It can bring a powerful new perspective to our career, our community, and even this very conference.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/19596" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 91 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--blue" id="yak-free-docker">
+        <img class="talk__thumb" src="assets/img/decks/yak-free-docker.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/1d495" rel="noopener">Yak Free Docker: Everyday Uses That Aren&#x27;t Deployment</a></h3>
+        <p class="talk__blurb">Docker for the everyday stuff that is not deployment: runtimes, dev tools, and throwaway utilities.</p>
+        <p class="talk__meta mono">3&times; &middot; <a href="https://joind.in/talk/1d495" rel="noopener">CascadiaPHP 2024</a> &middot; <a href="https://joind.in/talk/8c97b" rel="noopener">php[tek] 2024</a> &middot; <a href="https://joind.in/talk/6f072" rel="noopener">JestPHP</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Though it&#x27;s the common use case, deploying your application using docker - or even just using docker to power your local development stack - may seem a bit daunting at first. And it may require some changes you&#x27;re not yet ready, or able, to make. But if you want to get started with docker, there are plenty of uses that aren&#x27;t deployment.</p><p>In this 99% Yak-Shaving™ Free session, we&#x27;ll focus on the ones that require little (or no) setup, and build a solid understanding of docker itself. These day-to-day use cases will make you docker confident, and ready to tackle things like deployment with docker in the future.</p><p>Bring your laptop, and you&#x27;ll be using some of them before I stop talking. And if you find the docker vrs virtual machine distinction a little fuzzy, don&#x27;t worry - this talk will start by clearing that right up, and do it with sock puppets.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/1d495" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 19 ratings</span>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__head">
+        <div>
+          <p class="hand hand--yellow section__kicker">but first, in general</p>
+          <h2 class="display section__title" id="about-title">What I <b>actually do</b>.</h2>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about__text">
+          <p>I shape product strategy alongside business stakeholders while staying hands-on with architecture and implementation. I'm known for preventing unnecessary complexity, deferring irreversible decisions, and designing systems that stay adaptable as understanding evolves.</p>
+          <p>I'm also a <span class="scribble">recognized speaker</span> and published technical author. I've given keynotes at developer conferences and a TEDx talk on creativity and where humans fit in an ever-changing world. I care about making complex ideas accessible, whether that's in a code review, on stage, or at a whiteboard.</p>
+          <p>Before all that I founded and led Lehigh Valley Tech, organizing meetups, hackathons, and startup weekends for the local technology community.</p>
+        </div>
+        <dl class="expertise">
+          <div><dt>Engineering leadership</dt><dd>Hiring, performance management, mentorship, and building teams that work well together.</dd></div>
+          <div><dt>Systems architecture</dt><dd>API-first design, event-driven systems, and scalable backend platforms.</dd></div>
+          <div><dt>Platform strategy</dt><dd>API design, authentication architecture, and developer experience.</dd></div>
+          <div><dt>Technical communication</dt><dd>Conference keynotes, technical writing, and translating complex concepts for any audience.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact sticky sticky--tape" id="contact" aria-labelledby="contact-title">
+      <div>
+        <h2 class="contact__title" id="contact-title">I'm currently available for consulting, advisory work, <b>and the right longer-term role</b>.</h2>
+        <p class="contact__body">Whether you have a thorny API integration, a team that could use some direction, or a system architecture that needs a fresh perspective, I'd enjoy the conversation.</p>
+      </div>
+      <div class="contact__actions">
+        <a class="btn-sticky" href="https://calendar.app.google/FmfBr6pNfw5oTJ739" target="_blank" rel="noopener">Book a conversation</a>
+        <a class="contact__email" href="mailto:tim@timlytle.net">tim@timlytle.net</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="footer">
+      <ul class="footer__links">
+        <li><a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">joind.in</a></li>
+        <li><a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="footer__note">slides drawn in Inkscape, presented with Sozi</p>
     </div>
-
-    <script>
-        // Simple scroll-triggered fade-in
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.15 });
-
-        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
-    </script>
+  </footer>
 
 </body>
 </html>

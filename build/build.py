@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""Render index.html and talks.html from build/talks.json and build/templates/.
+
+Usage: python3 build/build.py
+Refresh the data first with: python3 build/fetch_joindin.py  (merges new joind.in entries into talks.json)
+"""
+import html
+import json
+import re
+from datetime import date
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+BUILD = ROOT / "build"
+DATA = json.loads((BUILD / "talks.json").read_text(encoding="utf-8"))
+
+STICKY_CYCLE = ["", "sticky--yellow", "sticky--blue", "", "sticky--green", "", "sticky--peach", "sticky--yellow", "", "sticky--blue"]
+
+
+def esc(s):
+    return html.escape(s or "", quote=True)
+
+
+def short_event(name):
+    """php[tek] 2023 -> php[tek] 2023; 'Longhorn PHP Conference 2023' -> 'Longhorn PHP 2023'."""
+    name = re.sub(r"\s+Conference\b", "", name)
+    name = re.sub(r"\s+-\s+Online Edition", " (online)", name)
+    name = re.sub(r"\s+\(Online\)", " (online)", name)
+    name = name.replace("Nomad PHP US - June 2015", "Nomad PHP 2015").replace("Nomad PHP December 2016 US", "Nomad PHP 2016")
+    name = name.replace("LVPHP - February 2013", "LVPHP 2013").replace("php|tek 2012 UnCons", "php[tek] 2012 uncon")
+    return name
+
+
+def rating_line(talk):
+    rated = [i for i in talk["instances"] if i.get("rating") and i.get("comments")]
+    if not rated:
+        return ""
+    total = sum(i["comments"] for i in rated)
+    avg = sum(i["rating"] * i["comments"] for i in rated) / total
+    noun = "rating" if total == 1 else "ratings"
+    return f'<span class="talk__rating">{avg:.1f} from {total} {noun}</span>'
+
+
+def instances_line(talk):
+    parts = []
+    for inst in sorted(talk["instances"], key=lambda i: i["date"], reverse=True):
+        label = esc(short_event(inst["event"]))
+        parts.append(f'<a href="{esc(inst["joindin"])}" rel="noopener">{label}</a>')
+    times = len(talk["instances"])
+    return f'{times}&times; &middot; ' + " &middot; ".join(parts)
+
+
+def links_line(talk):
+    links = []
+    slides = next((i["slides"] for i in sorted(talk["instances"], key=lambda i: i["date"], reverse=True) if i.get("slides")), None)
+    if slides:
+        links.append(f'<a href="{esc(slides)}" rel="noopener">Slides</a>')
+    if talk.get("video"):
+        links.append(f'<a href="{esc(talk["video"])}" rel="noopener">Video</a>')
+    newest = max(talk["instances"], key=lambda i: i["date"])
+    links.append(f'<a href="{esc(newest["joindin"])}" rel="noopener">Rate on joind.in</a>')
+    return "".join(links)
+
+
+def paragraphs(text):
+    chunks = [c.strip() for c in re.split(r"\n\s*\n|\s{2,}(?=[A-Z])", text or "") if c.strip()]
+    return "".join(f"<p>{esc(c)}</p>" for c in chunks)
+
+
+def card(talk, idx):
+    color = STICKY_CYCLE[idx % len(STICKY_CYCLE)]
+    if talk.get("thumb"):
+        media = f'<img class="talk__thumb" src="assets/img/decks/{esc(talk["thumb"])}" alt="" loading="lazy" width="800" height="450">'
+    else:
+        media = f'<div class="talk__thumb--placeholder" aria-hidden="true">{esc(talk["title"])}</div>'
+    newest = max(talk["instances"], key=lambda i: i["date"])
+    more = ""
+    if talk.get("description") and len(talk["description"]) > len(talk["blurb"]) + 40:
+        more = f'<details class="talk__more"><summary>Full abstract</summary>{paragraphs(talk["description"])}</details>'
+    return f'''
+      <article class="talk sticky sticky--tape {color}" id="{esc(talk["slug"])}">
+        {media}
+        <h3 class="talk__title"><a href="{esc(newest["joindin"])}" rel="noopener">{esc(talk["title"])}</a></h3>
+        <p class="talk__blurb">{esc(talk["blurb"])}</p>
+        <p class="talk__meta mono">{instances_line(talk)}</p>
+        {more}
+        <div class="talk__foot">
+          <div class="talk__links">{links_line(talk)}</div>
+          {rating_line(talk)}
+        </div>
+      </article>'''
+
+
+def upcoming_block():
+    today = date.today().isoformat()
+    items = [u for u in DATA.get("upcoming", []) if u["date"] >= today]
+    if not items:
+        return ""
+    u = items[0]
+    when = date.fromisoformat(u["date"]).strftime("%b %-d, %Y")
+    anchor = f'#{esc(u["slug"])}' if u.get("slug") else ""
+    return f'''
+      <a class="upcoming sticky sticky--tape sticky--yellow" href="{anchor}">
+        <span class="hand hand--orange">Next up</span>
+        <span class="upcoming__title">{esc(u["title"])}</span>
+        <span class="upcoming__meta mono">{esc(u["event"])} &middot; {esc(when)}</span>
+      </a>'''
+
+
+def hero_note():
+    today = date.today().isoformat()
+    items = [u for u in DATA.get("upcoming", []) if u["date"] >= today]
+    if not items:
+        return ""
+    u = items[0]
+    when = date.fromisoformat(u["date"]).strftime("%b %-d")
+    title = re.split(r"[:?]", u["title"])[0].strip()
+    if "?" in u["title"]:
+        title += "?"
+    href = f'talks.html#{esc(u["slug"])}' if u.get("slug") else "talks.html"
+    return f'''
+        <a class="hero__note sticky sticky--tape" href="{href}">
+          <span class="hand hand--orange">Next up</span>
+          <span class="title">{esc(title)}</span>
+          <span class="mono">{esc(u["event"])} &middot; {esc(when)}</span>
+        </a>'''
+
+
+def render(template_name, out_name, **slots):
+    tpl = (BUILD / "templates" / template_name).read_text(encoding="utf-8")
+    for key, val in slots.items():
+        tpl = tpl.replace("{{" + key + "}}", val)
+    leftover = re.findall(r"{{\w+}}", tpl)
+    if leftover:
+        raise SystemExit(f"unfilled slots in {template_name}: {leftover}")
+    (ROOT / out_name).write_text(tpl, encoding="utf-8")
+    print(f"wrote {out_name}")
+
+
+talks = sorted(DATA["talks"], key=lambda t: t["last"], reverse=True)
+by_slug = {t["slug"]: t for t in talks}
+featured = [by_slug[s] for s in DATA.get("featured", [])] or talks[:3]
+deliveries = sum(len(t["instances"]) for t in talks)
+first_year = min(i["date"] for t in talks for i in t["instances"])[:4]
+
+render(
+    "talks.html",
+    "talks.html",
+    TALK_CARDS="".join(card(t, i) for i, t in enumerate(talks)),
+    UPCOMING=upcoming_block(),
+    TALK_COUNT=str(len(talks)),
+    DELIVERY_COUNT=str(deliveries),
+    FIRST_YEAR=first_year,
+)
+render(
+    "index.html",
+    "index.html",
+    RECENT_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
+    HERO_NOTE=hero_note(),
+    TALK_COUNT=str(len(talks)),
+)

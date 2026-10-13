@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talks — Tim Lytle</title>
+  <meta name="description" content="Every conference talk Tim Lytle has given since 2012: 26 talks, 51 deliveries. APIs, testing, Docker, daemons, ownership, and a few yaks. Slides and ratings where they exist.">
+  <meta property="og:title" content="Talks — Tim Lytle">
+  <meta property="og:description" content="26 talks, 51 deliveries, since 2012. Slides, abstracts, and where to rate them.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://timlytle.net/talks.html">
+  <meta property="og:image" content="https://timlytle.net/assets/img/og-talks.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tjlytle">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Roboto+Condensed:wght@300;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+  <header class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="/" aria-label="Tim Lytle, home">
+        <span class="nav__name">Tim Lytle</span>
+        <span class="nav__handle">@tjlytle</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="talks.html" aria-current="page">Talks</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="section" style="padding-top:56px" aria-labelledby="talks-title">
+      <div class="section__head">
+        <div>
+          <h1 class="display section__title" id="talks-title" style="font-size:clamp(3rem,7vw,6rem)">Things I've<br><b>Talked About</b></h1>
+          <p class="lede" style="margin-top:18px">26 talks, 51 deliveries, since 2012. Slides and ratings where they exist. Saw one live? Rate it on joind.in, it really does help.</p>
+        </div>
+        <p class="hand" style="text-align:right;transform:rotate(-4deg);padding-bottom:12px" aria-hidden="true"><span class="hand--yellow" style="font-size:1.8rem;display:block">Saw me speak?</span><span class="hand--green" style="font-size:1.5rem;display:block">Rate the talk ↓</span></p>
+      </div>
+      
+      <a class="upcoming sticky sticky--tape sticky--yellow" href="#is-this-test-worth-it-evaluating-real-value-testing">
+        <span class="hand hand--orange">Next up</span>
+        <span class="upcoming__title">Is This Test Worth It? Evaluating the Real Value of Testing</span>
+        <span class="upcoming__meta mono">CodeBash 2026 &middot; Oct 14, 2026</span>
+      </a>
+      <div class="talk-grid">
+      <article class="talk sticky sticky--tape " id="battlesnake-hackathon">
+        <img class="talk__thumb" src="assets/img/decks/battlesnake.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/9e923" rel="noopener">BattleSnake Hackathon</a></h3>
+        <p class="talk__blurb">The tutorial slot for the php[tek] BattleSnake tournament: quickstart, docs overview, and a dissection of a snake.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/9e923" rel="noopener">PHP Tek 2026</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Are you ready for the 4th Annual BattleSnake Tournament this year? If not, this is the tutorial slot for you.</p><p>If you&#x27;ve never battle snaked in the past, we&#x27;ll kick things off with: a quick explanation and quick start links for those who like to dig right in, an overview of the BattleSnake docs for those who prefer detailed requirements, and a &#x27;snake dissection&#x27; of existing code for those who learn best by seeing examples in action.</p><p>After the intro, jump into coding whenever you?re ready, or if you&#x27;ve already thrown your exceptional snake into the fray, no worries, you can go heads down right away and tune out the introduction completely. I&#x27;ll be around for the entire session to troubleshoot and guide as you build, enhance, and strategize.</p><p>This is the perfect opportunity to engage in practice rounds, refine your strategies, and see how your snake performs in real-time scenarios before the main competition.</p><p>One step closer to taking home the vaunted trophy snake!</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/9e923" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 2 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--yellow" id="event-sourcing-teardown-understanding-pattern">
+        <img class="talk__thumb" src="assets/img/decks/event-sourcing.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/8578b" rel="noopener">Event Sourcing Teardown: Understanding the Pattern</a></h3>
+        <p class="talk__blurb">Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/8578b" rel="noopener">PHP TEK 2025</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Event sourcing is a powerful pattern that can fundamentally change how you approach building applications, when auditability and adaptability are needed. However, aspects of event sourcing can be misunderstood, and those misconceptions make it harder to understand and utilize effectively.</p><p>We&#x27;ll take away the abstractions and focus on building an event sourced system without the use of an event sourcing library. This approach will help focus on the core concepts: what an event table is, how events are replayed when loading an aggregate root, what a projection is, and how snapshots work. Once we&#x27;ve established that base understanding, we&#x27;ll take a look at how event sourcing libraries handle common concerns.</p><p>Along the way, we&#x27;ll clear up some common points of confusion, and explore how this can be applied to existing systems, not just greenfield projects. You&#x27;ll leave with a clear foundational understanding of event sourcing, so you can decide if this pattern is right for your next project.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/8578b" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 6 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--blue" id="is-this-test-worth-it-evaluating-real-value-testing">
+        <img class="talk__thumb" src="assets/img/decks/valuable-tests.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/9f3d1" rel="noopener">Is This Test Worth It? Evaluating the Real Value of Testing</a></h3>
+        <p class="talk__blurb">Unit, integration, contract, or end-to-end: the question that matters is what a test actually buys you.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/9f3d1" rel="noopener">PHP TEK 2025</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>The differences between unit tests, integration tests, contract tests, end-to-end tests, and behavior tests-and which type is best to use-are often debated. Principles like &quot;don&#x27;t mock what you don&#x27;t own&quot; or &quot;test behavior, not implementation&quot; are often cited in those conversations. But there&#x27;s one key question we should always ask when writing tests: is this a valuable test?</p><p>So let&#x27;s put those other concepts aside and ask a simple question as we look at some real-world examples: &quot;What is the value of this test?&quot; Answering that can lead to more nuanced questions. Does this test continue to deliver value over time? How much value comes from the act of writing this test? Are there ways to increase the immediate value as well as the long term value?</p><p>Join me as we rethink testing-not in terms of types and categories, but in terms of the practical, meaningful value that testing brings to our codebases and our teams.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/9f3d1" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 9 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="let-go-ownership">
+        <img class="talk__thumb" src="assets/img/decks/ownership.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/19596" rel="noopener">Let Go of Ownership</a></h3>
+        <p class="talk__blurb">A keynote on swapping the ownership model for stewardship: in code, career, and community.</p>
+        <p class="talk__meta mono">3&times; &middot; <a href="https://joind.in/talk/19596" rel="noopener">PHP TEK 2025</a> &middot; <a href="https://joind.in/talk/d73e7" rel="noopener">Longhorn PHP 2023</a> &middot; <a href="https://joind.in/talk/0f1ed" rel="noopener">php[tek] 2023</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>We may adopt a perspective of ownership around the code we write and maintain, the career path we find ourselves on, and our position in the community around us.</p><p>Intentionally shifting that perspective away from the ownership model to an alternative model can lead to finding opportunity where before there was frustration and finality.</p><p>And it can impact more that just our code. It can bring a powerful new perspective to our career, our community, and even this very conference.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/19596" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 91 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--green" id="yak-free-docker">
+        <img class="talk__thumb" src="assets/img/decks/yak-free-docker.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/1d495" rel="noopener">Yak Free Docker: Everyday Uses That Aren&#x27;t Deployment</a></h3>
+        <p class="talk__blurb">Docker for the everyday stuff that is not deployment: runtimes, dev tools, and throwaway utilities.</p>
+        <p class="talk__meta mono">3&times; &middot; <a href="https://joind.in/talk/1d495" rel="noopener">CascadiaPHP 2024</a> &middot; <a href="https://joind.in/talk/8c97b" rel="noopener">php[tek] 2024</a> &middot; <a href="https://joind.in/talk/6f072" rel="noopener">JestPHP</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Though it&#x27;s the common use case, deploying your application using docker - or even just using docker to power your local development stack - may seem a bit daunting at first. And it may require some changes you&#x27;re not yet ready, or able, to make. But if you want to get started with docker, there are plenty of uses that aren&#x27;t deployment.</p><p>In this 99% Yak-Shaving™ Free session, we&#x27;ll focus on the ones that require little (or no) setup, and build a solid understanding of docker itself. These day-to-day use cases will make you docker confident, and ready to tackle things like deployment with docker in the future.</p><p>Bring your laptop, and you&#x27;ll be using some of them before I stop talking. And if you find the docker vrs virtual machine distinction a little fuzzy, don&#x27;t worry - this talk will start by clearing that right up, and do it with sock puppets.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/1d495" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 19 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="you-can-handle-apis-introducing-api-handler">
+        <div class="talk__thumb--placeholder" aria-hidden="true">You Can Handle APIs: Introducing API Handler</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/f25b0" rel="noopener">You Can Handle APIs: Introducing API Handler</a></h3>
+        <p class="talk__blurb">A no-slides, just-code introduction to API Handler, a PSR-15 middleware pattern for building APIs.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/f25b0" rel="noopener">php[tek] 2024</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>This session is a &#x27;no slides, just code&#x27; introduction to a newly open sourced pattern that has changed the way we think about API development.</p><p>No, it&#x27;s not yet another framework. It&#x27;s a PSR-15 compatible middleware implementation paired with a set of intuitive interfaces designed to streamline API construction.</p><p>For legacy applications, the interfaces allow easy integration into your existing codebase, eliminating the usual configuration headaches of API frameworks. And if you&#x27;re on the path of crafting something new, imagine building a core stack that&#x27;s feather-light, powered by nothing more than PSR-7 and PSR-15 implementations.</p><p>In this hands-on session you&#x27;ll see firsthand how to implement this pattern in various scenarios, from breathing new life into old systems to laying the foundations of modern, lightweight applications.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/f25b0" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">4.0 from 3 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--peach" id="http-tortilla-make-psr-7-burritos">
+        <div class="talk__thumb--placeholder" aria-hidden="true">HTTP Tortilla: Make PSR-7 Burritos</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/4d704" rel="noopener">HTTP Tortilla: Make PSR-7 Burritos</a></h3>
+        <p class="talk__blurb">Wrapping PSR-7 request and response objects so the framework pieces you already use fit together.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/4d704" rel="noopener">php[tek] 2023</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>PSR-7 - HTTP Request / Response objects - provides a great set of common interfaces which allow you to leverage different bits of frameworks and component libraries while building web applications. Even better, there are so many implementations, i likely a library you already use has one.</p><p>However, the general behavior of a PRS-7 implementation isn&#x27;t tailored to the context of your application. But writing your own request / response implementation just for some syntactic sugar seems like a maintenance headache.</p><p>Built by the development team at PhoneBurner, HTTP Tortilla is a set of traits that make it easy to wrap any existing PSR-7 implementation and add your own functionality. But that&#x27;s only where it starts. By providing a simple way to satisfy the interfaces   you can now easily give existing classes - like exceptions - PSR-7 abilities.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/4d704" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 1 rating</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--yellow" id="hal-it-works">
+        <img class="talk__thumb" src="assets/img/decks/hal-it-works.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/02663" rel="noopener">HAL It Works</a></h3>
+        <p class="talk__blurb">How PhoneBurner uses HAL as a hypermedia format, the constraints on it, and the client-side cache pattern it enables.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/02663" rel="noopener">php[tek] 2023</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>HAL is a lightweight yet useful hypermedia format. Wl talk about how we&#x27;re using it at PhoneBurner, the constrains we&#x27;ve put on it, and the patterns that we&#x27;re using to implement APIs both server and client side. We&#x27;ll also cover the powerful cache pattern that allows client side request optimization to be handled server side.</p><p>If you&#x27;re looking for practical examples of how to implement and benifit from hypermedia when developing the internal APIs that power your own client side applications, this is the talk for you.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/02663" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 7 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="http-patterns-psr-7-15-by-example">
+        <div class="talk__thumb--placeholder" aria-hidden="true">HTTP Patterns: PSR 7 &amp; 15 By Example</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/778e1" rel="noopener">HTTP Patterns: PSR 7 &amp; 15 By Example</a></h3>
+        <p class="talk__blurb">A hands-on look at HTTP Messages and HTTP Handlers and how to properly leverage them.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/778e1" rel="noopener">Dutch PHP 2021 (online)</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Chances are your code already uses one of the HTTP PSRs in some way. In this &#x27;no slides, just code&#x27; session we&#x27;ll take a hands on look at how HTTP Messages (PSR-7) and HTTP Handlers (PSR-15) work, and how they can be properly leveraged. HTTP messages provide a considerable advantage over global variables, and their immutability actually makes it easier to confidently modify an incoming request or an outgoing response in your web application. HTTP handlers are a common concept in micro-frameworks, and PSR-15 provides a way to create reusable framework-agnostic code. But that&#x27;s not all it provides. The HTTP handler interface can be used to inject the concept of middleware into an existing application without having to introduce a new framework. Or to easily build a lightweight application without any framework. Take a guided tour through both PSRs, and find out how you can used them effectively in your current codebase.</p><p>What you&#x27;ll learn from this talk:
+- the value in immutable HTTP Request objects
+- how to evolve an HTTP Request object
+- how to extend a library&#x27;s HTTP Request object
+- how a middleware stack works
+- how easy it is to use PSR-7 &amp; PSR-15 without any framework</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/778e1" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">4.0 from 8 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--blue" id="building-first-class-client-libraries">
+        <img class="talk__thumb" src="assets/img/decks/first-class-clients.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/f02ee" rel="noopener">Building First Class Client Libraries</a></h3>
+        <p class="talk__blurb">Do consistent API patterns and good HTTP clients make the API-specific client library obsolete?</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/f02ee" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>As a variety of well-supported HTTP clients meets the rise of consistent patterns applied to API design, are we essentially removing the usefulness of an API specific client library?</p><p>Standards like HAL and Siren address common parts of API response. Description languages like the OpenAPI Spec define a way to communicate the behavior and structure of an API. With generic libraries that consume well-known API formats and code generators that create API specific bindings is there any value in a bespoke language-specific API wrapper?</p><p>In this session, we’ll consider how client libraries can help create a better developer experience for existing APIs and explore what a long term vision of client libraries may be, as more new APIs embrace modern patterns and standards.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/f02ee" rel="noopener">Rate on joind.in</a></div>
+          
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="hypermedia-without-hype">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Hypermedia Without The Hype</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/35080" rel="noopener">Hypermedia Without The Hype</a></h3>
+        <p class="talk__blurb">Hypermedia and HATEOAS without the skynet: applying what works for human navigation of the web to APIs.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/35080" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>No, it’s not skynet. Hypermedia – and the concept of HATEOAS – may seem a little intimidating at first glance. But it’s not so much about generic API clients that can crawl any compliant API, and more about just applying concepts that have worked well for human navigation of the web to our APIs.</p><p>In this session, we’ll consider the benefits of avoiding client-side path construction. We’ll also take a look at how applying some simple hypermedia concepts to our request/response design can open up significant potential for improvement, and greatly simplify the code consumers of our API have to write.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/35080" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 1 rating</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--yellow" id="patterns-for-api-development">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Patterns For API Development</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/1ec1b" rel="noopener">Patterns For API Development</a></h3>
+        <p class="talk__blurb">Common code patterns used when building APIs with PHP, with examples.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/1ec1b" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>PHP is no stranger to APIs. In the PHP ecosystem, there are API related libraries, API micro-frameworks, full-fledged API frameworks, and more.</p><p>While other sessions cover general API design patterns, in this session we’ll consider examples of common code patterns used when building APIs with PHP. We’ll explore some of the common patterns used in popular API frameworks – as well as the patterns found in some of the API related PSRs.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/1ec1b" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 1 rating</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--blue" id="versioning-every-way-is-wrong">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Versioning: Every Way Is Wrong</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/96c3a" rel="noopener">Versioning: Every Way Is Wrong</a></h3>
+        <p class="talk__blurb">API versioning: you do not want to do it, and when you do, someone will say you did it wrong.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/96c3a" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>There are a few certainties when it comes to versioning APIs: It’s not something you want to do. When you finally do it, you’re going to do it wrong (according to someone).</p><p>So is it possible to avoid it entirely? If you have to version your API, the overall design philosophy you’ve picked needs to influence how you go about that process.</p><p>In this session, we’ll consider some of the common versioning techniques, how they fit with various API design patterns, and what to look out for when versioning an API. We’ll also explore ways to avoid versioning while still changing an API.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/96c3a" rel="noopener">Rate on joind.in</a></div>
+          
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="uris-path-to-your-apis">
+        <div class="talk__thumb--placeholder" aria-hidden="true">URIs – The Path To Your APIs</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/60ef0" rel="noopener">URIs – The Path To Your APIs</a></h3>
+        <p class="talk__blurb">URIs are the path to your API data, and different design patterns use them very differently.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/60ef0" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>While the request and response encapsulate your API’s data, URIs provide the path to that data. But different API design patterns use URIs in different ways. In some, the API paths are nothing more than the address all data flows to and from. In others they communicate far more, describing relationships and even aspects about the request.</p><p>In this session, we’ll explore those differences, and the friction introduced when APIs aren’t consistent about usage. We’ll also consider some patterns and anti-patterns of URI path structure, and how to define a path structure that’s future friendly.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/60ef0" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">4.0 from 2 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--green" id="api-request-response-formats">
+        <div class="talk__thumb--placeholder" aria-hidden="true">API Request &amp; Response Formats</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/c6397" rel="noopener">API Request &amp; Response Formats</a></h3>
+        <p class="talk__blurb">Requests and responses are the core of an API. Pick formats that are natural for the consumer.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/c6397" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Requests and responses are the core of an API, and a significant part of the interface you’re designing. The code that consumes your API needs to create the request, and parse the response, so it’s worth considering what formats are natural for those consumers, not just what’s natural for the API code we’ll be writing.</p><p>But the consuming code isn’t the only thing to consider. If you have to support multiple formats, how do you do that consistently? What techniques can be used in APIs that need to handle binary data as well?</p><p>In this session, we’ll take a look at common request and response formats. We’ll also consider the advantages of each, not just in terms of the consuming code, but also use case and context. Finally, we’ll explore the general structure of API requests and responses for different API design patterns.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/c6397" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 2 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="authentication-token-api-talk">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Authentication: The Token API Talk</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/2d8a8" rel="noopener">Authentication: The Token API Talk</a></h3>
+        <p class="talk__blurb">How to authenticate API users, when you do not need to, and what each method trades off.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/2d8a8" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>As you design an API you’ll run into a few questions. How should you authenticate your users? Are there cases where you don’t even need to? There are a variety of authentication methods, which one is the best? It’s time to talk about API security – at least one aspect of it.</p><p>Each method has strengths and weaknesses, and the right authentication method depends on a few things: the kind of API you’re building, the users that consume it, and the context of the authentication. A client-side browser application shouldn’t use the same authentication mechanism as an API that serves data to other web services.</p><p>In this session, we’ll cover various authentication methods, and gain an understanding of the similarities and differences of the underlying mechanisms. We’ll also consider various use cases and the authentication concerns they introduce.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/2d8a8" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 1 rating</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--peach" id="apis-are-everywhere">
+        <div class="talk__thumb--placeholder" aria-hidden="true">APIs Are Everywhere</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/3a438" rel="noopener">APIs Are Everywhere</a></h3>
+        <p class="talk__blurb">We consume APIs every day as SDKs and libraries. The same design principles apply to the web APIs we build.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/3a438" rel="noopener">php[tek] 2019</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>When it comes to web APIs, we tend to forget that we consume various APIs (other people’s code) every day in the form of SDKs, libraries, development tools, etc. The same design principles that make the high-quality non-web APIs we consume easy to work with can be applied to the web APIs we build.</p><p>In this session we’ll explore what attributes are common to the tools, SDKs, libraries – the other APIs – we use on a daily basis, and how we can apply them to the web APIs we’re building.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/3a438" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 2 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--yellow" id="yak-free-api-tips">
+        <img class="talk__thumb" src="assets/img/decks/api-tips.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/50915" rel="noopener">Yak Free API Tips &amp; Tricks You Can Use Right Now</a></h3>
+        <p class="talk__blurb">API tools, services, and techniques that need little or no setup and that you can use before I stop talking.</p>
+        <p class="talk__meta mono">3&times; &middot; <a href="https://joind.in/talk/50915" rel="noopener">php[world] 2018</a> &middot; <a href="https://joind.in/talk/fa91c" rel="noopener">Cascadia PHP</a> &middot; <a href="https://joind.in/talk/e97e3" rel="noopener">Longhorn PHP 2018</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>API tools, services, and techniques abound, but in this 99% Yak-Shaving™ Free session, we&#x27;ll focus on the ones that require little (or no) setup, and that you can be using before I stop talking.</p><p>Whether you&#x27;re building or consuming APIs, there will be something for you. If you&#x27;re new to APIs, you&#x27;ll leave with a bunch of things you can use right now. If you&#x27;ve been doing this for a while, you&#x27;ll probably see a new way to simplify something that&#x27;s bugged you in the past.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/50915" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 11 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="birds-feather-api-design">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Birds of a Feather: API Design</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/ff15b" rel="noopener">Birds of a Feather: API Design</a></h3>
+        <p class="talk__blurb">A roundtable on API development and API design.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/ff15b" rel="noopener">php[world] 2018</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Join this Birds of a Feather roundtable to discuss various topics related to API Development and API Design.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/ff15b" rel="noopener">Rate on joind.in</a></div>
+          
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--blue" id="hands-on-api-design">
+        <img class="talk__thumb" src="assets/img/decks/api-design.jpg" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/b6512" rel="noopener">Hands-On API Design</a></h3>
+        <p class="talk__blurb">A workshop on going from an API-first decision to an API people actually want to use.</p>
+        <p class="talk__meta mono">3&times; &middot; <a href="https://joind.in/talk/b6512" rel="noopener">php[world] 2018</a> &middot; <a href="https://joind.in/talk/f9fb7" rel="noopener">Longhorn PHP 2018</a> &middot; <a href="https://joind.in/talk/7f63d" rel="noopener">php[world] 2017</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Building your next mobile app, SaaS product, or web app using an API first philosophy is a great decision. It can allow your team to develop in parallel, enable expansion to multiple platforms, and create opportunity for outside integration. But once you&#x27;ve made that decision, what&#x27;s next? How do you actually do it?</p><p>What options are there for authentication? How do you reset a password with an API? Is hypermedia worth considering for internal APIs? How do you handle unauthenticated access from a client side javascript application? What format is best for API requests and responses? Should you version your API now, or later?</p><p>In this hands on workshop we&#x27;ll talk about all those questions, and the answers that give your API a solid foundation. Because your API may start out serving the needs of internal mobile clients, or single page web apps, but one day (and probably sooner than you think) you&#x27;ll be turning it into a public API.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://joind.in/talk/b6512" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 10 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="building-php-daemons-long-running-processes">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Building PHP Daemons &amp; Long Running Processes</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/40f7f" rel="noopener">Building PHP Daemons &amp; Long Running Processes</a></h3>
+        <p class="talk__blurb">Stop abusing cron. Daemonize a PHP script that responds responsibly to process signals.</p>
+        <p class="talk__meta mono">7&times; &middot; <a href="https://joind.in/talk/40f7f" rel="noopener">WavePHP 2018</a> &middot; <a href="https://joind.in/talk/b61c9" rel="noopener">php[world] 2017</a> &middot; <a href="https://joind.in/talk/96116" rel="noopener">ZendCon 2016</a> &middot; <a href="https://joind.in/talk/82a27" rel="noopener">OpenWest 2016</a> &middot; <a href="https://joind.in/talk/dd0dd" rel="noopener">Lone Star PHP 2016</a> &middot; <a href="https://joind.in/talk/3a449" rel="noopener">Nomad PHP 2015</a> &middot; <a href="https://joind.in/talk/1cbd4" rel="noopener">php[tek] 2015</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>In this hands on workshop, you&#x27;ll learn how to stop abusing cron, and easily daemonize a php script that responds responsibly to process signals. There are things you don&#x27;t want to, or can&#x27;t do inside a web request. It could be a task that needs to be retired if it fails, maybe one that takes a significantly long time to process, or multiple jobs that need to be processed over time. Whether you&#x27;re sending an email, processing a video, or consuming Twitter&#x27;s streaming API - you should be using a separate process, and probably a daemon.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://prezi.com/0l3a7q5dywc6/" rel="noopener">Slides</a><a href="https://joind.in/talk/40f7f" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 51 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--yellow" id="adventures-contract-developer">
+        <img class="talk__thumb" src="assets/img/decks/adventures.png" alt="" loading="lazy" width="800" height="450">
+        <h3 class="talk__title"><a href="https://joind.in/talk/bc58e" rel="noopener">Adventures of a Contract Developer</a></h3>
+        <p class="talk__blurb">A contract developer for ten years shares a philosophy of contracting and the clients you will run into.</p>
+        <p class="talk__meta mono">6&times; &middot; <a href="https://joind.in/talk/bc58e" rel="noopener">PHP Unicorn (online)</a> &middot; <a href="https://joind.in/talk/655a8" rel="noopener">Northeast PHP 2016</a> &middot; <a href="https://joind.in/talk/9435c" rel="noopener">OpenWest 2016</a> &middot; <a href="https://joind.in/talk/a6bc4" rel="noopener">Lone Star PHP 2016</a> &middot; <a href="https://joind.in/talk/1d40a" rel="noopener">php[tek] 2014</a> &middot; <a href="https://joind.in/talk/237a9" rel="noopener">php[tek] 2012 uncon</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Thinking about quitting that desk job and enjoying the freedom of contract development? Already have?</p><p>A contract developer for 10 years, I’ll share my philosophy on contracting, some tips on how be successful, and a look at some of the clients you’ll run into.</p><p>While my style of contracting may not work for you, this talk will at least challenge you to consider not just how you’re marketing your product, but what your product really is, how you charge for it, and what that means long term.</p><p>Already a contract developer? I’ll give some tips on avoiding the painful parts of the job, setting and negotiating your rate, and one simple way to get great clients and keep them happy.</p><p>Considering contracting? Meet some of the clients you’ll certainly come across, a few warning signs and things to watch out for, and what needs to happen in each case before you can have a successful relationship.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://prezi.com/qls54c5eelol/adventures-of-a-contract-developer/" rel="noopener">Slides</a><a href="https://joind.in/talk/bc58e" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 30 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--blue" id="second-factor-auth">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Robust Second-factor Authentication with PHP</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/7dcb0" rel="noopener">Robust Second-factor Authentication with PHP</a></h3>
+        <p class="talk__blurb">Single-use codes, phone verification, apps, and physical devices: how each second factor works and what it costs you.</p>
+        <p class="talk__meta mono">4&times; &middot; <a href="https://joind.in/talk/7dcb0" rel="noopener">Nomad PHP 2016</a> &middot; <a href="https://joind.in/talk/c8739" rel="noopener">ZendCon 2016</a> &middot; <a href="https://joind.in/talk/1ed1d" rel="noopener">OpenWest 2016</a> &middot; <a href="https://joind.in/talk/74c3c" rel="noopener">php[tek] 2016</a></p>
+        <details class="talk__more"><summary>Full abstract</summary><p>Single-use codes delivered by email and SMS, mobile phone verification using automated phone calls and installed applications, or standalone physical devices – there’s more than one way to do 2nd-factor authentication (2FA).</p><p>There are benefits – and downsides – to each. Learn how each one works and what is best for you and your users. Avoid some common mistakes when rolling out 2FA, and take a look at how you can add one, or many, to your application’s login flow.</p></details>
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://prezi.com/wfzxxcsl7c8y" rel="noopener">Slides</a><a href="https://joind.in/talk/7dcb0" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 9 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="api-toolbox">
+        <div class="talk__thumb--placeholder" aria-hidden="true">The API Toolbox</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/b9411" rel="noopener">The API Toolbox</a></h3>
+        <p class="talk__blurb">The tools worth having around when you build and consume APIs.</p>
+        <p class="talk__meta mono">4&times; &middot; <a href="https://joind.in/talk/b9411" rel="noopener">ScotlandPHP 2016</a> &middot; <a href="https://joind.in/talk/a0776" rel="noopener">Northeast PHP 2016</a> &middot; <a href="https://joind.in/talk/a5ed2" rel="noopener">ConFoo 2015</a> &middot; <a href="https://joind.in/talk/bbaec" rel="noopener">Madison PHP 2014</a></p>
+        
+        <div class="talk__foot">
+          <div class="talk__links"><a href="https://prezi.com/qn_uy-law5gl/the-api-toolbox/" rel="noopener">Slides</a><a href="https://joind.in/talk/b9411" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 34 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape sticky--green" id="wonderful-world-apis">
+        <div class="talk__thumb--placeholder" aria-hidden="true">The Wonderful World of APIs</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/7cb86" rel="noopener">The Wonderful World of APIs</a></h3>
+        <p class="talk__blurb">A tour of the wide world of web APIs.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/7cb86" rel="noopener">php[tek] 2015</a></p>
+        
+        <div class="talk__foot">
+          <div class="talk__links"><a href="http://prezi.com/zhs6zcitmfxy/?utm_campaign=share&amp;utm_medium=copy" rel="noopener">Slides</a><a href="https://joind.in/talk/7cb86" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">4.0 from 15 ratings</span>
+        </div>
+      </article>
+      <article class="talk sticky sticky--tape " id="crons-queues-daemons-oh-my">
+        <div class="talk__thumb--placeholder" aria-hidden="true">Crons, Queues, and Daemons. Oh my!</div>
+        <h3 class="talk__title"><a href="https://joind.in/talk/9f155" rel="noopener">Crons, Queues, and Daemons. Oh my!</a></h3>
+        <p class="talk__blurb">When to use a cron, when to use a queue, and when you really need a daemon.</p>
+        <p class="talk__meta mono">1&times; &middot; <a href="https://joind.in/talk/9f155" rel="noopener">LVPHP 2013</a></p>
+        
+        <div class="talk__foot">
+          <div class="talk__links"><a href="http://prezi.com/hew3s5vudv5s/crons-queues-and-daemons/" rel="noopener">Slides</a><a href="https://joind.in/talk/9f155" rel="noopener">Rate on joind.in</a></div>
+          <span class="talk__rating">5.0 from 2 ratings</span>
+        </div>
+      </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="footer">
+      <ul class="footer__links">
+        <li><a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">joind.in</a></li>
+        <li><a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="footer__note">slides drawn in Inkscape, presented with Sozi</p>
+    </div>
+  </footer>
+
+</body>
+</html>

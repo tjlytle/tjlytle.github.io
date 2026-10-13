@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talks — Tim Lytle</title>
+  <meta name="description" content="Every conference talk Tim Lytle has given since {{FIRST_YEAR}}: {{TALK_COUNT}} talks, {{DELIVERY_COUNT}} deliveries. APIs, testing, Docker, daemons, ownership, and a few yaks. Slides and ratings where they exist.">
+  <meta property="og:title" content="Talks — Tim Lytle">
+  <meta property="og:description" content="{{TALK_COUNT}} talks, {{DELIVERY_COUNT}} deliveries, since {{FIRST_YEAR}}. Slides, abstracts, and where to rate them.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://timlytle.net/talks.html">
+  <meta property="og:image" content="https://timlytle.net/assets/img/og-talks.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tjlytle">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Roboto+Condensed:wght@300;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+  <header class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="/" aria-label="Tim Lytle, home">
+        <span class="nav__name">Tim Lytle</span>
+        <span class="nav__handle">@tjlytle</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="talks.html" aria-current="page">Talks</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="section" style="padding-top:56px" aria-labelledby="talks-title">
+      <div class="section__head">
+        <div>
+          <h1 class="display section__title" id="talks-title" style="font-size:clamp(3rem,7vw,6rem)">Things I've<br><b>Talked About</b></h1>
+          <p class="lede" style="margin-top:18px">{{TALK_COUNT}} talks, {{DELIVERY_COUNT}} deliveries, since {{FIRST_YEAR}}. Slides and ratings where they exist. Saw one live? Rate it on joind.in, it really does help.</p>
+        </div>
+        <p class="hand" style="text-align:right;transform:rotate(-4deg);padding-bottom:12px" aria-hidden="true"><span class="hand--yellow" style="font-size:1.8rem;display:block">Saw me speak?</span><span class="hand--green" style="font-size:1.5rem;display:block">Rate the talk ↓</span></p>
+      </div>
+      {{UPCOMING}}
+      <div class="talk-grid">{{TALK_CARDS}}
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="footer">
+      <ul class="footer__links">
+        <li><a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">joind.in</a></li>
+        <li><a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <p class="footer__note">slides drawn in Inkscape, presented with Sozi</p>
+    </div>
+  </footer>
+
+</body>
+</html>
