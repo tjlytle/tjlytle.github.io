@@ -31,14 +31,17 @@ def short_event(name):
     return name
 
 
-def rating_line(talk):
+def highly_rated(talk):
+    """Weighted joind.in average of 4.5+ across at least three ratings."""
     rated = [i for i in talk["instances"] if i.get("rating") and i.get("comments")]
-    if not rated:
-        return ""
     total = sum(i["comments"] for i in rated)
-    avg = sum(i["rating"] * i["comments"] for i in rated) / total
-    noun = "rating" if total == 1 else "ratings"
-    return f'<span class="talk__rating">{avg:.1f} from {total} {noun}</span>'
+    if total < 3:
+        return False
+    return sum(i["rating"] * i["comments"] for i in rated) / total >= 4.5
+
+
+def rating_line(talk):
+    return '<span class="talk__rating">highly rated</span>' if highly_rated(talk) else ""
 
 
 def instances_line(talk):
@@ -46,8 +49,7 @@ def instances_line(talk):
     for inst in sorted(talk["instances"], key=lambda i: i["date"], reverse=True):
         label = esc(short_event(inst["event"]))
         parts.append(f'<a href="{esc(inst["joindin"])}" rel="noopener">{label}</a>')
-    times = len(talk["instances"])
-    return f'{times}&times; &middot; ' + " &middot; ".join(parts)
+    return " &middot; ".join(parts)
 
 
 def links_line(talk):
@@ -57,8 +59,6 @@ def links_line(talk):
         links.append(f'<a href="{esc(slides)}" rel="noopener">Slides</a>')
     if talk.get("video"):
         links.append(f'<a href="{esc(talk["video"])}" rel="noopener">Video</a>')
-    newest = max(talk["instances"], key=lambda i: i["date"])
-    links.append(f'<a href="{esc(newest["joindin"])}" rel="noopener">Rate on joind.in</a>')
     return "".join(links)
 
 
@@ -74,6 +74,9 @@ def card(talk, idx):
     else:
         media = f'<div class="talk__thumb--placeholder" aria-hidden="true">{esc(talk["title"])}</div>'
     newest = max(talk["instances"], key=lambda i: i["date"])
+    foot = ""
+    if links_line(talk) or rating_line(talk):
+        foot = f'<div class="talk__foot"><div class="talk__links">{links_line(talk)}</div>{rating_line(talk)}</div>'
     more = ""
     if talk.get("description") and len(talk["description"]) > len(talk["blurb"]) + 40:
         more = f'<details class="talk__more"><summary>Full abstract</summary>{paragraphs(talk["description"])}</details>'
@@ -84,11 +87,36 @@ def card(talk, idx):
         <p class="talk__blurb">{esc(talk["blurb"])}</p>
         <p class="talk__meta mono">{instances_line(talk)}</p>
         {more}
-        <div class="talk__foot">
-          <div class="talk__links">{links_line(talk)}</div>
-          {rating_line(talk)}
-        </div>
+        {foot}
       </article>'''
+
+
+def list_rows(talks):
+    rows = []
+    last_year = None
+    for talk in talks:
+        year = talk["last"][:4]
+        label = f'<span class="row__year mono">{year}</span>' if year != last_year else '<span class="row__year mono" aria-hidden="true"></span>'
+        last_year = year
+        side = ""
+        slides = next((i["slides"] for i in sorted(talk["instances"], key=lambda i: i["date"], reverse=True) if i.get("slides")), None)
+        if slides:
+            side += f'<a class="row__link" href="{esc(slides)}" rel="noopener">Slides</a>'
+        if highly_rated(talk):
+            side += '<span class="row__rated">highly rated</span>'
+        anchor = f'#{esc(talk["slug"])}' if talk["slug"] in FEATURED_SLUGS else None
+        title = f'<a href="{anchor}">{esc(talk["title"])}</a>' if anchor else esc(talk["title"])
+        rows.append(f'''
+        <li class="row">
+          {label}
+          <div class="row__main">
+            <h3 class="row__title">{title}</h3>
+            <p class="row__events mono">{instances_line(talk)}</p>
+            <p class="row__blurb">{esc(talk["blurb"])}</p>
+          </div>
+          <div class="row__side">{side}</div>
+        </li>''')
+    return "".join(rows)
 
 
 def upcoming_block():
@@ -139,14 +167,16 @@ def render(template_name, out_name, **slots):
 
 talks = sorted(DATA["talks"], key=lambda t: t["last"], reverse=True)
 by_slug = {t["slug"]: t for t in talks}
-featured = [by_slug[s] for s in DATA.get("featured", [])] or talks[:3]
+FEATURED_SLUGS = DATA.get("featured", [])
+featured = [by_slug[s] for s in FEATURED_SLUGS] or talks[:3]
 deliveries = sum(len(t["instances"]) for t in talks)
 first_year = min(i["date"] for t in talks for i in t["instances"])[:4]
 
 render(
     "talks.html",
     "talks.html",
-    TALK_CARDS="".join(card(t, i) for i, t in enumerate(talks)),
+    FEATURED_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
+    TALK_LIST=list_rows(talks),
     UPCOMING=upcoming_block(),
     TALK_COUNT=str(len(talks)),
     DELIVERY_COUNT=str(deliveries),

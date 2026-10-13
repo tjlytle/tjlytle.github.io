@@ -143,7 +143,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .hero__note .hand { font-size: 1.3rem; }
 .hero__note .title { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.1; }
 .hero__note .mono { color: var(--ink-2); }
-.hero__caption { position: absolute; left: -70px; bottom: 64px; display: flex; align-items: flex-end; gap: 6px; font-size: 1.35rem; transform: rotate(-8deg); white-space: nowrap; }
+
+.talks__cta { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; text-decoration: none; transform: rotate(-4deg); padding-bottom: 12px; }
+.talks__cta .hand--yellow { font-size: 1.8rem; }
+.talks__cta .hand--green { font-size: 1.5rem; }
+.talks__cta:hover .hand--green { text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 4px; }
 
 /* ─── Sections ─── */
 .section { padding: 96px 0 0; }
@@ -177,6 +181,25 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 .talk__more[open] summary::after { content: ' −'; }
 .talk__more p { margin-top: 10px; }
 .talk__more p + p { margin-top: 8px; }
+
+/* ─── Talk list on a paper sheet ─── */
+.sheet { padding: 24px 48px 40px; --tilt: 0.4deg; --tape-tilt: 1.5deg; }
+.list { list-style: none; }
+.row { display: grid; grid-template-columns: 96px minmax(0, 1fr) 150px; gap: 8px 32px; align-items: start; padding: 26px 0; border-top: 1px solid rgba(27, 27, 27, 0.12); }
+.row:first-child { border-top: 0; }
+.row__year { color: var(--ink-2); font-weight: 500; padding-top: 6px; }
+.row__main { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.row__title { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; line-height: 1.1; color: var(--ink); text-wrap: balance; }
+.row__title a { text-decoration: none; border-bottom: 2px solid var(--green); }
+.row__title a:hover { border-bottom-color: var(--teal-deep); }
+.row__events { color: var(--ink-2); }
+.row__events a { color: var(--teal-deep); text-decoration: none; border-bottom: 1px solid rgba(15, 95, 120, 0.4); }
+.row__events a:hover { border-bottom-color: var(--teal-deep); }
+.row__blurb { font-size: 0.98rem; line-height: 1.5; color: #2a2520; text-wrap: pretty; max-width: 62ch; }
+.row__side { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; padding-top: 4px; }
+.row__link { font-family: var(--font-display); font-weight: 500; font-size: 1.05rem; color: var(--teal-deep); text-decoration: none; border-bottom: 2px solid var(--teal-deep); }
+.row__link:hover { border-bottom-color: var(--green); }
+.row__rated { font-family: var(--font-hand); font-weight: 700; font-size: 1.1rem; color: var(--orange); white-space: nowrap; transform: rotate(-3deg); }
 
 /* ─── Upcoming callout ─── */
 .upcoming { display: flex; align-items: center; gap: 10px 24px; flex-wrap: wrap; padding: 22px 26px; --tilt: -0.8deg; margin-bottom: 56px; text-decoration: none; color: var(--ink); }
@@ -216,7 +239,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .hero__figure { height: 460px; }
   .hero__avatar { width: 420px; }
   .hero__note { left: -110px; top: 20px; }
-  .hero__caption { left: -40px; bottom: 50px; font-size: 1.15rem; }
 }
 @media (max-width: 860px) {
   :root { --gutter: 20px; }
@@ -226,8 +248,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .hero__figure { height: auto; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
   .hero__avatar { position: static; width: 260px; align-self: flex-end; }
   .hero__note { position: static; width: min(100%, 320px); --tilt: -1.5deg; order: -1; }
-  .hero__caption { display: none; }
   .about { grid-template-columns: 1fr; gap: 40px; }
+  .talks__cta { align-items: flex-start; transform: rotate(-2deg); }
+  .sheet { padding: 20px 24px 28px; --tilt: 0deg; }
+  .row { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+  .row__year { padding-top: 0; }
+  .row__year:empty { display: none; }
+  .row__side { flex-direction: row; align-items: center; gap: 18px; padding-top: 2px; }
+  .row__side:empty { display: none; }
   .section { padding-top: 72px; }
   .contact { grid-template-columns: 1fr; padding: 36px 24px; margin-top: 80px; }
   .nav__links { gap: 22px; }
@@ -237,6 +265,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   :root { --gutter: 16px; }
   .talk-grid { grid-template-columns: 1fr; gap: 40px; }
   .talk { --tilt: 0deg !important; }
+  .sheet { padding: 16px 16px 24px; }
   .expertise { grid-template-columns: 1fr; }
   .nav { gap: 16px; }
   .nav__links { width: 100%; justify-content: space-between; gap: 12px; }

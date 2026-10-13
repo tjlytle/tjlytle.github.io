@@ -39,12 +39,23 @@
       <div class="section__head">
         <div>
           <h1 class="display section__title" id="talks-title" style="font-size:clamp(3rem,7vw,6rem)">Things I've<br><b>Talked About</b></h1>
-          <p class="lede" style="margin-top:18px">{{TALK_COUNT}} talks, {{DELIVERY_COUNT}} deliveries, since {{FIRST_YEAR}}. Slides and ratings where they exist. Saw one live? Rate it on joind.in, it really does help.</p>
+          <p class="lede" style="margin-top:18px">{{TALK_COUNT}} talks, {{DELIVERY_COUNT}} deliveries, since {{FIRST_YEAR}}. Abstracts for all of them, slides where they still exist.</p>
         </div>
-        <p class="hand" style="text-align:right;transform:rotate(-4deg);padding-bottom:12px" aria-hidden="true"><span class="hand--yellow" style="font-size:1.8rem;display:block">Saw me speak?</span><span class="hand--green" style="font-size:1.5rem;display:block">Rate the talk ↓</span></p>
+        <a class="hand talks__cta" href="/#contact"><span class="hand--yellow">Want one at your event?</span><span class="hand--green">Let's talk →</span></a>
       </div>
       {{UPCOMING}}
-      <div class="talk-grid">{{TALK_CARDS}}
+      <p class="hand hand--green section__kicker" style="margin-bottom:20px">three to start with</p>
+      <div class="talk-grid">{{FEATURED_CARDS}}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="all-title">
+      <div class="section__head">
+        <h2 class="display section__title" id="all-title">All of them, <b>newest first</b>.</h2>
+      </div>
+      <div class="sheet sticky sticky--tape">
+        <ol class="list">{{TALK_LIST}}
+        </ol>
       </div>
     </section>
 
