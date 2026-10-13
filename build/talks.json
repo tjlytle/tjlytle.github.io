@@ -195,7 +195,7 @@
   {
    "slug": "http-tortilla-make-psr-7-burritos",
    "title": "HTTP Tortilla: Make PSR-7 Burritos",
-   "description": "PSR-7 - HTTP Request / Response objects - provides a great set of common interfaces which allow you to leverage different bits of frameworks and component libraries while building web applications. Even better, there are so many implementations, i likely a library you already use has one.   However, the general behavior of a PRS-7 implementation isn't tailored to the context of your application. But writing your own request / response implementation just for some syntactic sugar seems like a maintenance headache.   Built by a team I led, HTTP Tortilla is a set of traits that make it easy to wrap any existing PSR-7 implementation and add your own functionality. But that's only where it starts. By providing a simple way to satisfy the interfaces   you can now easily give existing classes - like exceptions - PSR-7 abilities.",
+   "description": "PSR-7 - HTTP Request / Response objects - provides a great set of common interfaces which allow you to leverage different bits of frameworks and component libraries while building web applications. Even better, there are so many implementations, i likely a library you already use has one.   However, the general behavior of a PRS-7 implementation isn't tailored to the context of your application. But writing your own request / response implementation just for some syntactic sugar seems like a maintenance headache.   Built to scratch a real need on our team, HTTP Tortilla is a set of traits that make it easy to wrap any existing PSR-7 implementation and add your own functionality. But that's only where it starts. By providing a simple way to satisfy the interfaces   you can now easily give existing classes - like exceptions - PSR-7 abilities.",
    "first": "2023-05-18",
    "last": "2023-05-18",
    "times": 1,
@@ -218,7 +218,7 @@
   {
    "slug": "hal-it-works",
    "title": "HAL It Works",
-   "description": "HAL is a lightweight yet useful hypermedia format. We'll talk about how my team used it in production, the constraints we put on it, and the patterns we used to implement APIs both server and client side. We'll also cover the powerful cache pattern that allows client side request optimization to be handled server side.  If you're looking for practical examples of how to implement and benifit from hypermedia when developing the internal APIs that power your own client side applications, this is the talk for you.",
+   "description": "HAL is a lightweight yet useful hypermedia format. We'll talk about how our team used it in production, the constraints we put on it, and the patterns we used to implement APIs both server and client side. We'll also cover the powerful cache pattern that allows client side request optimization to be handled server side.  If you're looking for practical examples of how to implement and benifit from hypermedia when developing the internal APIs that power your own client side applications, this is the talk for you.",
    "first": "2023-05-17",
    "last": "2023-05-17",
    "times": 1,
