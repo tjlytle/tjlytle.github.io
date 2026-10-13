@@ -1,0 +1,866 @@
+{
+ "upcoming": [
+  {
+   "title": "Is This Test Worth It? Evaluating the Real Value of Testing",
+   "event": "CodeBash 2026",
+   "date": "2026-10-14",
+   "note": "Verify event name and date before publishing.",
+   "slug": "is-this-test-worth-it-evaluating-real-value-testing"
+  }
+ ],
+ "featured": [
+  "is-this-test-worth-it-evaluating-real-value-testing",
+  "let-go-ownership",
+  "yak-free-docker"
+ ],
+ "talks": [
+  {
+   "slug": "battlesnake-hackathon",
+   "title": "BattleSnake Hackathon",
+   "description": "Are you ready for the 4th Annual BattleSnake Tournament this year? If not, this is the tutorial slot for you.\r\n\r\nIf you've never battle snaked in the past, we'll kick things off with: a quick explanation and quick start links for those who like to dig right in, an overview of the BattleSnake docs for those who prefer detailed requirements, and a 'snake dissection' of existing code for those who learn best by seeing examples in action.\r\n\r\nAfter the intro, jump into coding whenever you?re ready, or if you've already thrown your exceptional snake into the fray, no worries, you can go heads down right away and tune out the introduction completely. I'll be around for the entire session to troubleshoot and guide as you build, enhance, and strategize. \r\n\r\nThis is the perfect opportunity to engage in practice rounds, refine your strategies, and see how your snake performs in real-time scenarios before the main competition.\r\n\r\nOne step closer to taking home the vaunted trophy snake!",
+   "first": "2026-05-19",
+   "last": "2026-05-19",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2026-05-19",
+     "event": "PHP Tek 2026",
+     "location": "Sheraton O'Hare Suites",
+     "event_url": "https://phptek.io/",
+     "joindin": "https://joind.in/talk/9e923",
+     "rating": 5,
+     "comments": 2,
+     "slides": null
+    }
+   ],
+   "blurb": "The tutorial slot for the php[tek] BattleSnake tournament: quickstart, docs overview, and a dissection of a snake.",
+   "thumb": "battlesnake.jpg",
+   "video": null
+  },
+  {
+   "slug": "event-sourcing-teardown-understanding-pattern",
+   "title": "Event Sourcing Teardown: Understanding the Pattern",
+   "description": "Event sourcing is a powerful pattern that can fundamentally change how you approach building applications, when auditability and adaptability are needed. However, aspects of event sourcing can be misunderstood, and those misconceptions make it harder to understand and utilize effectively. \r\n\r\nWe'll take away the abstractions and focus on building an event sourced system without the use of an event sourcing library. This approach will help focus on the core concepts: what an event table is, how events are replayed when loading an aggregate root, what a projection is, and how snapshots work. Once we've established that base understanding, we'll take a look at how event sourcing libraries handle common concerns.\r\n\r\nAlong the way, we'll clear up some common points of confusion, and explore how this can be applied to existing systems, not just greenfield projects. You'll leave with a clear foundational understanding of event sourcing, so you can decide if this pattern is right for your next project.",
+   "first": "2025-05-22",
+   "last": "2025-05-22",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2025-05-22",
+     "event": "PHP TEK 2025",
+     "location": "Sheraton O'Hare Suites",
+     "event_url": "https://phptek.io/",
+     "joindin": "https://joind.in/talk/8578b",
+     "rating": 5,
+     "comments": 6,
+     "slides": null
+    }
+   ],
+   "blurb": "Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.",
+   "thumb": "event-sourcing.jpg",
+   "video": null
+  },
+  {
+   "slug": "is-this-test-worth-it-evaluating-real-value-testing",
+   "title": "Is This Test Worth It? Evaluating the Real Value of Testing",
+   "description": "The differences between unit tests, integration tests, contract tests, end-to-end tests, and behavior tests-and which type is best to use-are often debated. Principles like \"don't mock what you don't own\" or \"test behavior, not implementation\" are often cited in those conversations. But there's one key question we should always ask when writing tests: is this a valuable test?\r\n\r\nSo let's put those other concepts aside and ask a simple question as we look at some real-world examples: \"What is the value of this test?\" Answering that can lead to more nuanced questions. Does this test continue to deliver value over time? How much value comes from the act of writing this test? Are there ways to increase the immediate value as well as the long term value?\r\n\r\n Join me as we rethink testing-not in terms of types and categories, but in terms of the practical, meaningful value that testing brings to our codebases and our teams.",
+   "first": "2025-05-21",
+   "last": "2025-05-21",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2025-05-21",
+     "event": "PHP TEK 2025",
+     "location": "Sheraton O'Hare Suites",
+     "event_url": "https://phptek.io/",
+     "joindin": "https://joind.in/talk/9f3d1",
+     "rating": 5,
+     "comments": 9,
+     "slides": null
+    }
+   ],
+   "blurb": "Unit, integration, contract, or end-to-end: the question that matters is what a test actually buys you.",
+   "thumb": "valuable-tests.jpg",
+   "video": null
+  },
+  {
+   "slug": "let-go-ownership",
+   "title": "Let Go of Ownership",
+   "description": "We may adopt a perspective of ownership around the code we write and maintain, the career path we find ourselves on, and our position in the community around us.\r\n\r\nIntentionally shifting that perspective away from the ownership model to an alternative model can lead to finding opportunity where before there was frustration and finality.\r\n\r\nAnd it can impact more that just our code. It can bring a powerful new perspective to our career, our community, and even this very conference.",
+   "first": "2023-05-16",
+   "last": "2025-05-20",
+   "times": 3,
+   "instances": [
+    {
+     "date": "2025-05-20",
+     "event": "PHP TEK 2025",
+     "location": "Sheraton O'Hare Suites",
+     "event_url": "https://phptek.io/",
+     "joindin": "https://joind.in/talk/19596",
+     "rating": 5,
+     "comments": 15,
+     "slides": null
+    },
+    {
+     "date": "2023-11-03",
+     "event": "Longhorn PHP Conference 2023",
+     "location": "Holiday Inn Austin Midtown",
+     "event_url": "https://www.longhornphp.com/",
+     "joindin": "https://joind.in/talk/d73e7",
+     "rating": 5,
+     "comments": 35,
+     "slides": null
+    },
+    {
+     "date": "2023-05-16",
+     "event": "php[tek] 2023",
+     "location": "Sheraton O'hare",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/0f1ed",
+     "rating": 5,
+     "comments": 41,
+     "slides": null
+    }
+   ],
+   "blurb": "A keynote on swapping the ownership model for stewardship: in code, career, and community.",
+   "thumb": "ownership.jpg",
+   "video": null
+  },
+  {
+   "slug": "yak-free-docker",
+   "title": "Yak Free Docker: Everyday Uses That Aren't Deployment",
+   "description": "Though it's the common use case, deploying your application using docker - or even just using docker to power your local development stack - may seem a bit daunting at first. And it may require some changes you're not yet ready, or able, to make. But if you want to get started with docker, there are plenty of uses that aren't deployment.\r\n\r\nIn this 99% Yak-Shaving™ Free session, we'll focus on the ones that require little (or no) setup, and build a solid understanding of docker itself. These day-to-day use cases will make you docker confident, and ready to tackle things like deployment with docker in the future.\r\n\r\nBring your laptop, and you'll be using some of them before I stop talking. And if you find the docker vrs virtual machine distinction a little fuzzy, don't worry - this talk will start by clearing that right up, and do it with sock puppets.",
+   "first": "2019-02-22",
+   "last": "2024-10-24",
+   "times": 3,
+   "instances": [
+    {
+     "date": "2024-10-24",
+     "event": "CascadiaPHP 2024",
+     "location": "University Place Hotel and Conference Center",
+     "event_url": "https://cascadiaphp.com/",
+     "joindin": "https://joind.in/talk/1d495",
+     "rating": 5,
+     "comments": 4,
+     "slides": null
+    },
+    {
+     "date": "2024-04-23",
+     "event": "php[tek] 2024",
+     "location": "Sheraton O’Hare Hotel",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/8c97b",
+     "rating": 5,
+     "comments": 8,
+     "slides": null
+    },
+    {
+     "date": "2019-02-22",
+     "event": "JestPHP Conference",
+     "location": "JesterZ Improv Comedy Club",
+     "event_url": "https://jestphp.com",
+     "joindin": "https://joind.in/talk/6f072",
+     "rating": 5,
+     "comments": 7,
+     "slides": null
+    }
+   ],
+   "blurb": "Docker for the everyday stuff that is not deployment: runtimes, dev tools, and throwaway utilities.",
+   "thumb": "yak-free-docker.jpg",
+   "video": null
+  },
+  {
+   "slug": "you-can-handle-apis-introducing-api-handler",
+   "title": "You Can Handle APIs: Introducing API Handler",
+   "description": "This session is a 'no slides, just code' introduction to a newly open sourced pattern that has changed the way we think about API development.\r\n\r\nNo, it's not yet another framework. It's a PSR-15 compatible middleware implementation paired with a set of intuitive interfaces designed to streamline API construction.\r\n\r\nFor legacy applications, the interfaces allow easy integration into your existing codebase, eliminating the usual configuration headaches of API frameworks. And if you're on the path of crafting something new, imagine building a core stack that's feather-light, powered by nothing more than PSR-7 and PSR-15 implementations.\r\n\r\nIn this hands-on session you'll see firsthand how to implement this pattern in various scenarios, from breathing new life into old systems to laying the foundations of modern, lightweight applications.",
+   "first": "2024-04-24",
+   "last": "2024-04-24",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2024-04-24",
+     "event": "php[tek] 2024",
+     "location": "Sheraton O’Hare Hotel",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/f25b0",
+     "rating": 4,
+     "comments": 3,
+     "slides": null
+    }
+   ],
+   "blurb": "A no-slides, just-code introduction to API Handler, a PSR-15 middleware pattern for building APIs.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "http-tortilla-make-psr-7-burritos",
+   "title": "HTTP Tortilla: Make PSR-7 Burritos",
+   "description": "PSR-7 - HTTP Request / Response objects - provides a great set of common interfaces which allow you to leverage different bits of frameworks and component libraries while building web applications. Even better, there are so many implementations, i likely a library you already use has one.   However, the general behavior of a PRS-7 implementation isn't tailored to the context of your application. But writing your own request / response implementation just for some syntactic sugar seems like a maintenance headache.   Built to scratch a real need on our team, HTTP Tortilla is a set of traits that make it easy to wrap any existing PSR-7 implementation and add your own functionality. But that's only where it starts. By providing a simple way to satisfy the interfaces   you can now easily give existing classes - like exceptions - PSR-7 abilities.",
+   "first": "2023-05-18",
+   "last": "2023-05-18",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2023-05-18",
+     "event": "php[tek] 2023",
+     "location": "Sheraton O'hare",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/4d704",
+     "rating": 5,
+     "comments": 1,
+     "slides": null
+    }
+   ],
+   "blurb": "Wrapping PSR-7 request and response objects so the framework pieces you already use fit together.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "hal-it-works",
+   "title": "HAL It Works",
+   "description": "HAL is a lightweight yet useful hypermedia format. We'll talk about how our team used it in production, the constraints we put on it, and the patterns we used to implement APIs both server and client side. We'll also cover the powerful cache pattern that allows client side request optimization to be handled server side.  If you're looking for practical examples of how to implement and benifit from hypermedia when developing the internal APIs that power your own client side applications, this is the talk for you.",
+   "first": "2023-05-17",
+   "last": "2023-05-17",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2023-05-17",
+     "event": "php[tek] 2023",
+     "location": "Sheraton O'hare",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/02663",
+     "rating": 5,
+     "comments": 7,
+     "slides": null
+    }
+   ],
+   "blurb": "How a production API team uses HAL as a hypermedia format, the constraints on it, and the client-side cache pattern it enables.",
+   "thumb": "hal-it-works.jpg",
+   "video": null
+  },
+  {
+   "slug": "http-patterns-psr-7-15-by-example",
+   "title": "HTTP Patterns: PSR 7 & 15 By Example",
+   "description": "Chances are your code already uses one of the HTTP PSRs in some way. In this 'no slides, just code' session we'll take a hands on look at how HTTP Messages (PSR-7) and HTTP Handlers (PSR-15) work, and how they can be properly leveraged. HTTP messages provide a considerable advantage over global variables, and their immutability actually makes it easier to confidently modify an incoming request or an outgoing response in your web application. HTTP handlers are a common concept in micro-frameworks, and PSR-15 provides a way to create reusable framework-agnostic code. But that's not all it provides. The HTTP handler interface can be used to inject the concept of middleware into an existing application without having to introduce a new framework. Or to easily build a lightweight application without any framework. Take a guided tour through both PSRs, and find out how you can used them effectively in your current codebase.\r\n\r\nWhat you'll learn from this talk:\r\n- the value in immutable HTTP Request objects\r\n- how to evolve an HTTP Request object\r\n- how to extend a library's HTTP Request object\r\n- how a middleware stack works\r\n- how easy it is to use PSR-7 & PSR-15 without any framework",
+   "first": "2021-06-18",
+   "last": "2021-06-18",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2021-06-18",
+     "event": "Dutch PHP Conference 2021 - Online Edition",
+     "location": "Online Conference",
+     "event_url": "https://www.phpconference.nl/",
+     "joindin": "https://joind.in/talk/778e1",
+     "rating": 4,
+     "comments": 8,
+     "slides": null
+    }
+   ],
+   "blurb": "A hands-on look at HTTP Messages and HTTP Handlers and how to properly leverage them.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "building-first-class-client-libraries",
+   "title": "Building First Class Client Libraries",
+   "description": "As a variety of well-supported HTTP clients meets the rise of consistent patterns applied to API design, are we essentially removing the usefulness of an API specific client library?\r\n\r\nStandards like HAL and Siren address common parts of API response. Description languages like the OpenAPI Spec define a way to communicate the behavior and structure of an API. With generic libraries that consume well-known API formats and code generators that create API specific bindings is there any value in a bespoke language-specific API wrapper?\r\n\r\nIn this session, we’ll consider how client libraries can help create a better developer experience for existing APIs and explore what a long term vision of client libraries may be, as more new APIs embrace modern patterns and standards.",
+   "first": "2019-05-22",
+   "last": "2019-05-22",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-22",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/f02ee",
+     "rating": 0,
+     "comments": 0,
+     "slides": null
+    }
+   ],
+   "blurb": "Do consistent API patterns and good HTTP clients make the API-specific client library obsolete?",
+   "thumb": "first-class-clients.jpg",
+   "video": null
+  },
+  {
+   "slug": "hypermedia-without-hype",
+   "title": "Hypermedia Without The Hype",
+   "description": "No, it’s not skynet. Hypermedia – and the concept of HATEOAS – may seem a little intimidating at first glance. But it’s not so much about generic API clients that can crawl any compliant API, and more about just applying concepts that have worked well for human navigation of the web to our APIs.\r\n\r\nIn this session, we’ll consider the benefits of avoiding client-side path construction. We’ll also take a look at how applying some simple hypermedia concepts to our request/response design can open up significant potential for improvement, and greatly simplify the code consumers of our API have to write.",
+   "first": "2019-05-22",
+   "last": "2019-05-22",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-22",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/35080",
+     "rating": 5,
+     "comments": 1,
+     "slides": null
+    }
+   ],
+   "blurb": "Hypermedia and HATEOAS without the skynet: applying what works for human navigation of the web to APIs.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "patterns-for-api-development",
+   "title": "Patterns For API Development",
+   "description": "PHP is no stranger to APIs. In the PHP ecosystem, there are API related libraries, API micro-frameworks, full-fledged API frameworks, and more.\r\n\r\nWhile other sessions cover general API design patterns, in this session we’ll consider examples of common code patterns used when building APIs with PHP. We’ll explore some of the common patterns used in popular API frameworks – as well as the patterns found in some of the API related PSRs.",
+   "first": "2019-05-22",
+   "last": "2019-05-22",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-22",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/1ec1b",
+     "rating": 5,
+     "comments": 1,
+     "slides": null
+    }
+   ],
+   "blurb": "Common code patterns used when building APIs with PHP, with examples.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "versioning-every-way-is-wrong",
+   "title": "Versioning: Every Way Is Wrong",
+   "description": "There are a few certainties when it comes to versioning APIs: It’s not something you want to do. When you finally do it, you’re going to do it wrong (according to someone).\r\n\r\nSo is it possible to avoid it entirely? If you have to version your API, the overall design philosophy you’ve picked needs to influence how you go about that process.\r\n\r\nIn this session, we’ll consider some of the common versioning techniques, how they fit with various API design patterns, and what to look out for when versioning an API. We’ll also explore ways to avoid versioning while still changing an API.",
+   "first": "2019-05-22",
+   "last": "2019-05-22",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-22",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/96c3a",
+     "rating": 0,
+     "comments": 0,
+     "slides": null
+    }
+   ],
+   "blurb": "API versioning: you do not want to do it, and when you do, someone will say you did it wrong.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "uris-path-to-your-apis",
+   "title": "URIs – The Path To Your APIs",
+   "description": "While the request and response encapsulate your API’s data, URIs provide the path to that data. But different API design patterns use URIs in different ways. In some, the API paths are nothing more than the address all data flows to and from. In others they communicate far more, describing relationships and even aspects about the request.\r\n\r\nIn this session, we’ll explore those differences, and the friction introduced when APIs aren’t consistent about usage. We’ll also consider some patterns and anti-patterns of URI path structure, and how to define a path structure that’s future friendly.",
+   "first": "2019-05-22",
+   "last": "2019-05-22",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-22",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/60ef0",
+     "rating": 4,
+     "comments": 2,
+     "slides": null
+    }
+   ],
+   "blurb": "URIs are the path to your API data, and different design patterns use them very differently.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "api-request-response-formats",
+   "title": "API Request & Response Formats",
+   "description": "Requests and responses are the core of an API, and a significant part of the interface you’re designing. The code that consumes your API needs to create the request, and parse the response, so it’s worth considering what formats are natural for those consumers, not just what’s natural for the API code we’ll be writing.\r\n\r\nBut the consuming code isn’t the only thing to consider. If you have to support multiple formats, how do you do that consistently? What techniques can be used in APIs that need to handle binary data as well?\r\n\r\nIn this session, we’ll take a look at common request and response formats. We’ll also consider the advantages of each, not just in terms of the consuming code, but also use case and context. Finally, we’ll explore the general structure of API requests and responses for different API design patterns.",
+   "first": "2019-05-21",
+   "last": "2019-05-21",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-21",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/c6397",
+     "rating": 5,
+     "comments": 2,
+     "slides": null
+    }
+   ],
+   "blurb": "Requests and responses are the core of an API. Pick formats that are natural for the consumer.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "authentication-token-api-talk",
+   "title": "Authentication: The Token API Talk",
+   "description": "As you design an API you’ll run into a few questions. How should you authenticate your users? Are there cases where you don’t even need to? There are a variety of authentication methods, which one is the best? It’s time to talk about API security – at least one aspect of it.\r\n\r\nEach method has strengths and weaknesses, and the right authentication method depends on a few things: the kind of API you’re building, the users that consume it, and the context of the authentication. A client-side browser application shouldn’t use the same authentication mechanism as an API that serves data to other web services.\r\n\r\nIn this session, we’ll cover various authentication methods, and gain an understanding of the similarities and differences of the underlying mechanisms. We’ll also consider various use cases and the authentication concerns they introduce.",
+   "first": "2019-05-21",
+   "last": "2019-05-21",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-21",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/2d8a8",
+     "rating": 5,
+     "comments": 1,
+     "slides": null
+    }
+   ],
+   "blurb": "How to authenticate API users, when you do not need to, and what each method trades off.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "apis-are-everywhere",
+   "title": "APIs Are Everywhere",
+   "description": "When it comes to web APIs, we tend to forget that we consume various APIs (other people’s code) every day in the form of SDKs, libraries, development tools, etc. The same design principles that make the high-quality non-web APIs we consume easy to work with can be applied to the web APIs we build.\r\n\r\nIn this session we’ll explore what attributes are common to the tools, SDKs, libraries – the other APIs – we use on a daily basis, and how we can apply them to the web APIs we’re building.",
+   "first": "2019-05-21",
+   "last": "2019-05-21",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2019-05-21",
+     "event": "php[tek] 2019",
+     "location": "Loudermilk Convention Center",
+     "event_url": "https://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/3a438",
+     "rating": 5,
+     "comments": 2,
+     "slides": null
+    }
+   ],
+   "blurb": "We consume APIs every day as SDKs and libraries. The same design principles apply to the web APIs we build.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "yak-free-api-tips",
+   "title": "Yak Free API Tips & Tricks You Can Use Right Now",
+   "description": "API tools, services, and techniques abound, but in this 99% Yak-Shaving™ Free session, we'll focus on the ones that require little (or no) setup, and that you can be using before I stop talking. \r\n\r\nWhether you're building or consuming APIs, there will be something for you. If you're new to APIs, you'll leave with a bunch of things you can use right now. If you've been doing this for a while, you'll probably see a new way to simplify something that's bugged you in the past.",
+   "first": "2018-04-20",
+   "last": "2018-11-15",
+   "times": 3,
+   "instances": [
+    {
+     "date": "2018-11-15",
+     "event": "php[world] 2018",
+     "location": "Westin Dulles",
+     "event_url": "https://world.phparch.com/",
+     "joindin": "https://joind.in/talk/50915",
+     "rating": 5,
+     "comments": 1,
+     "slides": null
+    },
+    {
+     "date": "2018-09-14",
+     "event": "Cascadia PHP",
+     "location": "University Place",
+     "event_url": "https://www.cascadiaphp.com",
+     "joindin": "https://joind.in/talk/fa91c",
+     "rating": 5,
+     "comments": 4,
+     "slides": null
+    },
+    {
+     "date": "2018-04-20",
+     "event": "Longhorn PHP Conference 2018",
+     "location": "Commons Learning Center",
+     "event_url": "https://www.longhornphp.com",
+     "joindin": "https://joind.in/talk/e97e3",
+     "rating": 5,
+     "comments": 6,
+     "slides": null
+    }
+   ],
+   "blurb": "API tools, services, and techniques that need little or no setup and that you can use before I stop talking.",
+   "thumb": "api-tips.jpg",
+   "video": null
+  },
+  {
+   "slug": "birds-feather-api-design",
+   "title": "Birds of a Feather: API Design",
+   "description": "Join this Birds of a Feather roundtable to discuss various topics related to API Development and API Design.",
+   "first": "2018-11-14",
+   "last": "2018-11-14",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2018-11-14",
+     "event": "php[world] 2018",
+     "location": "Westin Dulles",
+     "event_url": "https://world.phparch.com/",
+     "joindin": "https://joind.in/talk/ff15b",
+     "rating": 0,
+     "comments": 0,
+     "slides": null
+    }
+   ],
+   "blurb": "A roundtable on API development and API design.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "hands-on-api-design",
+   "title": "Hands-On API Design",
+   "description": "Building your next mobile app, SaaS product, or web app using an API first philosophy is a great decision. It can allow your team to develop in parallel, enable expansion to multiple platforms, and create opportunity for outside integration. But once you've made that decision, what's next? How do you actually do it?   What options are there for authentication? How do you reset a password with an API? Is hypermedia worth considering for internal APIs? How do you handle unauthenticated access from a client side javascript application? What format is best for API requests and responses? Should you version your API now, or later?   In this hands on workshop we'll talk about all those questions, and the answers that give your API a solid foundation. Because your API may start out serving the needs of internal mobile clients, or single page web apps, but one day (and probably sooner than you think) you'll be turning it into a public API.",
+   "first": "2017-11-14",
+   "last": "2018-11-13",
+   "times": 3,
+   "instances": [
+    {
+     "date": "2018-11-13",
+     "event": "php[world] 2018",
+     "location": "Westin Dulles",
+     "event_url": "https://world.phparch.com/",
+     "joindin": "https://joind.in/talk/b6512",
+     "rating": 5,
+     "comments": 2,
+     "slides": null
+    },
+    {
+     "date": "2018-04-19",
+     "event": "Longhorn PHP Conference 2018",
+     "location": "Commons Learning Center",
+     "event_url": "https://www.longhornphp.com",
+     "joindin": "https://joind.in/talk/f9fb7",
+     "rating": 5,
+     "comments": 3,
+     "slides": null
+    },
+    {
+     "date": "2017-11-14",
+     "event": "php[world] 2017",
+     "location": "Sheraton Tyson's Premiere",
+     "event_url": "https://world.phparch.com",
+     "joindin": "https://joind.in/talk/7f63d",
+     "rating": 5,
+     "comments": 5,
+     "slides": null
+    }
+   ],
+   "blurb": "A workshop on going from an API-first decision to an API people actually want to use.",
+   "thumb": "api-design.jpg",
+   "video": null
+  },
+  {
+   "slug": "building-php-daemons-long-running-processes",
+   "title": "Building PHP Daemons & Long Running Processes",
+   "description": "In this hands on workshop, you'll learn how to stop abusing cron, and easily daemonize a php script that responds responsibly to process signals. There are things you don't want to, or can't do inside a web request. It could be a task that needs to be retired if it fails, maybe one that takes a significantly long time to process, or multiple jobs that need to be processed over time. Whether you're sending an email, processing a video, or consuming Twitter's streaming API - you should be using a separate process, and probably a daemon.",
+   "first": "2015-05-22",
+   "last": "2018-09-19",
+   "times": 7,
+   "instances": [
+    {
+     "date": "2018-09-19",
+     "event": "WavePHP 2018",
+     "location": "Bahia Resort Hotel",
+     "event_url": "https://www.wavephp.com",
+     "joindin": "https://joind.in/talk/40f7f",
+     "rating": 5,
+     "comments": 5,
+     "slides": null
+    },
+    {
+     "date": "2017-11-15",
+     "event": "php[world] 2017",
+     "location": "Sheraton Tyson's Premiere",
+     "event_url": "https://world.phparch.com",
+     "joindin": "https://joind.in/talk/b61c9",
+     "rating": 5,
+     "comments": 3,
+     "slides": null
+    },
+    {
+     "date": "2016-10-18",
+     "event": "ZendCon 2016",
+     "location": "Hard Rock Hotel & Casino",
+     "event_url": "http://www.zendcon.com/",
+     "joindin": "https://joind.in/talk/96116",
+     "rating": 5,
+     "comments": 10,
+     "slides": "https://prezi.com/0l3a7q5dywc6/"
+    },
+    {
+     "date": "2016-07-13",
+     "event": "OpenWest 2016",
+     "location": "South Towne Expo Center",
+     "event_url": "http://www.openwest.org/",
+     "joindin": "https://joind.in/talk/82a27",
+     "rating": 5,
+     "comments": 4,
+     "slides": "https://prezi.com/0l3a7q5dywc6"
+    },
+    {
+     "date": "2016-04-09",
+     "event": "Lone Star PHP 2016",
+     "location": "Addison Conference Center",
+     "event_url": "http://lonestarphp.com",
+     "joindin": "https://joind.in/talk/dd0dd",
+     "rating": 5,
+     "comments": 11,
+     "slides": "https://prezi.com/0l3a7q5dywc6/building-php-daemons-and-long-running-processes/"
+    },
+    {
+     "date": "2015-06-18",
+     "event": "Nomad PHP US - June 2015",
+     "location": "online",
+     "event_url": "https://nomadphp.com/2015/03/20/nomadphp-2015-06-us/",
+     "joindin": "https://joind.in/talk/3a449",
+     "rating": 0,
+     "comments": 0,
+     "slides": null
+    },
+    {
+     "date": "2015-05-22",
+     "event": "php[tek] 2015",
+     "location": "Sheraton Gateway Suites O’Hare",
+     "event_url": "http://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/1cbd4",
+     "rating": 5,
+     "comments": 18,
+     "slides": "https://prezi.com/pymsnzwlieqt/building-php-daemons-and-long-running-processes-tek15/"
+    }
+   ],
+   "blurb": "Stop abusing cron. Daemonize a PHP script that responds responsibly to process signals.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "adventures-contract-developer",
+   "title": "Adventures of a Contract Developer",
+   "description": "Thinking about quitting that desk job and enjoying the freedom of contract development? Already have?\r\n\r\nA contract developer for 10 years, I’ll share my philosophy on contracting, some tips on how be successful, and a look at some of the clients you’ll run into.\r\n\r\nWhile my style of contracting may not work for you, this talk will at least challenge you to consider not just how you’re marketing your product, but what your product really is, how you charge for it, and what that means long term.\r\n\r\nAlready a contract developer? I’ll give some tips on avoiding the painful parts of the job, setting and negotiating your rate, and one simple way to get great clients and keep them happy.\r\n\r\nConsidering contracting? Meet some of the clients you’ll certainly come across, a few warning signs and things to watch out for, and what needs to happen in each case before you can have a successful relationship.",
+   "first": "2012-05-23",
+   "last": "2017-05-04",
+   "times": 6,
+   "instances": [
+    {
+     "date": "2017-05-04",
+     "event": "PHP Unicorn Conference (Online)",
+     "location": "Online",
+     "event_url": "http://www.phpunicorn.com/",
+     "joindin": "https://joind.in/talk/bc58e",
+     "rating": 5,
+     "comments": 3,
+     "slides": null
+    },
+    {
+     "date": "2016-08-04",
+     "event": "Northeast PHP 2016",
+     "location": "Rodd Charlottetown",
+     "event_url": "http://northeastphp.org",
+     "joindin": "https://joind.in/talk/655a8",
+     "rating": 4,
+     "comments": 1,
+     "slides": "https://prezi.com/qls54c5eelol/adventures-of-a-contract-developer/"
+    },
+    {
+     "date": "2016-07-15",
+     "event": "OpenWest 2016",
+     "location": "South Towne Expo Center",
+     "event_url": "http://www.openwest.org/",
+     "joindin": "https://joind.in/talk/9435c",
+     "rating": 5,
+     "comments": 1,
+     "slides": "https://prezi.com/qls54c5eelol"
+    },
+    {
+     "date": "2016-04-08",
+     "event": "Lone Star PHP 2016",
+     "location": "Addison Conference Center",
+     "event_url": "http://lonestarphp.com",
+     "joindin": "https://joind.in/talk/a6bc4",
+     "rating": 5,
+     "comments": 14,
+     "slides": "https://prezi.com/qls54c5eelol"
+    },
+    {
+     "date": "2014-05-22",
+     "event": "php[tek] 2014",
+     "location": "Sheraton Gateway Suites O’Hare",
+     "event_url": "http://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/1d40a",
+     "rating": 5,
+     "comments": 10,
+     "slides": "http://prezi.com/qls54c5eelol/adventures-of-a-contract-developer/"
+    },
+    {
+     "date": "2012-05-23",
+     "event": "php|tek 2012 UnCons",
+     "location": "Sheraton Gateway Suites O’Hare",
+     "event_url": null,
+     "joindin": "https://joind.in/talk/237a9",
+     "rating": 5,
+     "comments": 1,
+     "slides": "http://prezi.com/qls54c5eelol"
+    }
+   ],
+   "blurb": "A contract developer for ten years shares a philosophy of contracting and the clients you will run into.",
+   "thumb": "adventures.png",
+   "video": null
+  },
+  {
+   "slug": "second-factor-auth",
+   "title": "Robust Second-factor Authentication with PHP",
+   "description": "Single-use codes delivered by email and SMS, mobile phone verification using automated phone calls and installed applications, or standalone physical devices – there’s more than one way to do 2nd-factor authentication (2FA).\r\n\r\nThere are benefits – and downsides – to each. Learn how each one works and what is best for you and your users. Avoid some common mistakes when rolling out 2FA, and take a look at how you can add one, or many, to your application’s login flow.",
+   "first": "2016-05-25",
+   "last": "2016-12-15",
+   "times": 4,
+   "instances": [
+    {
+     "date": "2016-12-15",
+     "event": "Nomad PHP December 2016 US",
+     "location": "Online",
+     "event_url": "https://nomadphp.com/robust-second-factor-authenticationwith-php/",
+     "joindin": "https://joind.in/talk/7dcb0",
+     "rating": 5,
+     "comments": 1,
+     "slides": null
+    },
+    {
+     "date": "2016-10-19",
+     "event": "ZendCon 2016",
+     "location": "Hard Rock Hotel & Casino",
+     "event_url": "http://www.zendcon.com/",
+     "joindin": "https://joind.in/talk/c8739",
+     "rating": 5,
+     "comments": 4,
+     "slides": "https://prezi.com/wfzxxcsl7c8y"
+    },
+    {
+     "date": "2016-07-14",
+     "event": "OpenWest 2016",
+     "location": "South Towne Expo Center",
+     "event_url": "http://www.openwest.org/",
+     "joindin": "https://joind.in/talk/1ed1d",
+     "rating": 0,
+     "comments": 0,
+     "slides": "https://prezi.com/wfzxxcsl7c8y"
+    },
+    {
+     "date": "2016-05-25",
+     "event": "php[tek] 2016",
+     "location": "Sheraton Westport Chalet",
+     "event_url": "https://tek.phparch.com",
+     "joindin": "https://joind.in/talk/74c3c",
+     "rating": 5,
+     "comments": 4,
+     "slides": "https://prezi.com/wfzxxcsl7c8y/why-2fa/"
+    }
+   ],
+   "blurb": "Single-use codes, phone verification, apps, and physical devices: how each second factor works and what it costs you.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "api-toolbox",
+   "title": "The API Toolbox",
+   "description": "The API Toolbox",
+   "first": "2014-09-13",
+   "last": "2016-10-29",
+   "times": 4,
+   "instances": [
+    {
+     "date": "2016-10-29",
+     "event": "ScotlandPHP 2016",
+     "location": "Dynamic Earth",
+     "event_url": "https://conference.scotlandphp.co.uk/",
+     "joindin": "https://joind.in/talk/b9411",
+     "rating": 5,
+     "comments": 8,
+     "slides": "https://prezi.com/qn_uy-law5gl/the-api-toolbox/"
+    },
+    {
+     "date": "2016-08-05",
+     "event": "Northeast PHP 2016",
+     "location": "Rodd Charlottetown",
+     "event_url": "http://northeastphp.org",
+     "joindin": "https://joind.in/talk/a0776",
+     "rating": 5,
+     "comments": 5,
+     "slides": "https://prezi.com/qn_uy-law5gl/the-api-toolbox/"
+    },
+    {
+     "date": "2015-02-18",
+     "event": "ConFoo 2015",
+     "location": "Hilton Bonaventure",
+     "event_url": "http://confoo.ca",
+     "joindin": "https://joind.in/talk/a5ed2",
+     "rating": 5,
+     "comments": 4,
+     "slides": "https://prezi.com/qn_uy-law5gl/the-api-toolbox/"
+    },
+    {
+     "date": "2014-09-13",
+     "event": "Madison PHP Conference 2014",
+     "location": "Alliant Energy Center",
+     "event_url": "http://2014.madisonphpconference.com/",
+     "joindin": "https://joind.in/talk/bbaec",
+     "rating": 5,
+     "comments": 17,
+     "slides": "http://prezi.com/qn_uy-law5gl/the-api-toolbox/"
+    }
+   ],
+   "blurb": "The tools worth having around when you build and consume APIs.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "wonderful-world-apis",
+   "title": "The Wonderful World of APIs",
+   "description": "The Wonderful World of APIs",
+   "first": "2015-05-19",
+   "last": "2015-05-19",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2015-05-19",
+     "event": "php[tek] 2015",
+     "location": "Sheraton Gateway Suites O’Hare",
+     "event_url": "http://tek.phparch.com/",
+     "joindin": "https://joind.in/talk/7cb86",
+     "rating": 4,
+     "comments": 15,
+     "slides": "http://prezi.com/zhs6zcitmfxy/?utm_campaign=share&utm_medium=copy"
+    }
+   ],
+   "blurb": "A tour of the wide world of web APIs.",
+   "thumb": null,
+   "video": null
+  },
+  {
+   "slug": "crons-queues-daemons-oh-my",
+   "title": "Crons, Queues, and Daemons. Oh my!",
+   "description": "Crons, Queues, and Daemons. Oh my!",
+   "first": "2013-02-18",
+   "last": "2013-02-18",
+   "times": 1,
+   "instances": [
+    {
+     "date": "2013-02-18",
+     "event": "LVPHP - February 2013",
+     "location": "SoBoCoWorks",
+     "event_url": "http://meetup.lehighvalleyphp.com/events/99772362/",
+     "joindin": "https://joind.in/talk/9f155",
+     "rating": 5,
+     "comments": 2,
+     "slides": "http://prezi.com/hew3s5vudv5s/crons-queues-and-daemons/"
+    }
+   ],
+   "blurb": "When to use a cron, when to use a queue, and when you really need a daemon.",
+   "thumb": null,
+   "video": null
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tim Lytle — Engineering Leader, Platform Architect, Conference Speaker</title>
+  <meta name="description" content="Engineering leader and backend architect with 20+ years building API-first systems. Conference speaker. Available for consulting and longer-term opportunities.">
+  <meta property="og:title" content="Tim Lytle">
+  <meta property="og:description" content="I build APIs, lead teams, and give talks.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://timlytle.net/">
+  <meta property="og:image" content="https://timlytle.net/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tjlytle">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Roboto+Condensed:wght@300;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+  <header class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="/" aria-label="Tim Lytle, home">
+        <span class="nav__name">Tim Lytle</span>
+        <span class="nav__handle">@tjlytle</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="/talks.html">Talks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <h1 class="display hero__title" id="hero-title">I build <b>APIs</b>,<br>lead <b>teams</b>,<br>and give <b>talks</b>.</h1>
+        <p class="lede">Engineering leader and backend architect, twenty-plus years into building API-first systems. I run engineering orgs and still ship code, and I don't think you have to pick one.</p>
+        <div class="hero__actions">
+          <a class="btn-sticky" href="https://calendar.app.google/FmfBr6pNfw5oTJ739" target="_blank" rel="noopener">Book a conversation</a>
+          <a class="hand-link" href="/talks.html"><span>or see what I talk about</span><svg width="54" height="26" viewBox="0 0 54 26" fill="none" aria-hidden="true"><path d="M2 14 C 14 6, 30 6, 48 12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M40 4 L 50 12 L 38 18" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="hero__figure">
+        <img class="hero__avatar" src="/assets/img/tim.png" alt="A cartoon of Tim: glasses, big beard, grey hoodie." width="416" height="900" fetchpriority="high">
+        {{HERO_NOTE}}
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lately-title">
+      <div class="section__head">
+        <div>
+          <p class="hand hand--green section__kicker">Lately I've been talking about</p>
+          <h2 class="display section__title" id="lately-title">Tests, ownership, <b>and yaks</b>.</h2>
+        </div>
+        <a class="text-link" href="/talks.html">All {{TALK_COUNT}} talks</a>
+      </div>
+      <div class="talk-grid">{{RECENT_CARDS}}
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section__head">
+        <div>
+          <p class="hand hand--yellow section__kicker">But first, in general</p>
+          <h2 class="display section__title" id="about-title">What I <b>actually do</b>.</h2>
+        </div>
+      </div>
+      <div class="about">
+        <div class="about__text">
+          <p>I shape product strategy alongside business stakeholders while staying hands-on with architecture and implementation. I'm known for preventing unnecessary complexity, deferring irreversible decisions, and designing systems that stay adaptable as understanding evolves.</p>
+          <p>I'm also a <span class="scribble">recognized speaker</span> and published technical author. I've given keynotes at developer conferences and a TEDx talk on creativity and where humans fit in an ever-changing world. I care about making complex ideas accessible, whether that's in a code review, on stage, or at a whiteboard.</p>
+          <p>I've also founded and led Lehigh Valley Tech, organizing meetups, hackathons, and startup weekends for the local technology community.</p>
+        </div>
+        <dl class="expertise">
+          <div><dt>Engineering leadership</dt><dd>Hiring, performance management, mentorship, and building teams that work well together.</dd></div>
+          <div><dt>Systems architecture</dt><dd>API-first design, event-driven systems, and scalable backend platforms.</dd></div>
+          <div><dt>Platform strategy</dt><dd>API design, authentication architecture, and developer experience.</dd></div>
+          <div><dt>Technical communication</dt><dd>Conference keynotes, technical writing, and translating complex concepts for any audience.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="contact sticky sticky--tape" id="contact" aria-labelledby="contact-title">
+      <div>
+        <h2 class="contact__title" id="contact-title">I'm currently available for consulting, advisory work, <b>and the right longer-term role</b>.</h2>
+        <p class="contact__body">Whether you have a thorny API integration, a team that could use some direction, or a system architecture that needs a fresh perspective, I'd enjoy the conversation.</p>
+      </div>
+      <div class="contact__actions">
+        <a class="btn-sticky" href="https://calendar.app.google/FmfBr6pNfw5oTJ739" target="_blank" rel="noopener">Book a conversation</a>
+        <a class="contact__email" href="mailto:tim@timlytle.net">tim@timlytle.net</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="footer">
+      <ul class="footer__links">
+        <li><a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">joind.in</a></li>
+        <li><a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Parallax: the wash layer is 140vh tall and slides at 12% of scroll speed, clamped to its overhang.
+    (function () {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var root = document.documentElement, queued = false;
+      function update() {
+        var vh = innerHeight, max = vh * 0.2;
+        var shift = Math.max(-max, Math.min(max, max - scrollY * 0.12));
+        root.style.setProperty('--wash-shift', shift + 'px');
+        queued = false;
+      }
+      addEventListener('scroll', function () { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+      addEventListener('resize', update);
+      update();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patterns For API Development — a talk by Tim Lytle</title>
+  <meta name="description" content="Common code patterns used when building APIs with PHP, with examples.">
+  <meta property="og:title" content="Patterns For API Development — Tim Lytle">
+  <meta property="og:description" content="Common code patterns used when building APIs with PHP, with examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://timlytle.net/talks/patterns-for-api-development.html">
+  <meta property="og:image" content="https://timlytle.net/assets/img/og-talks.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@tjlytle">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Roboto+Condensed:wght@300;500;700&family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+  <header class="container">
+    <nav class="nav" aria-label="Primary">
+      <a class="nav__brand" href="/" aria-label="Tim Lytle, home">
+        <span class="nav__name">Tim Lytle</span>
+        <span class="nav__handle">@tjlytle</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="/#about">About</a></li>
+        <li><a href="/talks.html" aria-current="page">Talks</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <article class="detail">
+      <header class="detail__head">
+        <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
+        <p class="hand hand--yellow detail__kicker">given once, in 2019</p>
+        <h1 class="display detail__title">Patterns For API Development</h1>
+        <p class="lede">Common code patterns used when building APIs with PHP, with examples.</p>
+      </header>
+
+      <div class="detail__body">
+        <div class="detail__main">
+          <figure class="detail__deck sticky sticky--tape"><div class="detail__thumb slide slide--wash-5 slide--lg" aria-hidden="true"><span class="slide__title">Patterns For API <b>Development</b></span><span class="slide__sig hand">Tim Lytle &middot; @tjlytle</span></div></figure>
+          <div class="detail__abstract sheet sticky">
+            <h2 class="detail__h2">About this talk</h2>
+            <div class="prose"><p>PHP is no stranger to APIs. In the PHP ecosystem, there are API related libraries, API micro-frameworks, full-fledged API frameworks, and more.</p><p>While other sessions cover general API design patterns, in this session we’ll consider examples of common code patterns used when building APIs with PHP. We’ll explore some of the common patterns used in popular API frameworks – as well as the patterns found in some of the API related PSRs.</p></div>
+          </div>
+        </div>
+        <aside class="detail__side">
+          <div class="given sticky sticky--tape sticky--blue">
+            <h2 class="detail__h2">Given at</h2>
+            <ul class="given__list">
+          <li class="given__item">
+            <span class="given__event">php[tek] 2019</span>
+            <span class="given__meta mono">May 22, 2019 &middot; Loudermilk Convention Center &middot; <a href="https://joind.in/talk/1ec1b" rel="noopener">joind.in</a></span>
+          </li>
+            </ul>
+            
+          </div>
+          
+          <div class="book sticky sticky--tape sticky--yellow">
+            <p class="hand hand--orange book__kicker">Want this one?</p>
+            <h2 class="book__title">I'd be glad to give this talk at your event, meetup, or team.</h2>
+            <p class="book__body">Conferences, user groups, and internal engineering days all work. Tell me a bit about the audience and the date.</p>
+            <div class="book__actions">
+              <a class="btn-sticky" href="mailto:tim@timlytle.net?subject=Talk%20request%3A%20Patterns For API Development">Ask about this talk</a>
+              <a class="book__alt" href="https://calendar.app.google/FmfBr6pNfw5oTJ739" target="_blank" rel="noopener">or book a conversation</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+
+  </main>
+
+  <footer class="container">
+    <div class="footer">
+      <ul class="footer__links">
+        <li><a href="https://linkedin.com/in/timlytle" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://joind.in/user/tjlytle/talks" target="_blank" rel="noopener">joind.in</a></li>
+        <li><a href="https://github.com/tjlytle" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Parallax: the wash layer is 140vh tall and slides at 12% of scroll speed, clamped to its overhang.
+    (function () {
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var root = document.documentElement, queued = false;
+      function update() {
+        var vh = innerHeight, max = vh * 0.2;
+        var shift = Math.max(-max, Math.min(max, max - scrollY * 0.12));
+        root.style.setProperty('--wash-shift', shift + 'px');
+        queued = false;
+      }
+      addEventListener('scroll', function () { if (!queued) { queued = true; requestAnimationFrame(update); } }, { passive: true });
+      addEventListener('resize', update);
+      update();
+    })();
+  </script>
+</body>
+</html>

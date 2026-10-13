@@ -1,0 +1,9 @@
+{
+  "enabledPlugins": {
+    "design@initialcommit": true,
+    "design-audit@initialcommit": true
+  },
+  "extraKnownMarketplaces": {
+    "initialcommit": { "source": { "source": "github", "repo": "tjlytle/initialcommit-skills" } }
+  }
+}
