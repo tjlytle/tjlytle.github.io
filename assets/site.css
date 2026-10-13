@@ -261,11 +261,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @media (max-width: 860px) {
   :root { --gutter: 20px; }
   body { font-size: 17px; }
-  .hero { grid-template-columns: 1fr; gap: 24px; padding-top: 40px; }
-  .hero__copy { padding-top: 0; }
-  .hero__figure { height: auto; display: flex; flex-direction: column; gap: 24px; align-items: flex-start; }
-  .hero__avatar { position: static; width: 150px; align-self: flex-end; }
-  .hero__note { position: static; width: min(100%, 320px); --tilt: -1.5deg; order: -1; }
+  /* Phone: headline and a small avatar share the first row, everything else stacks under them. */
+  .hero { grid-template-columns: minmax(0, 1fr) 104px; grid-template-areas: "title avatar" "lede lede" "actions actions" "note note"; gap: 24px 16px; padding-top: 36px; align-items: end; }
+  .hero__copy, .hero__figure { display: contents; }
+  .hero__title { grid-area: title; font-size: 2.4rem; align-self: end; }
+  .hero__avatar { grid-area: avatar; position: static; width: 104px; height: auto; align-self: end; justify-self: end; }
+  .hero .lede { grid-area: lede; }
+  .hero__actions { grid-area: actions; }
+  .hero__note { grid-area: note; position: static; width: min(100%, 320px); --tilt: -1.5deg; justify-self: start; }
   .about { grid-template-columns: 1fr; gap: 40px; }
   .talks__cta { align-items: flex-start; transform: rotate(-2deg); }
   .sheet { padding: 20px 24px 28px; --tilt: 0deg; }
