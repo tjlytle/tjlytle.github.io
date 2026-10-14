@@ -1,3 +1,7 @@
+/* The hand font the decks use, served from here so no visitor needs it installed.
+   One cut covers every weight, so the browser never synthesises a bold. */
+@font-face { font-family: 'From Where You Are'; src: url('/assets/fonts/FromWhereYouAre.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+
 /* timlytle.net — "marker on watercolor": the site reads like a zoomed-out slide deck. */
 :root {
   --teal: #1b86a3;
@@ -16,7 +20,7 @@
   --sticky-peach: #f8c9a4;
   --font-display: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   --font-body: 'Roboto', system-ui, sans-serif;
-  --font-hand: 'Kalam', 'Comic Sans MS', cursive;
+  --font-hand: 'From Where You Are', 'Kalam', 'Comic Sans MS', cursive;
   --font-mono: 'Roboto Mono', ui-monospace, monospace;
   --shadow-sticky: 4px 5px 0 rgba(15, 95, 120, 0.45);
   --container: 1296px;
