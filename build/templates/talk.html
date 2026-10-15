@@ -50,7 +50,7 @@
           <div class="detail__abstract sheet sticky">
             <h2 class="detail__h2">About this talk</h2>
             <div class="prose">{{DESCRIPTION}}</div>
-          </div>
+          </div>{{QUOTES}}
         </div>
         <aside class="detail__side">
           <div class="given sticky sticky--tape sticky--blue">
@@ -100,6 +100,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>

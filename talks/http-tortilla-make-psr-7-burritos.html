@@ -51,6 +51,15 @@
             <h2 class="detail__h2">About this talk</h2>
             <div class="prose"><p>PSR-7 - HTTP Request / Response objects - provides a great set of common interfaces which allow you to leverage different bits of frameworks and component libraries while building web applications. Even better, there are so many implementations, i likely a library you already use has one.</p><p>However, the general behavior of a PRS-7 implementation isn&#x27;t tailored to the context of your application. But writing your own request / response implementation just for some syntactic sugar seems like a maintenance headache.</p><p>Built to scratch a real need on our team, HTTP Tortilla is a set of traits that make it easy to wrap any existing PSR-7 implementation and add your own functionality. But that&#x27;s only where it starts. By providing a simple way to satisfy the interfaces   you can now easily give existing classes - like exceptions - PSR-7 abilities.</p></div>
           </div>
+          <div class="quotes sheet sticky">
+            <h2 class="detail__h2">What people said</h2>
+            <ul class="quotes__list">
+        <li class="quote">
+          <blockquote class="quote__text">The way that HTTP-Tortilla integrates itself with PSR-7 in such a friction-less manner makes experimenting with its implementation really attractive.</blockquote>
+          <p class="quote__cite mono">Ryan Howe &middot; php[tek] 2023 &middot; <a href="https://joind.in/talk/4d704#comment-9fbff2" rel="noopener">on joind.in</a> </p>
+        </li>
+            </ul>
+          </div>
         </div>
         <aside class="detail__side">
           <div class="given sticky sticky--tape sticky--blue">
@@ -104,6 +113,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>

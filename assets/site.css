@@ -346,3 +346,27 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .detail__deck { padding: 10px; --tilt: 0deg; }
   .given, .book { --tilt: 0deg; }
 }
+
+/* Attendee comments pulled from joind.in */
+.quotes { --tilt: -0.5deg; --tape-tilt: -1.5deg; padding: 32px 40px 36px; }
+.quotes__list { list-style: none; display: flex; flex-direction: column; gap: 26px; }
+.quotes__list[data-random] > :nth-child(n + 4) { display: none; }
+.quotes__list > [hidden] { display: none; }
+.quote { position: relative; padding-left: 34px; }
+.quote::before { content: "\201C"; position: absolute; left: -4px; top: -14px; font-family: var(--font-display); font-weight: 700; font-size: 4rem; line-height: 1; color: var(--yellow); }
+.quote__text { font-family: var(--font-display); font-weight: 300; font-size: 1.35rem; line-height: 1.35; color: var(--ink); text-wrap: pretty; max-width: 52ch; }
+.quote__cite { margin-top: 8px; color: var(--ink-2); }
+.quote__cite a { color: var(--teal-deep); text-decoration: none; border-bottom: 1px solid rgba(15, 95, 120, 0.4); white-space: nowrap; }
+.quote__talk { display: block; margin-top: 2px; }
+.section--quotes .section__head { margin-bottom: 28px; }
+.quotes__list--home { flex-direction: row; flex-wrap: wrap; gap: 32px; }
+.quotes__list--home .quote { flex: 1 1 280px; background: var(--sticky-cream); color: var(--ink); padding: 28px 28px 24px 56px; box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18); transform: rotate(var(--tilt, 0.4deg)); }
+.quotes__list--home .quote:nth-child(2n) { --tilt: -0.6deg; }
+.quotes__list--home .quote:nth-child(3n) { --tilt: 0.9deg; }
+.quotes__list--home .quote::before { left: 18px; top: 10px; }
+.quotes__list--home .quote__text { font-size: 1.2rem; }
+@media (max-width: 860px) {
+  .quotes { padding: 26px 22px 28px; }
+  .quote__text { font-size: 1.2rem; }
+  .quotes__list--home .quote { padding: 24px 22px 22px 50px; }
+}
