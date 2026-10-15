@@ -48,11 +48,6 @@
       <div class="hero__figure">
         <img class="hero__avatar" src="/assets/img/tim.png" alt="A cartoon of Tim: glasses, big beard, grey hoodie." width="416" height="900" fetchpriority="high">
         
-        <a class="hero__note sticky sticky--tape" href="/talks/is-this-test-worth-it-evaluating-real-value-testing.html">
-          <span class="hand hand--orange">Next up</span>
-          <span class="title">Is This Test Worth It?</span>
-          <span class="mono">TechBash 2026 &middot; Oct 14</span>
-        </a>
       </div>
     </section>
 
@@ -87,6 +82,49 @@
         <div class="talk__foot"><a class="talk__more-link" href="/talks/yak-free-docker.html">About this talk &rarr;</a><span class="talk__rating">highly rated</span></div>
       </article>
       </div>
+    </section>
+
+    <section class="section section--quotes" aria-labelledby="said-title">
+      <div class="section__head">
+        <div>
+          <p class="hand hand--yellow section__kicker">From the comment cards</p>
+          <h2 class="display section__title" id="said-title">What people <b>said after</b>.</h2>
+        </div>
+      </div>
+      <ul class="quotes__list quotes__list--home" data-random="3">
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Tim Lytle is a fantastic speaker… He had an infectious enthusiasm in his presentation and I could listen to him speak for hours.</blockquote>
+          <p class="quote__cite mono">John Boctor &middot; php[tek] 2023 &middot; <a href="https://joind.in/talk/0f1ed#comment-505df7" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/let-go-ownership.html">Let Go of Ownership</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Tim&#x27;s public speaking is great: confident, vulnerable, and low-ego. He does a great job with examples and he seems to know the audience well.</blockquote>
+          <p class="quote__cite mono">Nick Pattison &middot; php[tek] 2023 &middot; <a href="https://joind.in/talk/0f1ed#comment-9503cc" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/let-go-ownership.html">Let Go of Ownership</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Great talk. I&#x27;m stealing the &quot;take stewardship&quot; instead of &quot;take ownership&quot; approach to &quot;I want you to take ownership&quot; conversations.</blockquote>
+          <p class="quote__cite mono">Sandy Smith &middot; php[tek] 2023 &middot; <a href="https://joind.in/talk/0f1ed#comment-15ef79" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/let-go-ownership.html">Let Go of Ownership</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">The slide presentation set the standard for the rest of the conference, which no one supplanted.</blockquote>
+          <p class="quote__cite mono">Chris Meza &middot; Lone Star PHP 2016 &middot; <a href="https://joind.in/talk/a6bc4#comment-5f7996" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/adventures-contract-developer.html">Adventures of a Contract Developer</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Tim is one of my favorite speakers, and I certainly appreciated his emphasis on giving us real, &quot;you can use these today&quot; examples. Even the Live Demo Gods approved!</blockquote>
+          <p class="quote__cite mono">Steve Grunwell &middot; Northeast PHP 2016 &middot; <a href="https://joind.in/talk/a0776#comment-e4b537" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/api-toolbox.html">The API Toolbox</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">I&#x27;m literally just going to steal Tim&#x27;s toolbox and share it with others as if I found all the tools.</blockquote>
+          <p class="quote__cite mono">Jason Lotito &middot; ConFoo 2015 &middot; <a href="https://joind.in/talk/a5ed2#comment-832061" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/api-toolbox.html">The API Toolbox</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Both last year and this year I thought I already knew a lot about his topics but I went because I knew he is good, and both times I ended up learning a lot.</blockquote>
+          <p class="quote__cite mono">Phillip Shipley &middot; php[tek] 2016 &middot; <a href="https://joind.in/talk/74c3c#comment-0b6680" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/second-factor-auth.html">Robust Second-factor Authentication with PHP</a></span></p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Third time seeing this talk, and it keeps getting better. Any time someone talks about ownership at work (or worse, CODEOWNERS) I want to scream &quot;STEWARDS!&quot;.</blockquote>
+          <p class="quote__cite mono">Steve Grunwell &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/19596#comment-43383c" rel="noopener">on joind.in</a> <span class="quote__talk">on <a href="/talks/let-go-ownership.html">Let Go of Ownership</a></span></p>
+        </li>
+      </ul>
     </section>
 
     <section class="section" id="about" aria-labelledby="about-title">
@@ -149,6 +187,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>

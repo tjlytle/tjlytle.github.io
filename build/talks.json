@@ -57,7 +57,39 @@
    ],
    "blurb": "Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.",
    "thumb": "event-sourcing.jpg",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 106987,
+     "author": "Steve Grunwell",
+     "date": "2025-05-22",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "Another morning, another great talk from Tim! It was also great having Battlesnakes used as the basis for the example application, as it's an uncommon use for Event Sourcing, but one with a well-defined problem space that is both competitive and non-serious—do you want to worry about financial transactions or DESTROYING YOUR RIVALS IN THE ARENA OF BATTLESNAKE?",
+     "url": "https://joind.in/talk/8578b#comment-65bd6c",
+     "pull": "It was also great having Battlesnakes used as the basis for the example application… do you want to worry about financial transactions or DESTROYING YOUR RIVALS IN THE ARENA OF BATTLESNAKE?"
+    },
+    {
+     "id": 107024,
+     "author": "Bill Tressler",
+     "date": "2025-05-22",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "This was a very interesting talk that gave me a lot to chew on. It’s definitely a complex (at least in my mind) concept, but after having a talk with Tim I feel pretty good about how we can use this. I particularly appreciated that this talk was not framework-centric.",
+     "url": "https://joind.in/talk/8578b#comment-4ec272",
+     "pull": "It's definitely a complex concept, but after having a talk with Tim I feel pretty good about how we can use this. I particularly appreciated that this talk was not framework-centric."
+    },
+    {
+     "id": 107031,
+     "author": "Dana Luther",
+     "date": "2025-05-22",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "Excellent engagement on this. The timing right after the Battlesnake competition was particularly effective, since it was still very fresh in mind from last night. Not only did I get a better understanding of how event sourcing can be stored and recalled, I got a better understanding of how Battlesnake works (win/win). I particularly valued the projection and snapshot elements since that filled in some gaps in how this can be effectively incorporated.",
+     "url": "https://joind.in/talk/8578b#comment-ac56b6",
+     "pull": "Not only did I get a better understanding of how event sourcing can be stored and recalled, I got a better understanding of how Battlesnake works (win/win)."
+    }
+   ]
   },
   {
    "slug": "is-this-test-worth-it-evaluating-real-value-testing",
@@ -80,7 +112,47 @@
    ],
    "blurb": "Unit, integration, contract, or end-to-end: the question that matters is what a test actually buys you.",
    "thumb": "valuable-tests.jpg",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 106891,
+     "author": "Steve Grunwell",
+     "date": "2025-05-21",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "As someone who eats, sleeps, and breathes automated testing I *loved* Tim's reasonable approach (e.g. \"here are the 'rules', but here's where you get *value*\". I was a little concerned when it turned into a Battlesnake tutorial in the back-half, but the examples were extremely relevant and tied back nicely to the first half.",
+     "url": "https://joind.in/talk/9f3d1#comment-c2d905",
+     "pull": "As someone who eats, sleeps, and breathes automated testing I *loved* Tim's reasonable approach: \"here are the 'rules', but here's where you get *value*\"."
+    },
+    {
+     "id": 106923,
+     "author": "Misha Hawthorn",
+     "date": "2025-05-21",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "Great new talk from Tim! I appreciated the novel \"testing parallelogram\" as an evolution of the \"testing pyramid\" model, and had many takeaways to improve my thinking around value and prioritization of testing, as well as the emphasis and benefit of leaning into TDD. Also appreciated the practical Battlesnake example to give concrete examples to look at together.",
+     "url": "https://joind.in/talk/9f3d1#comment-18c91a",
+     "pull": "I appreciated the novel \"testing parallelogram\" as an evolution of the \"testing pyramid\" model, and had many takeaways to improve my thinking around value and prioritization of testing."
+    },
+    {
+     "id": 106976,
+     "author": "Molly Przeklasa",
+     "date": "2025-05-21",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "The Test Pyramid was brilliant! I loved the commentary on nomenclature and how we tend to get wrapped up in the “right” framework and test types instead of focusing on what value the tests are bringing (or not).",
+     "url": "https://joind.in/talk/9f3d1#comment-bf1b98"
+    },
+    {
+     "id": 106892,
+     "author": "Joshua Stroup",
+     "date": "2025-05-21",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "Great points to quantify the value of a test. Using Battlesnake to demonstrate was a perfect way to wrap up.",
+     "url": "https://joind.in/talk/9f3d1#comment-7ee136"
+    }
+   ]
   },
   {
    "slug": "let-go-ownership",
@@ -123,7 +195,86 @@
    ],
    "blurb": "A keynote on swapping the ownership model for stewardship: in code, career, and community.",
    "thumb": "ownership.jpg",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 104313,
+     "author": "John Boctor",
+     "date": "2023-05-16",
+     "event": "php[tek] 2023",
+     "rating": 5,
+     "text": "Tim Lytle is a fantastic speaker. Starting the conference out with a talk on ownership while waxing philosophy, he breathed life and context into an old parable that I have heard dozens of times. He was able to convey the point that while the organizers and speakers have done their part, it is now up to us to take advantage of the opportunities provided us. He had an infectious enthusiasm in his presentation and I could listen to him speak for hours.",
+     "url": "https://joind.in/talk/0f1ed#comment-505df7",
+     "pull": "Tim Lytle is a fantastic speaker… He had an infectious enthusiasm in his presentation and I could listen to him speak for hours."
+    },
+    {
+     "id": 104319,
+     "author": "Nick Pattison",
+     "date": "2023-05-16",
+     "event": "php[tek] 2023",
+     "rating": 5,
+     "text": "Tim's public speaking is great -- confident, vulnerable, and low-ego. He does a great job with examples and he seems to know the audience well. The visuals were great, and I loved that the talk oozed philosophy rather that tech. Such a great way to prime everyone for learning! Learning is difficult (it involves so much un-learning), and Tim did a great job inspiring / challenging the audience without putting them on the defensive.",
+     "url": "https://joind.in/talk/0f1ed#comment-9503cc",
+     "pull": "Tim's public speaking is great: confident, vulnerable, and low-ego. He does a great job with examples and he seems to know the audience well."
+    },
+    {
+     "id": 104324,
+     "author": "Sandy Smith",
+     "date": "2023-05-16",
+     "event": "php[tek] 2023",
+     "rating": 5,
+     "text": "Great talk. I'm stealing the \"take stewardship\" instead of \"take ownership\" approach to \"I want you to take ownership\" conversations.",
+     "url": "https://joind.in/talk/0f1ed#comment-15ef79"
+    },
+    {
+     "id": 106858,
+     "author": "Steve Grunwell",
+     "date": "2025-05-20",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "Third time seeing this talk, and it keeps getting better. Any time someone talks about ownership at work (or worse, CODEOWNERS) I want to scream \"STEWARDS!\".",
+     "url": "https://joind.in/talk/19596#comment-43383c"
+    },
+    {
+     "id": 106963,
+     "author": "Darin Jacobson",
+     "date": "2025-05-21",
+     "event": "PHP TEK 2025",
+     "rating": 5,
+     "text": "I've never felt so personally attacked but at the same time feeling so motivated. Seriously though really powerful talk and had my attention from the start. Really hit me with he said you can feel relief while working your way through grief. Just one of the many thought provoking things I got from this talk.",
+     "url": "https://joind.in/talk/19596#comment-d05795",
+     "pull": "I've never felt so personally attacked but at the same time feeling so motivated. Seriously though, really powerful talk and had my attention from the start."
+    },
+    {
+     "id": 104300,
+     "author": "Jake Bennett",
+     "date": "2023-05-16",
+     "event": "php[tek] 2023",
+     "rating": 5,
+     "text": "Loved this talk! Great way to kick off the conference. Felt like a sermon more than a tech talk, in a good way 😄 Great preparation, slides kept the interest, can’t imagine how long that must have taken! Nice work!",
+     "url": "https://joind.in/talk/0f1ed#comment-49093b",
+     "pull": "Loved this talk! Great way to kick off the conference. Felt like a sermon more than a tech talk, in a good way 😄"
+    },
+    {
+     "id": 105243,
+     "author": "Daniel Abernathy",
+     "date": "2023-11-03",
+     "event": "Longhorn PHP Conference 2023",
+     "rating": 5,
+     "text": "Loved the slides - engaging, interesting, and fun. Tim did a great job at starting the talk in a way that felt abstract, but ending in a way that tied everything back together with a relevant message for developers (or anyone who cares about their career). This talk worked perfectly as an opening keynote: a reminder that our jobs are something valuable that has been entrusted to us.",
+     "url": "https://joind.in/talk/d73e7#comment-c8011d",
+     "pull": "This talk worked perfectly as an opening keynote: a reminder that our jobs are something valuable that has been entrusted to us."
+    },
+    {
+     "id": 105626,
+     "author": "Sandy Smith",
+     "date": "2023-11-09",
+     "event": "Longhorn PHP Conference 2023",
+     "rating": 5,
+     "text": "As usual, this is a banger. Great keynote to reframe everyone's thinking and give them a charge to take with them to the rest of a conference.",
+     "url": "https://joind.in/talk/d73e7#comment-ba8525"
+    }
+   ]
   },
   {
    "slug": "yak-free-docker",
@@ -166,7 +317,47 @@
    ],
    "blurb": "Docker for the everyday stuff that is not deployment: runtimes, dev tools, and throwaway utilities.",
    "thumb": "yak-free-docker.jpg",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 106169,
+     "author": "Larry Garfield",
+     "date": "2024-04-24",
+     "event": "php[tek] 2024",
+     "rating": 5,
+     "text": "By far the nest Docker intro I've ever seen. Also the sickest slides I've ever seen.",
+     "url": "https://joind.in/talk/8c97b#comment-1ec375",
+     "pull": "By far the [best] Docker intro I've ever seen. Also the sickest slides I've ever seen."
+    },
+    {
+     "id": 106162,
+     "author": "Jeremy Ward",
+     "date": "2024-04-24",
+     "event": "php[tek] 2024",
+     "rating": 5,
+     "text": "Compelling, high-energy talk that serves as a solid intro to Docker for devs who may not have ever worked with it. Plus, sock puppets and the most incredible slide deck I've ever seen!",
+     "url": "https://joind.in/talk/8c97b#comment-6612b3"
+    },
+    {
+     "id": 106147,
+     "author": "Scott Keck-Warren",
+     "date": "2024-04-23",
+     "event": "php[tek] 2024",
+     "rating": 5,
+     "text": "Both the presentation and the content were a real mind-shift. It's something I'll be telling others about for sure.",
+     "url": "https://joind.in/talk/8c97b#comment-6d9f4e"
+    },
+    {
+     "id": 92309,
+     "author": "Guido Faecke",
+     "date": "2019-02-22",
+     "event": "JestPHP Conference",
+     "rating": 5,
+     "text": "THE most entertaining talk I've ever seen! Besides the entertainment part, it also clarified a couple of things for me in regards to Docker. FYI - Tim, don't loose that puppet. Without it, the talk wouldn't be what it was today.",
+     "url": "https://joind.in/talk/6f072#comment-5a21ad",
+     "pull": "THE most entertaining talk I've ever seen! Besides the entertainment part, it also clarified a couple of things for me in regards to Docker. FYI, Tim, don't lose that puppet."
+    }
+   ]
   },
   {
    "slug": "you-can-handle-apis-introducing-api-handler",
@@ -212,7 +403,19 @@
    ],
    "blurb": "Wrapping PSR-7 request and response objects so the framework pieces you already use fit together.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 104618,
+     "author": "Ryan Howe",
+     "date": "2023-05-18",
+     "event": "php[tek] 2023",
+     "rating": 5,
+     "text": "Great talk and demo. The way that HTTP-Tortilla integrates itself with PSR-7 in such a friction-less manner makes experimenting with its implementation really attractive. Honestly the entire project just goes through determining the resources you need and hydrating them in a completely new fashion for me so there is just a lot of conceptual unpacking I'll be doing for the next several days. Thanks for another great talk",
+     "url": "https://joind.in/talk/4d704#comment-9fbff2",
+     "pull": "The way that HTTP-Tortilla integrates itself with PSR-7 in such a friction-less manner makes experimenting with its implementation really attractive."
+    }
+   ]
   },
   {
    "slug": "hal-it-works",
@@ -258,7 +461,19 @@
    ],
    "blurb": "A hands-on look at HTTP Messages and HTTP Handlers and how to properly leverage them.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 102535,
+     "author": "Mark Baker",
+     "date": "2021-06-19",
+     "event": "Dutch PHP Conference 2021 - Online Edition",
+     "rating": 4,
+     "text": "My first thought was that this was pre-recorded; but it quickly became clear that it was a live coding exercise, which I thought was particularly impressive. Good depth of knowledge with examples of the benefits of middleware, and the live coding was a great way of demonstrating that. While the focus was on PSR7/PSR15, those benefits apply equally to middleware implementations that don't follow the FIG standards, and it's only the implementations that differ.",
+     "url": "https://joind.in/talk/778e1#comment-ae5775",
+     "pull": "My first thought was that this was pre-recorded; but it quickly became clear that it was a live coding exercise, which I thought was particularly impressive."
+    }
+   ]
   },
   {
    "slug": "building-first-class-client-libraries",
@@ -485,7 +700,29 @@
    ],
    "blurb": "API tools, services, and techniques that need little or no setup and that you can use before I stop talking.",
    "thumb": "api-tips.jpg",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 89306,
+     "author": "Ian Littman",
+     "date": "2018-09-14",
+     "event": "Cascadia PHP",
+     "rating": 5,
+     "text": "Polished presentation, understandable despite going a mile per miinute, thanks to the pre-recorded presentation. I'm submitting this review mid-presentation because I'm confident that the awesomeness will only continue.",
+     "url": "https://joind.in/talk/fa91c#comment-052613",
+     "pull": "I'm submitting this review mid-presentation because I'm confident that the awesomeness will only continue."
+    },
+    {
+     "id": 87063,
+     "author": "Ed Barnard",
+     "date": "2018-04-22",
+     "event": "Longhorn PHP Conference 2018",
+     "rating": 5,
+     "text": "Seeing tools in use was exactly what I needed. There are a number of things I've been doing the hard way that I can now simplify and streamline. In particular, the recently-upgraded PhpStorm client, and capturing responses to create Swagger definitions. I sure wish I'd come to Tim's Thursday tutorial.",
+     "url": "https://joind.in/talk/e97e3#comment-cdc826",
+     "pull": "Seeing tools in use was exactly what I needed. There are a number of things I've been doing the hard way that I can now simplify and streamline."
+    }
+   ]
   },
   {
    "slug": "birds-feather-api-design",
@@ -551,7 +788,18 @@
    ],
    "blurb": "A workshop on going from an API-first decision to an API people actually want to use.",
    "thumb": "api-design.jpg",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 86877,
+     "author": "Eric Poe",
+     "date": "2018-04-19",
+     "event": "Longhorn PHP Conference 2018",
+     "rating": 5,
+     "text": "Lots of information, very little code, and with good humor throughout. I learned quite a bit and have so much more to learn. Well done!",
+     "url": "https://joind.in/talk/f9fb7#comment-f6dd44"
+    }
+   ]
   },
   {
    "slug": "building-php-daemons-long-running-processes",
@@ -634,7 +882,47 @@
    ],
    "blurb": "Stop abusing cron. Daemonize a PHP script that responds responsibly to process signals.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 57312,
+     "author": "Steve Grunwell",
+     "date": "2015-05-30",
+     "event": "php[tek] 2015",
+     "rating": 5,
+     "text": "Perhaps one of the most \"oh wow, I want to build that\" talks at php[tek]. Informative, well-presented, and inspiring.",
+     "url": "https://joind.in/talk/1cbd4#comment-2fed03"
+    },
+    {
+     "id": 57095,
+     "author": "Phillip Shipley",
+     "date": "2015-05-22",
+     "event": "php[tek] 2015",
+     "rating": 5,
+     "text": "Tim did an excellent job communicating WHY we might want to use PHP for long running daemons and then actually showed us HOW. I was not aware of the internal process control capabilities of the language that can make it fairly elegant to write daemons in this way. Very good.",
+     "url": "https://joind.in/talk/1cbd4#comment-0eea96",
+     "pull": "Tim did an excellent job communicating WHY we might want to use PHP for long running daemons and then actually showed us HOW."
+    },
+    {
+     "id": 69212,
+     "author": "Mark Duncan",
+     "date": "2016-04-09",
+     "event": "Lone Star PHP 2016",
+     "rating": 5,
+     "text": "Really enjoyed this talk, feel like I have a better working knowledge of how to run daemons responsibly. Super well organized and presented. Demo was fantastic, probably my favorite talk so far, thanks so much!",
+     "url": "https://joind.in/talk/dd0dd#comment-f337c9",
+     "pull": "Super well organized and presented. Demo was fantastic, probably my favorite talk so far."
+    },
+    {
+     "id": 74489,
+     "author": "David Thomson",
+     "date": "2016-10-19",
+     "event": "ZendCon 2016",
+     "rating": 5,
+     "text": "Very good. Sessions like this are why I come to Zendcon. Very good visual materials, great use of git.",
+     "url": "https://joind.in/talk/96116#comment-f54358"
+    }
+   ]
   },
   {
    "slug": "adventures-contract-developer",
@@ -707,7 +995,39 @@
    ],
    "blurb": "A contract developer for ten years shares a philosophy of contracting and the clients you will run into.",
    "thumb": "adventures.png",
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 43004,
+     "author": "Jason Lotito",
+     "date": "2014-05-24",
+     "event": "php[tek] 2014",
+     "rating": 5,
+     "text": "I don't do contract work. I do real work. What I learned is Tim doesn't do contract work either. He does mercenary development, which sounds so much cooler than what I do. Tim is always an excellent speaker, and knowing how much time and energy he puts into his talks, it's clear he cares about providing a lot of value. And he always does. Combining a good story with humor and actionable advice, this was an excellent talk.",
+     "url": "https://joind.in/talk/1d40a#comment-831429",
+     "pull": "Combining a good story with humor and actionable advice, this was an excellent talk."
+    },
+    {
+     "id": 69360,
+     "author": "Chris Meza",
+     "date": "2016-04-11",
+     "event": "Lone Star PHP 2016",
+     "rating": 5,
+     "text": "The slide presentation set the standard for the rest of the conference, which no one supplanted. I sincerely appreciated the stance of \"I am the product\" as a new perspective on how to approach things. And parts of the talk about being the product/commodity, reminded me of this: https://youtu.be/VEgu7jdc_fs",
+     "url": "https://joind.in/talk/a6bc4#comment-5f7996",
+     "pull": "The slide presentation set the standard for the rest of the conference, which no one supplanted."
+    },
+    {
+     "id": 20691,
+     "author": "Sean Prunka",
+     "date": "2012-05-24",
+     "event": "php|tek 2012 UnCons",
+     "rating": 5,
+     "text": "For myself, everything Tim had to share in this talk were lessons I learned the hard way. I would have loved to have heard this talk before I end did any free lance work.",
+     "url": "https://joind.in/talk/237a9#comment-8ae097",
+     "pull": "Everything Tim had to share in this talk were lessons I learned the hard way. I would have loved to have heard this talk before I did any freelance work."
+    }
+   ]
   },
   {
    "slug": "second-factor-auth",
@@ -760,7 +1080,19 @@
    ],
    "blurb": "Single-use codes, phone verification, apps, and physical devices: how each second factor works and what it costs you.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 70769,
+     "author": "Phillip Shipley",
+     "date": "2016-05-30",
+     "event": "php[tek] 2016",
+     "rating": 5,
+     "text": "Tim always does an excellent job presenting. Both last year and this year I thought I already knew a lot about his topics but I went because I knew he is good and both times I ended up learning a lot. Very engaging presentation style and examples.",
+     "url": "https://joind.in/talk/74c3c#comment-0b6680",
+     "pull": "Both last year and this year I thought I already knew a lot about his topics but I went because I knew he is good, and both times I ended up learning a lot."
+    }
+   ]
   },
   {
    "slug": "api-toolbox",
@@ -813,7 +1145,58 @@
    ],
    "blurb": "The tools worth having around when you build and consume APIs.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": [
+    {
+     "id": 52681,
+     "author": "Jason Lotito",
+     "date": "2015-02-19",
+     "event": "ConFoo 2015",
+     "rating": 5,
+     "text": "I'm literally just going to steal Tim's toolbox and share it with others as if I found all the tools. Awesome presentation by someone who has been in the trenches.",
+     "url": "https://joind.in/talk/a5ed2#comment-832061",
+     "pull": "I'm literally just going to steal Tim's toolbox and share it with others as if I found all the tools."
+    },
+    {
+     "id": 75318,
+     "author": "Jason Judge",
+     "date": "2016-10-30",
+     "event": "ScotlandPHP 2016",
+     "rating": 5,
+     "text": "Tim Lytle was wondering why we weren't very interactive. I think it was because minds were being overloaded with the fantastic range of tools available and demonstrated to us in this live-coding talk. Never taken so many notes :-) Just being introduced to API proxies to monitor the flow over an API was a revelation. Thank you.",
+     "url": "https://joind.in/talk/b9411#comment-55bf89",
+     "pull": "Minds were being overloaded with the fantastic range of tools available and demonstrated to us in this live-coding talk. Never taken so many notes."
+    },
+    {
+     "id": 72172,
+     "author": "Steve Grunwell",
+     "date": "2016-08-08",
+     "event": "Northeast PHP 2016",
+     "rating": 5,
+     "text": "Tim is one of my favorite speakers, and I certainly appreciated his emphasis on giving us real, \"you can use these today\" examples. Even the Live Demo Gods approved! I *should* take off a star for him forgetting to mute his notifications, but he gets it back for encouraging us to spam his open port (and not getting mad when we did).",
+     "url": "https://joind.in/talk/a0776#comment-e4b537",
+     "pull": "Tim is one of my favorite speakers, and I certainly appreciated his emphasis on giving us real, \"you can use these today\" examples. Even the Live Demo Gods approved!"
+    },
+    {
+     "id": 45346,
+     "author": "Jeff Carouth",
+     "date": "2014-09-14",
+     "event": "Madison PHP Conference 2014",
+     "rating": 5,
+     "text": "This talk provided a great overview of tools to work better with APIs as a consumer and as a developer. I especially liked that Tim provided the reasoning behind using the tools, showed how they worked, and then discussed alternatives to the ones he prefers. The live demos were an excellent touch that really drove home the usefulness of several tools he was recommending.",
+     "url": "https://joind.in/talk/bbaec#comment-22b9fa",
+     "pull": "I especially liked that Tim provided the reasoning behind using the tools, showed how they worked, and then discussed alternatives to the ones he prefers."
+    },
+    {
+     "id": 45284,
+     "author": "Matthew Weier O'Phinney",
+     "date": "2014-09-13",
+     "event": "Madison PHP Conference 2014",
+     "rating": 5,
+     "text": "Very nice overview of the API tools currently available. I particularly liked the live demos - Tim was quite lucky with his internet connectivity, and pulled them off without a hiccup!",
+     "url": "https://joind.in/talk/bbaec#comment-2067d6"
+    }
+   ]
   },
   {
    "slug": "wonderful-world-apis",
@@ -861,5 +1244,15 @@
    "thumb": null,
    "video": null
   }
+ ],
+ "speaker_quotes": [
+  104313,
+  104319,
+  104324,
+  69360,
+  72172,
+  52681,
+  70769,
+  106858
  ]
 }

@@ -190,6 +190,42 @@ def talk_kicker(talk):
     return f"given {n} times, {span}"
 
 
+def quote_item(h, with_talk=None):
+    text = h.get("pull") or h["text"]
+    talk_line = f'<span class="quote__talk">on <a href="{talk_url(with_talk)}">{esc(with_talk["title"])}</a></span>' if with_talk else ""
+    return f'''
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">{esc(text)}</blockquote>
+          <p class="quote__cite mono">{esc(h["author"])} &middot; {esc(h["event"])} &middot; <a href="{esc(h["url"])}" rel="noopener">on joind.in</a> {talk_line}</p>
+        </li>'''
+
+
+def quotes_block(talk):
+    """Attendee comments for a talk page; more than three get shuffled client-side."""
+    hs = talk.get("highlights") or []
+    if not hs:
+        return ""
+    rand = ' data-random="3"' if len(hs) > 3 else ""
+    return f'''
+
+          <div class="quotes">
+            <p class="hand hand--yellow quotes__kicker">What people said</p>
+            <ul class="quotes__list"{rand}>{"".join(quote_item(h) for h in hs)}
+            </ul>
+          </div>'''
+
+
+def speaker_quotes_block(talks):
+    by_id = {h["id"]: (h, t) for t in talks for h in t.get("highlights", [])}
+    hs = [by_id[i] for i in DATA.get("speaker_quotes", []) if i in by_id]
+    if not hs:
+        return ""
+    rand = ' data-random="3"' if len(hs) > 3 else ""
+    return f'''
+      <ul class="quotes__list quotes__list--home"{rand}>{"".join(quote_item(h, t) for h, t in hs)}
+      </ul>'''
+
+
 def render(template_name, out_path, **slots):
     tpl = (BUILD / "templates" / template_name).read_text(encoding="utf-8")
     for key, val in slots.items():
@@ -220,6 +256,7 @@ render(
     "index.html", ROOT / "index.html",
     RECENT_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
     HERO_NOTE=hero_note(),
+    QUOTES=speaker_quotes_block(talks),
     TALK_COUNT=str(len(talks)),
 )
 for talk in talks:
@@ -232,6 +269,7 @@ for talk in talks:
         MEDIA=media(talk, "detail__thumb"),
         DESCRIPTION=paragraphs(talk["description"]) or f'<p>{esc(talk["blurb"])}</p>',
         GIVEN_AT=given_at(talk),
+        QUOTES=quotes_block(talk),
         SLIDES=f'<a class="btn-sticky btn-sticky--quiet" href="{esc(slides)}" rel="noopener">Open the slides</a>' if slides else "",
         RATED=rating_tag("detail__rated") if highly_rated(talk) else "",
         OG_IMAGE=f'/assets/img/decks/{talk["thumb"]}' if talk.get("thumb") else "/assets/img/og-talks.jpg",

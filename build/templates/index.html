@@ -63,6 +63,15 @@
       </div>
     </section>
 
+    <section class="section section--quotes" aria-labelledby="said-title">
+      <div class="section__head">
+        <div>
+          <p class="hand hand--yellow section__kicker">From the comment cards</p>
+          <h2 class="display section__title" id="said-title">What people <b>said after</b>.</h2>
+        </div>
+      </div>{{QUOTES}}
+    </section>
+
     <section class="section" id="about" aria-labelledby="about-title">
       <div class="section__head">
         <div>
@@ -123,6 +132,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>

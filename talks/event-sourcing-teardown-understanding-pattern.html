@@ -37,15 +37,14 @@
   <main class="container">
 
     <article class="detail">
-      <header class="detail__head">
-        <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
-        <p class="hand hand--yellow detail__kicker">given once, in 2025</p>
-        <h1 class="display detail__title">Event Sourcing Teardown: Understanding the Pattern</h1>
-        <p class="lede">Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.</p>
-      </header>
-
       <div class="detail__body">
         <div class="detail__main">
+          <header class="detail__head">
+            <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
+            <p class="hand hand--yellow detail__kicker">given once, in 2025</p>
+            <h1 class="display detail__title">Event Sourcing Teardown: Understanding the Pattern</h1>
+            <p class="lede">Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.</p>
+          </header>
           <figure class="detail__deck sticky sticky--tape"><img class="detail__thumb" src="/assets/img/decks/event-sourcing.jpg" alt="" loading="lazy" width="800" height="450"></figure>
           <div class="detail__abstract sheet sticky">
             <h2 class="detail__h2">About this talk</h2>
@@ -53,6 +52,24 @@
           </div>
         </div>
         <aside class="detail__side">
+
+          <div class="quotes">
+            <p class="hand hand--yellow quotes__kicker">What people said</p>
+            <ul class="quotes__list">
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">It was also great having Battlesnakes used as the basis for the example application… do you want to worry about financial transactions or DESTROYING YOUR RIVALS IN THE ARENA OF BATTLESNAKE?</blockquote>
+          <p class="quote__cite mono">Steve Grunwell &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/8578b#comment-65bd6c" rel="noopener">on joind.in</a> </p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">It&#x27;s definitely a complex concept, but after having a talk with Tim I feel pretty good about how we can use this. I particularly appreciated that this talk was not framework-centric.</blockquote>
+          <p class="quote__cite mono">Bill Tressler &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/8578b#comment-4ec272" rel="noopener">on joind.in</a> </p>
+        </li>
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Not only did I get a better understanding of how event sourcing can be stored and recalled, I got a better understanding of how Battlesnake works (win/win).</blockquote>
+          <p class="quote__cite mono">Dana Luther &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/8578b#comment-ac56b6" rel="noopener">on joind.in</a> </p>
+        </li>
+            </ul>
+          </div>
           <div class="given sticky sticky--tape sticky--blue">
             <h2 class="detail__h2">Given at</h2>
             <ul class="given__list">
@@ -104,6 +121,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>

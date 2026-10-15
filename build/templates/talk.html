@@ -37,22 +37,21 @@
   <main class="container">
 
     <article class="detail">
-      <header class="detail__head">
-        <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
-        <p class="hand hand--yellow detail__kicker">{{KICKER}}</p>
-        <h1 class="display detail__title">{{TITLE}}</h1>
-        <p class="lede">{{BLURB}}</p>
-      </header>
-
       <div class="detail__body">
         <div class="detail__main">
+          <header class="detail__head">
+            <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
+            <p class="hand hand--yellow detail__kicker">{{KICKER}}</p>
+            <h1 class="display detail__title">{{TITLE}}</h1>
+            <p class="lede">{{BLURB}}</p>
+          </header>
           <figure class="detail__deck sticky sticky--tape">{{MEDIA}}</figure>
           <div class="detail__abstract sheet sticky">
             <h2 class="detail__h2">About this talk</h2>
             <div class="prose">{{DESCRIPTION}}</div>
           </div>
         </div>
-        <aside class="detail__side">
+        <aside class="detail__side">{{QUOTES}}
           <div class="given sticky sticky--tape sticky--blue">
             <h2 class="detail__h2">Given at</h2>
             <ul class="given__list">{{GIVEN_AT}}
@@ -100,6 +99,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>

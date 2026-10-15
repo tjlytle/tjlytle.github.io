@@ -37,15 +37,14 @@
   <main class="container">
 
     <article class="detail">
-      <header class="detail__head">
-        <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
-        <p class="hand hand--yellow detail__kicker">given 4 times, 2016</p>
-        <h1 class="display detail__title">Robust Second-factor Authentication with PHP</h1>
-        <p class="lede">Single-use codes, phone verification, apps, and physical devices: how each second factor works and what it costs you.</p>
-      </header>
-
       <div class="detail__body">
         <div class="detail__main">
+          <header class="detail__head">
+            <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
+            <p class="hand hand--yellow detail__kicker">given 4 times, 2016</p>
+            <h1 class="display detail__title">Robust Second-factor Authentication with PHP</h1>
+            <p class="lede">Single-use codes, phone verification, apps, and physical devices: how each second factor works and what it costs you.</p>
+          </header>
           <figure class="detail__deck sticky sticky--tape"><div class="detail__thumb slide slide--wash-4 " aria-hidden="true"><span class="slide__title">Robust Second-factor Authentication with <b>PHP</b></span><span class="slide__sig hand">Tim Lytle &middot; @tjlytle</span></div></figure>
           <div class="detail__abstract sheet sticky">
             <h2 class="detail__h2">About this talk</h2>
@@ -53,6 +52,16 @@
           </div>
         </div>
         <aside class="detail__side">
+
+          <div class="quotes">
+            <p class="hand hand--yellow quotes__kicker">What people said</p>
+            <ul class="quotes__list">
+        <li class="quote sticky sticky--tape">
+          <blockquote class="quote__text">Both last year and this year I thought I already knew a lot about his topics but I went because I knew he is good, and both times I ended up learning a lot.</blockquote>
+          <p class="quote__cite mono">Phillip Shipley &middot; php[tek] 2016 &middot; <a href="https://joind.in/talk/74c3c#comment-0b6680" rel="noopener">on joind.in</a> </p>
+        </li>
+            </ul>
+          </div>
           <div class="given sticky sticky--tape sticky--blue">
             <h2 class="detail__h2">Given at</h2>
             <ul class="given__list">
@@ -116,6 +125,13 @@
       addEventListener('resize', update);
       update();
     })();
+  </script>
+  <script>
+    document.querySelectorAll('[data-random]').forEach(function (list) {
+      var keep = Number(list.dataset.random), items = Array.from(list.children);
+      for (var i = items.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = items[i]; items[i] = items[j]; items[j] = t; }
+      items.forEach(function (el, i) { el.hidden = i >= keep; list.appendChild(el); });
+    });
   </script>
 </body>
 </html>
