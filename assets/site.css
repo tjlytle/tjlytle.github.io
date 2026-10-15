@@ -339,14 +339,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @media (max-width: 960px) {
   .detail__body { grid-template-columns: 1fr; gap: 44px; }
   /* one column: header, quotes, deck, abstract, then the rest */
-  .detail__main, .detail__side { display: contents; }
+  .detail__main, .detail__side, .detail__side .quotes, .detail__side .quotes__list { display: contents; }
+  .detail__side .quotes__kicker { display: none; }
   .detail__head { order: 1; }
-  .quotes { order: 2; }
+  .quotes__list > .quote:nth-child(1) { order: 2; }
   .detail__deck { order: 3; }
-  .detail__abstract { order: 4; }
-  .given { order: 5; }
-  .detail__side > .btn-sticky { order: 6; }
-  .book { order: 7; }
+  .quotes__list > .quote:nth-child(2) { order: 4; }
+  .detail__abstract { order: 5; }
+  .quotes__list > .quote:nth-child(n + 3) { order: 6; }
+  .given { order: 7; }
+  .detail__side > .btn-sticky { order: 8; }
+  .book { order: 9; }
 }
 @media (max-width: 520px) {
   .detail { padding-top: 32px; }
