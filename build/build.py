@@ -250,6 +250,7 @@ render(
     FEATURED_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
     TALK_LIST=list_rows(talks),
     UPCOMING=upcoming_block(),
+    QUOTES=speaker_quotes_block(talks),
     TALK_COUNT=str(len(talks)), DELIVERY_COUNT=str(deliveries), FIRST_YEAR=first_year,
 )
 render(
