@@ -37,31 +37,31 @@
   <main class="container">
 
     <article class="detail">
-      <header class="detail__head">
-        <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
-        <p class="hand hand--yellow detail__kicker">given once, in 2023</p>
-        <h1 class="display detail__title">HTTP Tortilla: Make PSR-7 Burritos</h1>
-        <p class="lede">Wrapping PSR-7 request and response objects so the framework pieces you already use fit together.</p>
-      </header>
-
       <div class="detail__body">
         <div class="detail__main">
+          <header class="detail__head">
+            <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
+            <p class="hand hand--yellow detail__kicker">given once, in 2023</p>
+            <h1 class="display detail__title">HTTP Tortilla: Make PSR-7 Burritos</h1>
+            <p class="lede">Wrapping PSR-7 request and response objects so the framework pieces you already use fit together.</p>
+          </header>
           <figure class="detail__deck sticky sticky--tape"><div class="detail__thumb slide slide--wash-9 " aria-hidden="true"><span class="slide__title">HTTP Tortilla: Make PSR-7 <b>Burritos</b></span><span class="slide__sig hand">Tim Lytle &middot; @tjlytle</span></div></figure>
           <div class="detail__abstract sheet sticky">
             <h2 class="detail__h2">About this talk</h2>
             <div class="prose"><p>PSR-7 - HTTP Request / Response objects - provides a great set of common interfaces which allow you to leverage different bits of frameworks and component libraries while building web applications. Even better, there are so many implementations, i likely a library you already use has one.</p><p>However, the general behavior of a PRS-7 implementation isn&#x27;t tailored to the context of your application. But writing your own request / response implementation just for some syntactic sugar seems like a maintenance headache.</p><p>Built to scratch a real need on our team, HTTP Tortilla is a set of traits that make it easy to wrap any existing PSR-7 implementation and add your own functionality. But that&#x27;s only where it starts. By providing a simple way to satisfy the interfaces   you can now easily give existing classes - like exceptions - PSR-7 abilities.</p></div>
           </div>
-          <div class="quotes sheet sticky">
-            <h2 class="detail__h2">What people said</h2>
+        </div>
+        <aside class="detail__side">
+
+          <div class="quotes">
+            <p class="hand hand--yellow quotes__kicker">What people said</p>
             <ul class="quotes__list">
-        <li class="quote">
+        <li class="quote sticky sticky--tape">
           <blockquote class="quote__text">The way that HTTP-Tortilla integrates itself with PSR-7 in such a friction-less manner makes experimenting with its implementation really attractive.</blockquote>
           <p class="quote__cite mono">Ryan Howe &middot; php[tek] 2023 &middot; <a href="https://joind.in/talk/4d704#comment-9fbff2" rel="noopener">on joind.in</a> </p>
         </li>
             </ul>
           </div>
-        </div>
-        <aside class="detail__side">
           <div class="given sticky sticky--tape sticky--blue">
             <h2 class="detail__h2">Given at</h2>
             <ul class="given__list">

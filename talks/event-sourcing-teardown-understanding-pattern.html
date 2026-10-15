@@ -37,39 +37,39 @@
   <main class="container">
 
     <article class="detail">
-      <header class="detail__head">
-        <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
-        <p class="hand hand--yellow detail__kicker">given once, in 2025</p>
-        <h1 class="display detail__title">Event Sourcing Teardown: Understanding the Pattern</h1>
-        <p class="lede">Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.</p>
-      </header>
-
       <div class="detail__body">
         <div class="detail__main">
+          <header class="detail__head">
+            <a class="detail__back hand hand--green" href="/talks.html">&larr; all the talks</a>
+            <p class="hand hand--yellow detail__kicker">given once, in 2025</p>
+            <h1 class="display detail__title">Event Sourcing Teardown: Understanding the Pattern</h1>
+            <p class="lede">Events, aggregates, projections, snapshots, and commands, taken apart so the pattern is easier to use well.</p>
+          </header>
           <figure class="detail__deck sticky sticky--tape"><img class="detail__thumb" src="/assets/img/decks/event-sourcing.jpg" alt="" loading="lazy" width="800" height="450"></figure>
           <div class="detail__abstract sheet sticky">
             <h2 class="detail__h2">About this talk</h2>
             <div class="prose"><p>Event sourcing is a powerful pattern that can fundamentally change how you approach building applications, when auditability and adaptability are needed. However, aspects of event sourcing can be misunderstood, and those misconceptions make it harder to understand and utilize effectively.</p><p>We&#x27;ll take away the abstractions and focus on building an event sourced system without the use of an event sourcing library. This approach will help focus on the core concepts: what an event table is, how events are replayed when loading an aggregate root, what a projection is, and how snapshots work. Once we&#x27;ve established that base understanding, we&#x27;ll take a look at how event sourcing libraries handle common concerns.</p><p>Along the way, we&#x27;ll clear up some common points of confusion, and explore how this can be applied to existing systems, not just greenfield projects. You&#x27;ll leave with a clear foundational understanding of event sourcing, so you can decide if this pattern is right for your next project.</p></div>
           </div>
-          <div class="quotes sheet sticky">
-            <h2 class="detail__h2">What people said</h2>
+        </div>
+        <aside class="detail__side">
+
+          <div class="quotes">
+            <p class="hand hand--yellow quotes__kicker">What people said</p>
             <ul class="quotes__list">
-        <li class="quote">
+        <li class="quote sticky sticky--tape">
           <blockquote class="quote__text">It was also great having Battlesnakes used as the basis for the example application… do you want to worry about financial transactions or DESTROYING YOUR RIVALS IN THE ARENA OF BATTLESNAKE?</blockquote>
           <p class="quote__cite mono">Steve Grunwell &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/8578b#comment-65bd6c" rel="noopener">on joind.in</a> </p>
         </li>
-        <li class="quote">
+        <li class="quote sticky sticky--tape">
           <blockquote class="quote__text">It&#x27;s definitely a complex concept, but after having a talk with Tim I feel pretty good about how we can use this. I particularly appreciated that this talk was not framework-centric.</blockquote>
           <p class="quote__cite mono">Bill Tressler &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/8578b#comment-4ec272" rel="noopener">on joind.in</a> </p>
         </li>
-        <li class="quote">
+        <li class="quote sticky sticky--tape">
           <blockquote class="quote__text">Not only did I get a better understanding of how event sourcing can be stored and recalled, I got a better understanding of how Battlesnake works (win/win).</blockquote>
           <p class="quote__cite mono">Dana Luther &middot; PHP TEK 2025 &middot; <a href="https://joind.in/talk/8578b#comment-ac56b6" rel="noopener">on joind.in</a> </p>
         </li>
             </ul>
           </div>
-        </div>
-        <aside class="detail__side">
           <div class="given sticky sticky--tape sticky--blue">
             <h2 class="detail__h2">Given at</h2>
             <ul class="given__list">

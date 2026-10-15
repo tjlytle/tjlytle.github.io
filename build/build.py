@@ -194,7 +194,7 @@ def quote_item(h, with_talk=None):
     text = h.get("pull") or h["text"]
     talk_line = f'<span class="quote__talk">on <a href="{talk_url(with_talk)}">{esc(with_talk["title"])}</a></span>' if with_talk else ""
     return f'''
-        <li class="quote">
+        <li class="quote sticky sticky--tape">
           <blockquote class="quote__text">{esc(text)}</blockquote>
           <p class="quote__cite mono">{esc(h["author"])} &middot; {esc(h["event"])} &middot; <a href="{esc(h["url"])}" rel="noopener">on joind.in</a> {talk_line}</p>
         </li>'''
@@ -207,8 +207,9 @@ def quotes_block(talk):
         return ""
     rand = ' data-random="3"' if len(hs) > 3 else ""
     return f'''
-          <div class="quotes sheet sticky">
-            <h2 class="detail__h2">What people said</h2>
+
+          <div class="quotes">
+            <p class="hand hand--yellow quotes__kicker">What people said</p>
             <ul class="quotes__list"{rand}>{"".join(quote_item(h) for h in hs)}
             </ul>
           </div>'''
