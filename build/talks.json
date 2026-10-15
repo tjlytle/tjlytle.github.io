@@ -34,7 +34,8 @@
    ],
    "blurb": "The tutorial slot for the php[tek] BattleSnake tournament: quickstart, docs overview, and a dissection of a snake.",
    "thumb": "battlesnake.jpg",
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "event-sourcing-teardown-understanding-pattern",
@@ -197,16 +198,6 @@
    "thumb": "ownership.jpg",
    "video": null,
    "highlights": [
-    {
-     "id": 104313,
-     "author": "John Boctor",
-     "date": "2023-05-16",
-     "event": "php[tek] 2023",
-     "rating": 5,
-     "text": "Tim Lytle is a fantastic speaker. Starting the conference out with a talk on ownership while waxing philosophy, he breathed life and context into an old parable that I have heard dozens of times. He was able to convey the point that while the organizers and speakers have done their part, it is now up to us to take advantage of the opportunities provided us. He had an infectious enthusiasm in his presentation and I could listen to him speak for hours.",
-     "url": "https://joind.in/talk/0f1ed#comment-505df7",
-     "pull": "Tim Lytle is a fantastic speaker… He had an infectious enthusiasm in his presentation and I could listen to him speak for hours."
-    },
     {
      "id": 104319,
      "author": "Nick Pattison",
@@ -380,7 +371,8 @@
    ],
    "blurb": "A no-slides, just-code introduction to API Handler, a PSR-15 middleware pattern for building APIs.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "http-tortilla-make-psr-7-burritos",
@@ -438,7 +430,8 @@
    ],
    "blurb": "How a production API team uses HAL as a hypermedia format, the constraints on it, and the client-side cache pattern it enables.",
    "thumb": "hal-it-works.jpg",
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "http-patterns-psr-7-15-by-example",
@@ -496,7 +489,8 @@
    ],
    "blurb": "Do consistent API patterns and good HTTP clients make the API-specific client library obsolete?",
    "thumb": "first-class-clients.jpg",
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "hypermedia-without-hype",
@@ -519,7 +513,8 @@
    ],
    "blurb": "Hypermedia and HATEOAS without the skynet: applying what works for human navigation of the web to APIs.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "patterns-for-api-development",
@@ -542,7 +537,8 @@
    ],
    "blurb": "Common code patterns used when building APIs with PHP, with examples.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "versioning-every-way-is-wrong",
@@ -565,7 +561,8 @@
    ],
    "blurb": "API versioning: you do not want to do it, and when you do, someone will say you did it wrong.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "uris-path-to-your-apis",
@@ -588,7 +585,8 @@
    ],
    "blurb": "URIs are the path to your API data, and different design patterns use them very differently.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "api-request-response-formats",
@@ -611,7 +609,8 @@
    ],
    "blurb": "Requests and responses are the core of an API. Pick formats that are natural for the consumer.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "authentication-token-api-talk",
@@ -634,7 +633,8 @@
    ],
    "blurb": "How to authenticate API users, when you do not need to, and what each method trades off.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "apis-are-everywhere",
@@ -657,7 +657,8 @@
    ],
    "blurb": "We consume APIs every day as SDKs and libraries. The same design principles apply to the web APIs we build.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "yak-free-api-tips",
@@ -745,7 +746,8 @@
    ],
    "blurb": "A roundtable on API development and API design.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "hands-on-api-design",
@@ -1219,7 +1221,8 @@
    ],
    "blurb": "A tour of the wide world of web APIs.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   },
   {
    "slug": "crons-queues-daemons-oh-my",
@@ -1242,11 +1245,11 @@
    ],
    "blurb": "When to use a cron, when to use a queue, and when you really need a daemon.",
    "thumb": null,
-   "video": null
+   "video": null,
+   "highlights": []
   }
  ],
  "speaker_quotes": [
-  104313,
   104319,
   104324,
   69360,
