@@ -1,0 +1,14 @@
+[
+  {
+    "claim": "No self-authored rating schema",
+    "paths": ["index.html", "talks.html", "talks/*.html", "build/build.py"],
+    "must_not_match": ["AggregateRating", "ratingValue"],
+    "must_match": []
+  },
+  {
+    "claim": "No unfilled template slots shipped",
+    "paths": ["index.html", "talks.html", "talks/*.html", "llms.txt"],
+    "must_not_match": ["\\{\\{[A-Z_]+\\}\\}"],
+    "must_match": []
+  }
+]
