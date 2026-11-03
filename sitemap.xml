@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://timlytle.net/</loc></url>
+  <url><loc>https://timlytle.net/talks.html</loc></url>
+  <url><loc>https://timlytle.net/talks/battlesnake-hackathon.html</loc></url>
+  <url><loc>https://timlytle.net/talks/event-sourcing-teardown-understanding-pattern.html</loc></url>
+  <url><loc>https://timlytle.net/talks/is-this-test-worth-it-evaluating-real-value-testing.html</loc></url>
+  <url><loc>https://timlytle.net/talks/let-go-ownership.html</loc></url>
+  <url><loc>https://timlytle.net/talks/yak-free-docker.html</loc></url>
+  <url><loc>https://timlytle.net/talks/you-can-handle-apis-introducing-api-handler.html</loc></url>
+  <url><loc>https://timlytle.net/talks/http-tortilla-make-psr-7-burritos.html</loc></url>
+  <url><loc>https://timlytle.net/talks/hal-it-works.html</loc></url>
+  <url><loc>https://timlytle.net/talks/http-patterns-psr-7-15-by-example.html</loc></url>
+  <url><loc>https://timlytle.net/talks/building-first-class-client-libraries.html</loc></url>
+  <url><loc>https://timlytle.net/talks/hypermedia-without-hype.html</loc></url>
+  <url><loc>https://timlytle.net/talks/patterns-for-api-development.html</loc></url>
+  <url><loc>https://timlytle.net/talks/versioning-every-way-is-wrong.html</loc></url>
+  <url><loc>https://timlytle.net/talks/uris-path-to-your-apis.html</loc></url>
+  <url><loc>https://timlytle.net/talks/api-request-response-formats.html</loc></url>
+  <url><loc>https://timlytle.net/talks/authentication-token-api-talk.html</loc></url>
+  <url><loc>https://timlytle.net/talks/apis-are-everywhere.html</loc></url>
+  <url><loc>https://timlytle.net/talks/yak-free-api-tips.html</loc></url>
+  <url><loc>https://timlytle.net/talks/birds-feather-api-design.html</loc></url>
+  <url><loc>https://timlytle.net/talks/hands-on-api-design.html</loc></url>
+  <url><loc>https://timlytle.net/talks/building-php-daemons-long-running-processes.html</loc></url>
+  <url><loc>https://timlytle.net/talks/adventures-contract-developer.html</loc></url>
+  <url><loc>https://timlytle.net/talks/second-factor-auth.html</loc></url>
+  <url><loc>https://timlytle.net/talks/api-toolbox.html</loc></url>
+  <url><loc>https://timlytle.net/talks/wonderful-world-apis.html</loc></url>
+  <url><loc>https://timlytle.net/talks/crons-queues-daemons-oh-my.html</loc></url>
+</urlset>

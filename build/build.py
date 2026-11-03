@@ -226,6 +226,69 @@ def speaker_quotes_block(talks):
       </ul>'''
 
 
+SITE = "https://timlytle.net"
+PERSON_ID = f"{SITE}/#person"
+PERSON = {
+    "@type": "Person",
+    "@id": PERSON_ID,
+    "name": "Tim Lytle",
+    "alternateName": "tjlytle",
+    "url": f"{SITE}/",
+    "image": f"{SITE}/assets/img/tim.png",
+    "jobTitle": "Engineering Leader and Backend Architect",
+    "description": "Engineering leader and backend architect with 20+ years building API-first systems, and a conference speaker on APIs, testing, Docker and engineering culture.",
+    "email": "mailto:tim@timlytle.net",
+    "knowsAbout": ["API design", "Backend architecture", "Engineering leadership", "PHP", "Event-driven systems", "Authentication", "Software testing", "Docker"],
+    "sameAs": [
+        "https://linkedin.com/in/timlytle",
+        "https://github.com/tjlytle",
+        "https://joind.in/user/tjlytle",
+        "https://sessionize.com/tjlytle",
+        "https://x.com/tjlytle",
+    ],
+}
+WEBSITE = {"@type": "WebSite", "@id": f"{SITE}/#website", "url": f"{SITE}/", "name": "Tim Lytle", "publisher": {"@id": PERSON_ID}}
+
+
+def jsonld(*nodes):
+    """One ld+json block with an @graph; '</' escaped so a string can't close the script tag."""
+    doc = json.dumps({"@context": "https://schema.org", "@graph": list(nodes)}, ensure_ascii=False)
+    return '<script type="application/ld+json">\n' + doc.replace("</", "<\\/") + "\n  </script>"
+
+
+def breadcrumbs(*crumbs):
+    return {"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": n, "name": name, "item": url} for n, (name, url) in enumerate(crumbs, 1)]}
+
+
+def talk_jsonld(talk):
+    url = SITE + talk_url(talk)
+    work_id = f"{url}#talk"
+    work = {
+        "@type": "CreativeWork", "@id": work_id, "name": talk["title"], "abstract": talk["blurb"],
+        "url": url, "author": {"@id": PERSON_ID}, "dateCreated": talk["first"], "inLanguage": "en",
+    }
+    if talk.get("thumb"):
+        work["image"] = f'{SITE}/assets/img/decks/{talk["thumb"]}'
+    if slides_link(talk):
+        work["subjectOf"] = {"@type": "PresentationDigitalDocument", "url": slides_link(talk), "author": {"@id": PERSON_ID}}
+    events = []
+    for i in newest_first(talk):
+        online = (i.get("location") or "").lower().startswith("online")
+        event = {"@type": "Event", "name": i["event"], "startDate": i["date"], "url": i["joindin"],
+                 "performer": {"@id": PERSON_ID}, "workPerformed": {"@id": work_id}}
+        if online:
+            event["eventAttendanceMode"] = "https://schema.org/OnlineEventAttendanceMode"
+            event["location"] = {"@type": "VirtualLocation", "url": i.get("event_url") or i["joindin"]}
+        elif i.get("location"):
+            event["location"] = {"@type": "Place", "name": i["location"]}
+        events.append(event)
+    page = {"@type": "WebPage", "@id": url, "url": url, "name": f'{talk["title"]} — a talk by Tim Lytle',
+            "isPartOf": {"@id": WEBSITE["@id"]}, "mainEntity": {"@id": work_id}, "author": {"@id": PERSON_ID}}
+    crumbs = breadcrumbs(("Tim Lytle", f"{SITE}/"), ("Talks", f"{SITE}/talks.html"), (talk["title"], url))
+    return jsonld(page, work, *events, crumbs, PERSON, WEBSITE)
+
+
 def render(template_name, out_path, **slots):
     tpl = (BUILD / "templates" / template_name).read_text(encoding="utf-8")
     for key, val in slots.items():
@@ -245,6 +308,12 @@ featured = [by_slug[s] for s in DATA.get("featured", [])] or talks[:3]
 deliveries = sum(len(t["instances"]) for t in talks)
 first_year = min(i["date"] for t in talks for i in t["instances"])[:4]
 
+talks_page = {
+    "@type": "CollectionPage", "@id": f"{SITE}/talks.html", "url": f"{SITE}/talks.html", "name": "Talks — Tim Lytle",
+    "isPartOf": {"@id": WEBSITE["@id"]}, "about": {"@id": PERSON_ID},
+    "mainEntity": {"@type": "ItemList", "numberOfItems": len(talks), "itemListElement": [
+        {"@type": "ListItem", "position": n, "url": SITE + talk_url(t), "name": t["title"]} for n, t in enumerate(talks, 1)]},
+}
 render(
     "talks.html", ROOT / "talks.html",
     FEATURED_CARDS="".join(card(t, i) for i, t in enumerate(featured)),
@@ -252,6 +321,7 @@ render(
     UPCOMING=upcoming_block(),
     QUOTES=speaker_quotes_block(talks),
     TALK_COUNT=str(len(talks)), DELIVERY_COUNT=str(deliveries), FIRST_YEAR=first_year,
+    JSONLD=jsonld(talks_page, breadcrumbs(("Tim Lytle", f"{SITE}/"), ("Talks", f"{SITE}/talks.html")), PERSON, WEBSITE),
 )
 render(
     "index.html", ROOT / "index.html",
@@ -259,6 +329,8 @@ render(
     HERO_NOTE=hero_note(),
     QUOTES=speaker_quotes_block(talks),
     TALK_COUNT=str(len(talks)),
+    JSONLD=jsonld({"@type": "ProfilePage", "@id": f"{SITE}/", "url": f"{SITE}/", "name": "Tim Lytle",
+                   "isPartOf": {"@id": WEBSITE["@id"]}, "mainEntity": {"@id": PERSON_ID}}, PERSON, WEBSITE),
 )
 for talk in talks:
     slides = slides_link(talk)
@@ -275,5 +347,26 @@ for talk in talks:
         RATED=rating_tag("detail__rated") if highly_rated(talk) else "",
         OG_IMAGE=f'/assets/img/decks/{talk["thumb"]}' if talk.get("thumb") else "/assets/img/og-talks.jpg",
         SLUG=talk["slug"],
+        JSONLD=talk_jsonld(talk),
     )
-print(f"wrote index.html, talks.html and {len(talks)} talk pages")
+
+# Crawler files. No <lastmod>: there's no per-page content date to report, and a build date would be noise.
+page_urls = [f"{SITE}/", f"{SITE}/talks.html"] + [SITE + talk_url(t) for t in talks]
+(ROOT / "sitemap.xml").write_text(
+    '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    + "".join(f"  <url><loc>{u}</loc></url>\n" for u in page_urls) + "</urlset>\n", encoding="utf-8")
+(ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+llms = [
+    "# Tim Lytle", "",
+    f"> {PERSON['description']} Available for consulting, advisory work, and the right longer-term role.", "",
+    f"Tim has given {len(talks)} conference talks ({deliveries} deliveries) since {first_year}, mostly at PHP and developer conferences. "
+    "Ratings and attendee comments are public on joind.in.", "",
+    "## Pages", "",
+    f"- [Home]({SITE}/): what Tim does, recent talks, and how to get in touch",
+    f"- [Talks]({SITE}/talks.html): every talk, where it was given, slides and ratings", "",
+    "## Talks", "",
+] + [f'- [{t["title"]}]({SITE}{talk_url(t)}): {t["blurb"]}' for t in talks] + [
+    "", "## Elsewhere", "",
+] + [f"- {u}" for u in PERSON["sameAs"]] + ["- Email: tim@timlytle.net", ""]
+(ROOT / "llms.txt").write_text("\n".join(llms), encoding="utf-8")
+print(f"wrote index.html, talks.html, {len(talks)} talk pages, sitemap.xml, robots.txt and llms.txt")
